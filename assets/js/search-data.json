@@ -13,10 +13,10 @@
   
     
         ,"post1": {
-            "title": "My First Post!",
-            "content": "",
-            "url": "https://taykimmy.github.io/VSCodeProject/markdown/2022/08/22/My-First-Jupyter-Notebook.html",
-            "relUrl": "/markdown/2022/08/22/My-First-Jupyter-Notebook.html",
+            "title": "First Jupyter Notebook Post",
+            "content": "Using Python code . print (&quot;hello&quot;) .",
+            "url": "https://taykimmy.github.io/VSCodeProject/jupyter/2022/08/22/My-First-Jupyter-Notebook.html",
+            "relUrl": "/jupyter/2022/08/22/My-First-Jupyter-Notebook.html",
             "date": " • Aug 22, 2022"
         }
         
