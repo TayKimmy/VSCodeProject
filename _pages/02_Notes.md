@@ -4,7 +4,7 @@ layout: page
 title: Vocab
 ---
 # Vocab
-
+--- 
 ### This year's vocabulary includes:
 - Function - A group of related statements that perform a specific task
 - Def - The command to define a function
