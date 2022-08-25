@@ -1,0 +1,1 @@
+def Python_Math_Quiz(prompt):
