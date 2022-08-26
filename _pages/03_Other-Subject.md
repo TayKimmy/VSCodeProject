@@ -4,6 +4,10 @@ layout: page
 title: World History
 ---
 
+### World Map
+
+![]({{ site.baseurl }}/images/Fastpages-world-map.jpg)
+
 ### World Religions
 
 World Religions worldwide and percentages of the world population
@@ -18,4 +22,4 @@ World Religions worldwide and percentages of the world population
 |-|-|
 | Buddhism | 6.6% |
 
-![]({{ site.baseurl }}/images/Fastpages-world-map.jpg)
+![]({{ site.baseurl }}/images/Fastpages-world-religion-map.jpg)
