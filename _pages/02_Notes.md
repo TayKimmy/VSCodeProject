@@ -3,7 +3,6 @@ toc: true
 layout: page
 title: Vocab
 ---
-# Vocab
 
 ![]({{ site.baseurl }}/images/Fastpages-vocab.png)
 
