@@ -1,0 +1,18 @@
+---
+toc: true
+layout: page
+title: World History
+---
+## World Religions
+
+World Religions worldwide and percentages of the world population
+
+| World Religions | Percentage of World Population|
+|-|-|
+| Christianity | 31.7% |
+|-|-|
+| Islam | 25% |
+|-|-|
+| Hinduism | 15% |
+|-|-|
+| Buddhism | 6.6% |
