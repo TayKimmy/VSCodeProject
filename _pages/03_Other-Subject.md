@@ -3,7 +3,8 @@ toc: true
 layout: page
 title: World History
 ---
-## World Religions
+
+### World Religions
 
 World Religions worldwide and percentages of the world population
 
@@ -16,3 +17,5 @@ World Religions worldwide and percentages of the world population
 | Hinduism | 15% |
 |-|-|
 | Buddhism | 6.6% |
+
+![]({{ site.baseurl }}/images/Fastpages-world-map.jpg)
