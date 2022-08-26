@@ -3,7 +3,9 @@ toc: true
 layout: page
 title: Vocab
 ---
-# Vocab
+
+![]({{ site.baseurl }}/images/Fastpages-vocab.png)
+
 --- 
 ### This year's vocabulary includes:
 - Function - A group of related statements that perform a specific task

@@ -9,3 +9,6 @@ This website has been created by **[Tay Kim](https://www.urbandictionary.com/def
 
 
 [^1]:The best coder and web developer currently alive.
+
+
+![]({{ site.baseurl }}/images/Fastpages-image.png)

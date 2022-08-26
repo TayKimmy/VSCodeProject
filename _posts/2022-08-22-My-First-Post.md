@@ -7,6 +7,8 @@ title: First Blog Post!
 ---
 # About Me
 
+![]({{ site.baseurl }}/images/Fastpages-Post-Image.jpg)
+
 ## My favorite things to do
 
 - Read
