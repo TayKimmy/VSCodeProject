@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Python Lists and Dictionaries Post | Tay Kim fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Python Lists and Dictionaries Post" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Using lists and dictionaries in python code." />
+<meta property="og:description" content="Using lists and dictionaries in python code." />
+<link rel="canonical" href="https://taykimmy.github.io/VSCodeProject/jupyter/2022/08/30/Python-Lists-Dictionaries.html" />
+<meta property="og:url" content="https://taykimmy.github.io/VSCodeProject/jupyter/2022/08/30/Python-Lists-Dictionaries.html" />
+<meta property="og:site_name" content="Tay Kim fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-08-30T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Python Lists and Dictionaries Post" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-08-30T00:00:00-05:00","datePublished":"2022-08-30T00:00:00-05:00","description":"Using lists and dictionaries in python code.","headline":"Python Lists and Dictionaries Post","mainEntityOfPage":{"@type":"WebPage","@id":"https://taykimmy.github.io/VSCodeProject/jupyter/2022/08/30/Python-Lists-Dictionaries.html"},"url":"https://taykimmy.github.io/VSCodeProject/jupyter/2022/08/30/Python-Lists-Dictionaries.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/VSCodeProject/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://taykimmy.github.io/VSCodeProject/feed.xml" title="Tay Kim fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/VSCodeProject/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/VSCodeProject/">Tay Kim fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/VSCodeProject/about/">About Me</a><a class="page-link" href="/VSCodeProject/search/">Search</a><a class="page-link" href="/VSCodeProject/_pages/02_Notes.html">Vocab</a><a class="page-link" href="/VSCodeProject/_pages/03_Other-Subject.html">World History</a><a class="page-link" href="/VSCodeProject/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Python Lists and Dictionaries Post</h1><p class="page-description">Using lists and dictionaries in python code.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-08-30T00:00:00-05:00" itemprop="datePublished">
+        Aug 30, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      2 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/VSCodeProject/categories/#jupyter">jupyter</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/TayKimmy/VSCodeProject/tree/master/_notebooks/2022-08-30-Python-Lists-Dictionaries.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/VSCodeProject/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/TayKimmy/VSCodeProject/master?filepath=_notebooks%2F2022-08-30-Python-Lists-Dictionaries.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/VSCodeProject/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/TayKimmy/VSCodeProject/blob/master/_notebooks/2022-08-30-Python-Lists-Dictionaries.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/VSCodeProject/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FTayKimmy%2FVSCodeProject%2Fblob%2Fmaster%2F_notebooks%2F2022-08-30-Python-Lists-Dictionaries.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/VSCodeProject/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#InfoDb">InfoDb </a></li>
+<li class="toc-entry toc-h2"><a href="#For-Loops-and-Index">For Loops and Index </a></li>
+<li class="toc-entry toc-h2"><a href="#Outputting-in-Reverse-Order">Outputting in Reverse Order </a></li>
+<li class="toc-entry toc-h2"><a href="#Other-list-methods">Other list methods </a></li>
+<li class="toc-entry toc-h2"><a href="#Adding-to-a-Dictionary">Adding to a Dictionary </a></li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-08-30-Python-Lists-Dictionaries.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="InfoDb">
+<a class="anchor" href="#InfoDb" aria-hidden="true"><span class="octicon octicon-link"></span></a>InfoDb<a class="anchor-link" href="#InfoDb"> </a>
+</h2>
+<p>InfoDb is a dictionary inside of a list. Here is an example code using InfoDb:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">InfoDb</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Append to List a Dictionary of key/values related to a person and cars</span>
+<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"John"</span><span class="p">,</span>
+    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Mortensen"</span><span class="p">,</span>
+    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"October 21"</span><span class="p">,</span>
+    <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"San Diego"</span><span class="p">,</span>
+    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"jmortensen@powayusd.com"</span><span class="p">,</span>
+    <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"2015-Fusion"</span><span class="p">,</span> <span class="s2">"2011-Ranger"</span><span class="p">,</span> <span class="s2">"2003-Excursion"</span><span class="p">,</span> <span class="s2">"1997-F350"</span><span class="p">,</span> <span class="s2">"1969-Cadillac"</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="c1"># Append to List a 2nd Dictionary of key/values</span>
+<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Sunny"</span><span class="p">,</span>
+    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Naidu"</span><span class="p">,</span>
+    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"August 2"</span><span class="p">,</span>
+    <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"Temecula"</span><span class="p">,</span>
+    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"snaidu@powayusd.com"</span><span class="p">,</span>
+    <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"4Runner"</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Tay"</span><span class="p">,</span>
+    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Kim"</span><span class="p">,</span>
+    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"May 13"</span><span class="p">,</span>
+    <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"San Diego"</span><span class="p">,</span>
+    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"taykimpro@gmail.com"</span><span class="p">,</span>
+    <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"None"</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="c1"># Print the data structure</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[{'FirstName': 'John', 'LastName': 'Mortensen', 'DOB': 'October 21', 'Residence': 'San Diego', 'Email': 'jmortensen@powayusd.com', 'Owns_Cars': ['2015-Fusion', '2011-Ranger', '2003-Excursion', '1997-F350', '1969-Cadillac']}, {'FirstName': 'Sunny', 'LastName': 'Naidu', 'DOB': 'August 2', 'Residence': 'Temecula', 'Email': 'snaidu@powayusd.com', 'Owns_Cars': ['4Runner']}, {'FirstName': 'Tay', 'LastName': 'Kim', 'DOB': 'May 13', 'Residence': 'San Diego', 'Email': 'taykimpro@gmail.com', 'Owns_Cars': ['None']}]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="For-Loops-and-Index">
+<a class="anchor" href="#For-Loops-and-Index" aria-hidden="true"><span class="octicon octicon-link"></span></a>For Loops and Index<a class="anchor-link" href="#For-Loops-and-Index"> </a>
+</h2>
+<p>Using <code>for loops</code> and iterating through using <code>index</code> in python. Here is a simple example:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Car_Brands</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Honda"</span><span class="p">,</span> <span class="s2">"Hyundai"</span><span class="p">,</span> <span class="s2">"Kia"</span><span class="p">,</span> <span class="s2">"Tesla"</span><span class="p">,</span> <span class="s2">"Lamborghini"</span><span class="p">,</span> <span class="s2">"Ferrari"</span><span class="p">,</span> <span class="s2">"Bugatti"</span><span class="p">,</span> <span class="s2">"Toyota"</span><span class="p">,</span> <span class="s2">"Porsche"</span><span class="p">,</span> <span class="s2">"Mustang"</span><span class="p">,</span> <span class="s2">"BMW"</span><span class="p">,</span> <span class="s2">"Mercedes"</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">Car_Brands</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Honda
+Hyundai
+Kia
+Tesla
+Lamborghini
+Ferrari
+Bugatti
+Toyota
+Porsche
+Mustang
+BMW
+Mercedes
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Outputting-in-Reverse-Order">
+<a class="anchor" href="#Outputting-in-Reverse-Order" aria-hidden="true"><span class="octicon octicon-link"></span></a>Outputting in Reverse Order<a class="anchor-link" href="#Outputting-in-Reverse-Order"> </a>
+</h2>
+<p>It is possible to output data in a reverse order. Here is an example using a palindrome:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">is_palindrome</span><span class="p">(</span><span class="n">prompt</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">prompt</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">prompt</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">prompt</span>
+
+<span class="n">word</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter a word: "</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">is_palindrome</span><span class="p">(</span><span class="n">word</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="si">{0}</span><span class="s2"> is a palindrome!"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">word</span><span class="p">))</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"The provided word is not a palindrome."</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>eyb
+bye
+The provided word is not a palindrome.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Other-list-methods">
+<a class="anchor" href="#Other-list-methods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Other list methods<a class="anchor-link" href="#Other-list-methods"> </a>
+</h2>
+<p>Lists can have a variety of methods performed on them. A couple being <code>.append()</code> or <code>while loop</code>. Here is an example using <code>.append()</code> and <code>.lower()</code> with a <code>for loop</code>:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Dangerous_Animals</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Box Jellyfish"</span><span class="p">,</span> <span class="s2">"African CAPE BuFfalo"</span><span class="p">,</span> <span class="s2">"BLAck MambA"</span><span class="p">,</span> <span class="s2">"Blue-RINGED octopus"</span><span class="p">]</span>
+<span class="n">Dangerous_Animals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"Cone SnAIl"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">Dangerous_Animals</span><span class="p">)):</span>
+    <span class="n">Dangerous_Animals</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">Dangerous_Animals</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Dangerous_Animals</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>['box jellyfish', 'african cape buffalo', 'black mamba', 'blue-ringed octopus', 'cone snail']
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Adding-to-a-Dictionary">
+<a class="anchor" href="#Adding-to-a-Dictionary" aria-hidden="true"><span class="octicon octicon-link"></span></a>Adding to a Dictionary<a class="anchor-link" href="#Adding-to-a-Dictionary"> </a>
+</h2>
+<p>You can also add or create new keys and values to a dictionary data set. This can also be done with input. Here is an example:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">My_Dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"Pikachu"</span><span class="p">:</span> <span class="s2">"Electric-type"</span><span class="p">,</span>
+    <span class="s2">"Charizard"</span><span class="p">:</span> <span class="s2">"Fire-type"</span><span class="p">,</span>
+    <span class="s2">"Blastoise"</span><span class="p">:</span> <span class="s2">"Water-type"</span><span class="p">,</span>
+    <span class="s2">"Venusaur"</span><span class="p">:</span> <span class="s2">"Grass-type"</span><span class="p">,</span>
+    <span class="s2">"Snorlax"</span><span class="p">:</span> <span class="s2">"Normal-type"</span><span class="p">,</span>
+    <span class="s2">"Garchomp"</span><span class="p">:</span> <span class="s2">"Dragon-type"</span><span class="p">,</span>
+    <span class="s2">"Lucario"</span><span class="p">:</span> <span class="s2">"Fighting-type"</span><span class="p">,</span>
+    <span class="s2">"Darkrai"</span><span class="p">:</span> <span class="s2">"Dark-type"</span><span class="p">,</span>
+    <span class="s2">"Arceus"</span><span class="p">:</span> <span class="s2">"Normal-type"</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">My_Dict</span><span class="p">)</span>
+<span class="n">My_Dict</span><span class="p">[</span><span class="s2">"Reshiram"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"Dragon-type"</span> <span class="c1">#Added new key and value into dictionary</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">My_Dict</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{'Pikachu': 'Electric-type', 'Charizard': 'Fire-type', 'Blastoise': 'Water-type', 'Venusaur': 'Grass-type', 'Snorlax': 'Normal-type', 'Garchomp': 'Dragon-type', 'Lucario': 'Fighting-type', 'Darkrai': 'Dark-type', 'Arceus': 'Normal-type'}
+{'Pikachu': 'Electric-type', 'Charizard': 'Fire-type', 'Blastoise': 'Water-type', 'Venusaur': 'Grass-type', 'Snorlax': 'Normal-type', 'Garchomp': 'Dragon-type', 'Lucario': 'Fighting-type', 'Darkrai': 'Dark-type', 'Arceus': 'Normal-type', 'Reshiram': 'Dragon-type'}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="TayKimmy/VSCodeProject"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/VSCodeProject/jupyter/2022/08/30/Python-Lists-Dictionaries.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/VSCodeProject/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/VSCodeProject/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/VSCodeProject/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Tay&#39;s first fastpage is going to be amazing.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" target="_blank" title="fastai"><svg class="svg-icon grey"><use xlink:href="/VSCodeProject/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" target="_blank" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/VSCodeProject/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
