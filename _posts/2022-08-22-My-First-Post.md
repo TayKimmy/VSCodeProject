@@ -4,6 +4,7 @@ layout: post
 description: My first blog post.
 categories: [markdown]
 title: First Blog Post!
+image: images/Fastpages-space.jpg
 ---
 # About Me
 
