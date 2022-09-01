@@ -2,6 +2,7 @@
 toc: true
 layout: page
 title: Vocab
+categories: [Week 1]
 ---
 
 ![]({{ site.baseurl }}/images/Fastpages-vocab.png)

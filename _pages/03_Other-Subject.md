@@ -2,6 +2,7 @@
 toc: true
 layout: page
 title: World History
+categories: [Week 1]
 ---
 
 ### World Map

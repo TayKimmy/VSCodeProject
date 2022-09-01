@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: My first blog post.
-categories: [markdown]
+categories: [markdown, Week 0]
 title: First Blog Post!
 image: images/Fastpages-space.jpg
 ---
