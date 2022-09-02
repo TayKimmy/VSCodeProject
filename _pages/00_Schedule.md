@@ -5,7 +5,7 @@ title: Schedule
 categories: [Week 2]
 ---
 
-## Class Schedule
+## Work Schedule
 
 This is a table that includes each of my posts and notebooks for each week. As of now, I have Week 0, Week 1, and Week 2.
 
