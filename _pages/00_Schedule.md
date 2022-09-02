@@ -1,7 +1,7 @@
 ---
 toc: true
 layout: page
-title: World History
+title: Schedule
 categories: [Week 2]
 ---
 
