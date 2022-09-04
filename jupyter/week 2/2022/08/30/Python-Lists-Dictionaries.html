@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      4 min read
+      7 min read
     
 </span></p>
 
@@ -131,6 +131,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#For-Loops-and-Index">For Loops and Index </a></li>
 <li class="toc-entry toc-h2"><a href="#Outputting-in-Reverse-Order">Outputting in Reverse Order </a></li>
 <li class="toc-entry toc-h2"><a href="#Other-list-methods">Other list methods </a></li>
+<li class="toc-entry toc-h2"><a href="#Using-While-Loop">Using While Loop </a></li>
 <li class="toc-entry toc-h2"><a href="#Adding-to-a-Dictionary">Adding to a Dictionary </a></li>
 <li class="toc-entry toc-h2"><a href="#Python-Quiz">Python Quiz </a></li>
 </ul><!--
@@ -148,7 +149,7 @@ window.onload = wrap_img;
 <h2 id="InfoDb">
 <a class="anchor" href="#InfoDb" aria-hidden="true"><span class="octicon octicon-link"></span></a>InfoDb<a class="anchor-link" href="#InfoDb"> </a>
 </h2>
-<p>InfoDb is a dictionary inside of a list. Here is an example code using InfoDb:</p>
+<p>InfoDb is a dictionary inside of a list. The example below has parts from the class repository. The dictionary information is appended into a list, making an InfoDb. I appended my own information and I also coded it so that people could input their own information.</p>
 
 </div>
 </div>
@@ -181,7 +182,7 @@ window.onload = wrap_img;
     <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"snaidu@powayusd.com"</span><span class="p">,</span>
     <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"4Runner"</span><span class="p">]</span>
 <span class="p">})</span>
-
+<span class="c1"># Appended my own info</span>
 <span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
     <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Tay"</span><span class="p">,</span>
     <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Kim"</span><span class="p">,</span>
@@ -189,6 +190,14 @@ window.onload = wrap_img;
     <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"San Diego"</span><span class="p">,</span>
     <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"taykimpro@gmail.com"</span><span class="p">,</span>
     <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"None"</span><span class="p">]</span>
+<span class="p">})</span>
+<span class="c1"># People can input their own info</span>
+<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"name "</span><span class="p">),</span>
+    <span class="s2">"LastName"</span><span class="p">:</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"last name "</span><span class="p">),</span>
+    <span class="s2">"DOB"</span><span class="p">:</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"DOB "</span><span class="p">),</span>
+    <span class="s2">"Residence"</span><span class="p">:</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"residence "</span><span class="p">),</span>
+    <span class="s2">"Email"</span><span class="p">:</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"email "</span><span class="p">),</span>
 <span class="p">})</span>
 
 <span class="c1"># Print the data structure</span>
@@ -205,7 +214,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[{'FirstName': 'John', 'LastName': 'Mortensen', 'DOB': 'October 21', 'Residence': 'San Diego', 'Email': 'jmortensen@powayusd.com', 'Owns_Cars': ['2015-Fusion', '2011-Ranger', '2003-Excursion', '1997-F350', '1969-Cadillac']}, {'FirstName': 'Sunny', 'LastName': 'Naidu', 'DOB': 'August 2', 'Residence': 'Temecula', 'Email': 'snaidu@powayusd.com', 'Owns_Cars': ['4Runner']}, {'FirstName': 'Tay', 'LastName': 'Kim', 'DOB': 'May 13', 'Residence': 'San Diego', 'Email': 'taykimpro@gmail.com', 'Owns_Cars': ['None']}]
+<pre>[{'FirstName': 'John', 'LastName': 'Mortensen', 'DOB': 'October 21', 'Residence': 'San Diego', 'Email': 'jmortensen@powayusd.com', 'Owns_Cars': ['2015-Fusion', '2011-Ranger', '2003-Excursion', '1997-F350', '1969-Cadillac']}, {'FirstName': 'Sunny', 'LastName': 'Naidu', 'DOB': 'August 2', 'Residence': 'Temecula', 'Email': 'snaidu@powayusd.com', 'Owns_Cars': ['4Runner']}, {'FirstName': 'Tay', 'LastName': 'Kim', 'DOB': 'May 13', 'Residence': 'San Diego', 'Email': 'taykimpro@gmail.com', 'Owns_Cars': ['None']}, {'FirstName': 'Rob', 'LastName': 'Smith', 'DOB': 'September 24', 'Residence': '4S Ranch', 'Email': 'robbydobby@gmail.com'}]
 </pre>
 </div>
 </div>
@@ -222,7 +231,7 @@ window.onload = wrap_img;
 <h2 id="For-Loops-and-Index">
 <a class="anchor" href="#For-Loops-and-Index" aria-hidden="true"><span class="octicon octicon-link"></span></a>For Loops and Index<a class="anchor-link" href="#For-Loops-and-Index"> </a>
 </h2>
-<p>Using <code>for loops</code> and iterating through using <code>index</code> in python. Here is a simple example:</p>
+<p>Using <code>for loops</code> and iterating through using <code>index</code> in python. In this simple example, I created a list of car brands and then I used a for loop to iterate through it. Then, I printed all the values that I iterated through.</p>
 
 </div>
 </div>
@@ -235,8 +244,10 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Car_Brands</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Honda"</span><span class="p">,</span> <span class="s2">"Hyundai"</span><span class="p">,</span> <span class="s2">"Kia"</span><span class="p">,</span> <span class="s2">"Tesla"</span><span class="p">,</span> <span class="s2">"Lamborghini"</span><span class="p">,</span> <span class="s2">"Ferrari"</span><span class="p">,</span> <span class="s2">"Bugatti"</span><span class="p">,</span> <span class="s2">"Toyota"</span><span class="p">,</span> <span class="s2">"Porsche"</span><span class="p">,</span> <span class="s2">"Mustang"</span><span class="p">,</span> <span class="s2">"BMW"</span><span class="p">,</span> <span class="s2">"Mercedes"</span><span class="p">]</span>
+<span class="c1"># Using a for loop to iterate through list</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">Car_Brands</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="c1"># printing all the values</span>
 </pre></div>
 
     </div>
@@ -277,7 +288,7 @@ Mercedes
 <h2 id="Outputting-in-Reverse-Order">
 <a class="anchor" href="#Outputting-in-Reverse-Order" aria-hidden="true"><span class="octicon octicon-link"></span></a>Outputting in Reverse Order<a class="anchor-link" href="#Outputting-in-Reverse-Order"> </a>
 </h2>
-<p>It is possible to output data in a reverse order. Here is an example using a palindrome:</p>
+<p>It is possible to output data in a reverse order. In this example, I determine if an inputted word is a palindrome. I first iterate through the inputted word the opposite way, or reverse order, and then if the reversed order is equal to the regular order, then I output that the word is a palindrome. If not, then I say the inputted word is not a palindrome.</p>
 
 </div>
 </div>
@@ -290,13 +301,13 @@ Mercedes
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">is_palindrome</span><span class="p">(</span><span class="n">prompt</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">prompt</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">prompt</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># iterates through the word in the reverse order</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">prompt</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">prompt</span>
+    <span class="k">return</span> <span class="n">prompt</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">prompt</span> <span class="c1"># returns if the reverse order is the same as the regular order</span>
 
 <span class="n">word</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter a word: "</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">is_palindrome</span><span class="p">(</span><span class="n">word</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="si">{0}</span><span class="s2"> is a palindrome!"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">word</span><span class="p">))</span>
+<span class="k">if</span> <span class="n">is_palindrome</span><span class="p">(</span><span class="n">word</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span> <span class="c1"># If the reverse is the same as regular</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="si">{0}</span><span class="s2"> is a palindrome!"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">word</span><span class="p">))</span> 
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"The provided word is not a palindrome."</span><span class="p">)</span>
 </pre></div>
@@ -330,7 +341,7 @@ The provided word is not a palindrome.
 <h2 id="Other-list-methods">
 <a class="anchor" href="#Other-list-methods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Other list methods<a class="anchor-link" href="#Other-list-methods"> </a>
 </h2>
-<p>Lists can have a variety of methods performed on them. A couple being <code>.append()</code> or <code>while loop</code>. Here is an example using <code>.append()</code> and <code>.lower()</code> with a <code>for loop</code>:</p>
+<p>Lists can have a variety of methods performed on them. A couple being <code>.append()</code> or <code>while loop</code>. In this example, I use <code>.append()</code> and <code>.lower()</code> with a <code>for loop</code>. I first make a list that I add dangerous animals. Then, I append another value. I made sure to make all the inputs have weird capitalization. Then, I terated through the range of the length of the list. I also made all the list values lowercase and then I printed all the values.</p>
 
 </div>
 </div>
@@ -342,10 +353,10 @@ The provided word is not a palindrome.
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Dangerous_Animals</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Box Jellyfish"</span><span class="p">,</span> <span class="s2">"African CAPE BuFfalo"</span><span class="p">,</span> <span class="s2">"BLAck MambA"</span><span class="p">,</span> <span class="s2">"Blue-RINGED octopus"</span><span class="p">]</span>
-<span class="n">Dangerous_Animals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"Cone SnAIl"</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">Dangerous_Animals</span><span class="p">)):</span>
-    <span class="n">Dangerous_Animals</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">Dangerous_Animals</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Dangerous_Animals</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Box Jellyfish"</span><span class="p">,</span> <span class="s2">"African CAPE BuFfalo"</span><span class="p">,</span> <span class="s2">"BLAck MambA"</span><span class="p">,</span> <span class="s2">"Blue-RINGED octopus"</span><span class="p">]</span> <span class="c1"># made a list with dangerous animals, has weird capitalization</span>
+<span class="n">Dangerous_Animals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"Cone SnAIl"</span><span class="p">)</span> <span class="c1"># added a new list value</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">Dangerous_Animals</span><span class="p">)):</span> <span class="c1"># iterates through the range of the length of the list</span>
+    <span class="n">Dangerous_Animals</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">Dangerous_Animals</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="c1"># made all the values lowercase</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">Dangerous_Animals</span><span class="p">)</span>
 </pre></div>
 
@@ -373,10 +384,60 @@ The provided word is not a palindrome.
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Using-While-Loop">
+<a class="anchor" href="#Using-While-Loop" aria-hidden="true"><span class="octicon octicon-link"></span></a>Using While Loop<a class="anchor-link" href="#Using-While-Loop"> </a>
+</h2>
+<p><code>While loops</code> can also be used with a list. In this example, I used the same list as before. Then, I defined i as 0. Then I used a while loop so that while i was less than the length of the list, the output was equal to the list at index of i. I printed the output and I incremented i by 1 each time.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Dangerous_Animals</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Box Jellyfish"</span><span class="p">,</span> <span class="s2">"African Cape Buffalo"</span><span class="p">,</span> <span class="s2">"Black Mamba"</span><span class="p">,</span> <span class="s2">"Blue-ringed Octopus"</span><span class="p">]</span> <span class="c1"># used the same list as before</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># defined a variable, i</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">Dangerous_Animals</span><span class="p">):</span> <span class="c1"># only runs while i is less than the length of the list</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="n">Dangerous_Animals</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="c1"># output equals each value when the list is at index of i</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># increments i by 1 each time</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Box Jellyfish
+African Cape Buffalo
+Black Mamba
+Blue-ringed Octopus
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Adding-to-a-Dictionary">
 <a class="anchor" href="#Adding-to-a-Dictionary" aria-hidden="true"><span class="octicon octicon-link"></span></a>Adding to a Dictionary<a class="anchor-link" href="#Adding-to-a-Dictionary"> </a>
 </h2>
-<p>You can also add or create new keys and values to a dictionary data set. This can also be done with input. Here is an example:</p>
+<p>You can also add or create new keys and values to a dictionary data set. This can also be done with input. In the example, I first created a dictionary with pokemon names as the keys and their type as values. I then added a new key and value and I also used input to add a new value and new key.</p>
 
 </div>
 </div>
@@ -398,7 +459,7 @@ The provided word is not a palindrome.
     <span class="s2">"Lucario"</span><span class="p">:</span> <span class="s2">"Fighting-type"</span><span class="p">,</span>
     <span class="s2">"Darkrai"</span><span class="p">:</span> <span class="s2">"Dark-type"</span><span class="p">,</span>
     <span class="s2">"Arceus"</span><span class="p">:</span> <span class="s2">"Normal-type"</span><span class="p">,</span>
-<span class="p">}</span>
+<span class="p">}</span> <span class="c1"># defined a new dictionary</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">My_Dict</span><span class="p">)</span>
 <span class="n">My_Dict</span><span class="p">[</span><span class="s2">"Reshiram"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"Dragon-type"</span> <span class="c1">#Added new key and value into dictionary</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">My_Dict</span><span class="p">)</span>
@@ -435,7 +496,7 @@ The provided word is not a palindrome.
 <h2 id="Python-Quiz">
 <a class="anchor" href="#Python-Quiz" aria-hidden="true"><span class="octicon octicon-link"></span></a>Python Quiz<a class="anchor-link" href="#Python-Quiz"> </a>
 </h2>
-<p>Making a qyuz that uses a list of dictionaries (InfoDb):</p>
+<p>I made a quiz using the InfoDb, list of dictionary. In this example, I defined a function with prompt as a parameter. I also defined a variable word, so that it was equal to the user's input. I also added 2 new variables, that defined the number of correct answers and the number of questions. I then printed a short intro that said "Hello, you will be asked (the amount of questions) short questions." I then made a list of dictionaries (InfoDb) with the questions as the keys and the answers as the values. I then used a for loop to iterate through all the dictionary keys and values. If the word (user's input) for each question was equal to its respectable answer, then it printed "Answer is correct" and added the number of correct answers by 1. If the word wasn't equal, then an incorrect answer resopnse was pinted. At the end, I printed the amount of questions the user got correct out of the total questions.</p>
 
 </div>
 </div>
@@ -447,16 +508,18 @@ The provided word is not a palindrome.
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">Python_Quiz</span><span class="p">(</span><span class="n">prompt</span><span class="p">):</span>
-    <span class="k">global</span> <span class="n">word</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="s2">"Question: "</span> <span class="o">+</span> <span class="n">prompt</span><span class="p">)</span>
-    <span class="n">word</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">Python_Quiz</span><span class="p">(</span><span class="n">prompt</span><span class="p">):</span> <span class="c1"># Defines function that takes 'prompt' as a parameter</span>
+    <span class="k">global</span> <span class="n">word</span> <span class="c1"># so that word can be called outside function</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s2">"Question: "</span> <span class="o">+</span> <span class="n">prompt</span><span class="p">)</span> <span class="c1"># setup for each question</span>
+    <span class="n">word</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span> <span class="c1"># the variable word is the user's input</span>
     <span class="k">return</span> <span class="n">word</span>
 
 <span class="n">questions_number</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">correct_answer</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="c1"># 2 variables for the number of questions and number of correct answers</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Hello, you will be asked "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">questions_number</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" short questions"</span><span class="p">)</span>
+<span class="c1"># short intro</span>
 
 <span class="n">My_Quiz</span> <span class="o">=</span> <span class="p">[{</span>
     <span class="s2">"What is the answer to this math problem: What is f(4) if f(x) = 3x/x-3"</span><span class="p">:</span> <span class="s2">"12"</span><span class="p">,</span>
@@ -464,25 +527,19 @@ The provided word is not a palindrome.
     <span class="s2">"What is the capital of the U.S?"</span><span class="p">:</span> <span class="s2">"Washington D.C."</span><span class="p">,</span>
     <span class="s2">"What is the molar mass of Carbon-12?"</span><span class="p">:</span> <span class="s2">"12 g"</span><span class="p">,</span>
     <span class="s2">"How many moles of water are in a 3.0 gram sample?"</span><span class="p">:</span> <span class="s2">"0.17"</span><span class="p">,</span>
-<span class="p">}]</span>
-<span class="c1"># My_Quiz.append({</span>
-<span class="c1">#     "What is the answer to this math problem: What is f(4) if f(x) = 3x/x-3": "12",</span>
-<span class="c1">#     "What is the most popular religion in the world?": "Christianity",</span>
-<span class="c1">#     "What is the capital of the U.S?": "Washington D.C.",</span>
-<span class="c1">#     "What is the molar mass of Carbon-12?": "12 g",</span>
-<span class="c1">#     "How many moles of water are in a 3.0 gram sample?": "0.17",</span>
-<span class="c1"># })</span>
+<span class="p">}]</span> <span class="c1"># makes a list of dictionaries with questions as the keys and the answers as the values</span>
 
-<span class="k">for</span> <span class="nb">dict</span> <span class="ow">in</span> <span class="n">My_Quiz</span><span class="p">:</span>
-    <span class="k">for</span> <span class="n">questions</span><span class="p">,</span> <span class="n">answers</span> <span class="ow">in</span> <span class="nb">dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-        <span class="n">Python_Quiz</span><span class="p">(</span><span class="n">questions</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">word</span> <span class="o">==</span> <span class="n">answers</span><span class="p">:</span>
+<span class="k">for</span> <span class="nb">dict</span> <span class="ow">in</span> <span class="n">My_Quiz</span><span class="p">:</span> <span class="c1"># for all dictionary stuff in the InfoDb</span>
+    <span class="k">for</span> <span class="n">questions</span><span class="p">,</span> <span class="n">answers</span> <span class="ow">in</span> <span class="nb">dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span> <span class="c1"># both keys and values</span>
+        <span class="n">Python_Quiz</span><span class="p">(</span><span class="n">questions</span><span class="p">)</span> <span class="c1"># the prompt is the questions</span>
+        <span class="k">if</span> <span class="n">word</span> <span class="o">==</span> <span class="n">answers</span><span class="p">:</span> <span class="c1"># if the user's answer is equal to the correct answer</span>
             <span class="nb">print</span><span class="p">(</span><span class="s2">"Answer is correct"</span><span class="p">)</span>
-            <span class="n">correct_answer</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">correct_answer</span> <span class="o">+=</span> <span class="mi">1</span>  
         <span class="k">else</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="s2">"Answer is incorrect"</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">"You scored "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">correct_answer</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"/"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">questions_number</span><span class="p">))</span>
+<span class="c1"># prints how many correct answers out of total questions</span>
 </pre></div>
 
     </div>
