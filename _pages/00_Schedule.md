@@ -7,6 +7,8 @@ categories: [Week 2]
 
 ## Work Schedule
 
+![]({{ site.baseurl }}/images/Fastpages-schedule.png)
+
 This is a table that includes each of my posts and notebooks for each week. As of now, I have Week 0, Week 1, and Week 2.
 
 | Week # |  |  |
