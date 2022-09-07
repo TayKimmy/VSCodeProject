@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: This is a post that contains the outline of the Quiz that Adi and I made on code.org
-categories: [markdown, week-3]
+categories: [markdown, Week 3]
 title: Outline of Quiz on Code.org
 ---
 
@@ -11,7 +11,7 @@ The number of pages is going to be 5 pages. 3 pages are for the questions of the
 
 ## Home Page
 The home page will contain a button and a picture with the title.
-- When the button is clicked, the quiz beings. First question is shown.
+- When the button is clicked, the quiz begins. First question is shown.
 - The picture will contain the title of the quiz.
 
 ## Question 1
