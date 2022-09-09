@@ -4,6 +4,7 @@ layout: post
 description: This is a post that contains the outline of The Course app that Aditya and I made for APCSP
 categories: [markdown, Week 3]
 title: Outline Of Course App For Code.org
+image: images/Fastpages-robot.png
 ---
 
 # Outline 
