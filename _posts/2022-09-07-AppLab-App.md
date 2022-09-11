@@ -12,13 +12,13 @@ image: images/Fastpages-robot.png
 ---
 
 ## Overall
-The Course app will basically have various courses listed in it. Each course will have their own description, a breif of the syllabus and a personal experiance note. This app will help students to get a better idea of what they are getting into if they take this course. This will have a home page which will take you to a course catalog page. The course catalog page will contain diffrent buttons which when clicked will take you to their respective course pages. In the course pages we will have description part of syllabus and a persnal note from a student. 
+The Course app will basically have various courses listed in it. Each course will have their own description, a brief of the syllabus and a personal experiance note. This app will help students to get a better idea of what they are getting into if they take this course. This will have a home page which will take you to a course catalog page. The course catalog page will contain different buttons which when clicked will take you to their respective course pages. In the course pages we will have description part of syllabus and a personal note from a student. 
 
 ---
 
 ## Home Page
 The home page will contain a button and a picture with the title.
-- When the button is cliked you are taken to the course catalog. Course catalog is shown.
+- When the button is clicked you are taken to the course catalog. Course catalog is shown.
 - The Picture will contain the title of the App
 
 ---
@@ -34,6 +34,6 @@ This page will contain many buttons, each for a diffrent course
 This Page will contain
 - A description of the course 
 - A personal note 
-- A breif od the syllabus and what to expect
+- A brief of the syllabus and what to expect
 
 ---
