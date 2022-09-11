@@ -37,3 +37,18 @@ This Page will contain
 - A brief of the syllabus and what to expect
 
 ---
+
+## Add Notes Page
+This page will contain
+- An input box where people can write in a note
+- A button called save note that saves the user's input
+
+---
+
+## Notes Screen Page
+This page will contain
+- A list of all the notes that the user has inputted
+- The list will contain buttons title with the day that the user has inputted the note
+- Clicking on the button will take you to another screen that shows the content of the note
+
+---
