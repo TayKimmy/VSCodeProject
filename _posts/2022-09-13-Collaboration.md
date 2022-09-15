@@ -7,7 +7,7 @@ title: Collegeboard Collaboration notes
 image: images/Fastpages-griffin.png
 ---
 
-![]({{ site.baseurl }}/images/Fastpage-collaboration.png)
+![]({{ site.baseurl }}/images/Fastpages-collaboration.png)
 
 ## Why is collaboration important?
 - Computing innovations are improved through collaboration
