@@ -3,7 +3,7 @@ toc: true
 layout: post
 description: A post with screenshots for the HTML Hacks
 categories: [markdown, Week 2]
-title: HTML Hack Screenshots
+title: HTML Fragments Hack Screenshots
 image: images/Fastpages-castle.png
 ---
 ## Theme Screenshot
