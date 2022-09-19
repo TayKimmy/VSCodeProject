@@ -3,7 +3,7 @@ toc: true
 layout: post
 description: This is a post with the notes and lists about the Psychology and the Good Life video
 categories: [markdown, Week 4]
-title: Focus and Habits notes
+title: Focus and Habits Notes
 ---
 ## Vocabulary
 This is a compacted list of words that I believed were important to the video and their definitions:
