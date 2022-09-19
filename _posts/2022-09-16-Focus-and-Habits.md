@@ -19,7 +19,7 @@ This is a compacted list of words that I believed were important to the video an
 - Priorities - The fact or condition of being regarded or treated as more important.
 
 ---
-## Note of Gratitude
+## Notes of Gratitude
 I made 2 notes of gratitudes, one to my friend on campus and one to my parents at home.
 For the note to my friend, I thanked him for staying with me for many years and helping me when I needed. I tried to express my gratitude sincerely and fully. He was very grateful for the note and that was that.
 For the note to my parents, I thanked them for helping me become who I am today. I expressed my gratitude for them and I also showed my appreciation for them doing many things for me (driving me, cooking for me, doing laundery, cleaning, etc.). They were also very grateful for my note and were proud of me.
