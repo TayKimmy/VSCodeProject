@@ -2,7 +2,7 @@
   
     
         "post0": {
-            "title": "Javascript Kernel Post",
+            "title": "JavaScript Kernel Post",
             "content": "Javascript .",
             "url": "https://taykimmy.github.io/VSCodeProject/jupyter/week%205/2022/09/22/Javascript.html",
             "relUrl": "/jupyter/week%205/2022/09/22/Javascript.html",
@@ -218,7 +218,7 @@
   
       ,"page6": {
           "title": "Submenu",
-          "content": "Javascript Kernel | HTML and Javascript fragments | .",
+          "content": "JavaScript Kernel | HTML and JavaScript fragments | . Links within this Sub Menu . This submenu links to two different blogs in my website. One is a Jupyter Notebook while the other is a regular Blog Post. They both contain fragments of JavaScript and HTML and are designed by such. . JavaScript Kernel Post: A Jupyter Notebook that shows usage of Jupyter Javascript kernel in code and in text as well. | HTML and JavaScript fragments: A _post that uses both JavaScript and HTML to design the post and create a table. | .",
           "url": "https://taykimmy.github.io/VSCodeProject/_pages/06_submenu.html",
           "relUrl": "/_pages/06_submenu.html",
           "date": ""
