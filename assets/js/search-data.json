@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "JavaScript Kernel Post",
-            "content": "Javascript .",
+            "content": "JavaScript .",
             "url": "https://taykimmy.github.io/VSCodeProject/jupyter/week%205/2022/09/22/Javascript.html",
             "relUrl": "/jupyter/week%205/2022/09/22/Javascript.html",
             "date": " • Sep 22, 2022"
@@ -13,7 +13,7 @@
   
     
         ,"post1": {
-            "title": "HTML and Javscript fragments",
+            "title": "HTML and JavaScript fragments",
             "content": "Countries Best food . Korea | Korean BBQ | . Kimchi | Bibimbap | . Japan | Sushi | . Tempura | Udon | China | Fried Rice | . Kung Pao Chicken | Dumplings | Click Me! . .",
             "url": "https://taykimmy.github.io/VSCodeProject/markdown/week%205/2022/09/22/HTML.html",
             "relUrl": "/markdown/week%205/2022/09/22/HTML.html",
@@ -170,7 +170,7 @@
   
       ,"page0": {
           "title": "Schedule",
-          "content": "Work Schedule . . This is a table that includes each of my posts and notebooks for each week. As of now, I have Week 0, Week 1, and Week 2. . Week # |   |   |   | . 0 | First Blog Post | First Jupyter Notebook Post |   | . 1 | Python Quiz Post | Bash Kernel Post |   | . 2 | Python Lists and Dictionaries Post | HTML Hack Screenshots |   | . 3 | Outline of Quiz on Code.org | Outline Of Course App For Code.org | Collegeboard Performance Task Post | . 4 | Collegeboard Collaboration Notes | Focus and Habits Notes |   | .",
+          "content": "Work Schedule . . This is a table that includes each of my posts and notebooks for each week. As of now, I have Week 0, Week 1, and Week 2. . Week # |   |   |   | . 0 | First Blog Post | First Jupyter Notebook Post |   | . 1 | Python Quiz Post | Bash Kernel Post |   | . 2 | Python Lists and Dictionaries Post | HTML Hack Screenshots |   | . 3 | Outline of Quiz on Code.org | Outline Of Course App For Code.org | Collegeboard Performance Task Post | . 4 | Collegeboard Collaboration Notes | Focus and Habits Notes |   | . 5 | JavaScript Kernel Post | HTML and JavaScript fragments | Collegeboard Program Purpose Notes | .",
           "url": "https://taykimmy.github.io/VSCodeProject/_pages/00_Schedule.html",
           "relUrl": "/_pages/00_Schedule.html",
           "date": ""
