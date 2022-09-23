@@ -2,8 +2,8 @@
   
     
         "post0": {
-            "title": "Javascript Kernel",
-            "content": "",
+            "title": "Javascript Kernel Post",
+            "content": "Javascript .",
             "url": "https://taykimmy.github.io/VSCodeProject/jupyter/week%205/2022/09/22/Javascript.html",
             "relUrl": "/jupyter/week%205/2022/09/22/Javascript.html",
             "date": " • Sep 22, 2022"
@@ -218,7 +218,7 @@
   
       ,"page6": {
           "title": "Submenu",
-          "content": "| | .",
+          "content": "Javascript Kernel | HTML and Javascript fragments | .",
           "url": "https://taykimmy.github.io/VSCodeProject/_pages/06_submenu.html",
           "relUrl": "/_pages/06_submenu.html",
           "date": ""
