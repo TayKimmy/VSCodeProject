@@ -21,10 +21,185 @@ layout: notebook
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="JavaScript">JavaScript<a class="anchor-link" href="#JavaScript"> </a></h2>
+<h2 id="JavaScript-Code">JavaScript Code<a class="anchor-link" href="#JavaScript-Code"> </a></h2><p>The codes below all use the JavaScript language in order to perform something.</p>
+
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Function">Function<a class="anchor-link" href="#Function"> </a></h3><p>This code defines a function and takes 2 numbers as a parameter and returns the product of the 2 numbers.</p>
+
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="kd">function</span> <span class="nx">myFunction</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">a</span> <span class="o">*</span> <span class="nx">b</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nx">myFunction</span><span class="p">(</span><span class="mf">125</span><span class="p">,</span><span class="mf">5</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>625</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Temperature">Temperature<a class="anchor-link" href="#Temperature"> </a></h3><p>The code below takes an integer input that we assume is the degrees in Fahrenheit and then determines the code in Celsius.</p>
+
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="kd">function</span> <span class="nx">toCelsius</span><span class="p">(</span><span class="nx">fahrenheit</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span><span class="mf">5</span><span class="o">/</span><span class="mf">9</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="nx">fahrenheit</span><span class="o">-</span><span class="mf">32</span><span class="p">);</span>
+  <span class="p">}</span>
+
+<span class="nx">toCelsius</span><span class="p">(</span><span class="mf">0</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>32.22222222222222</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Even/Odd-Number">Even/Odd Number<a class="anchor-link" href="#Even/Odd-Number"> </a></h3><p>This code contains a function that takes one number as the parameter. Then, it determines if the number is even or odd based on the remainer when divided by 2.</p>
+
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="kd">function</span> <span class="nx">IsOdd</span><span class="p">(</span><span class="nx">x</span><span class="p">){</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">x</span> <span class="o">%</span> <span class="mf">2</span> <span class="o">==</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span> <span class="o">+</span> <span class="s2">&quot; is an even number&quot;</span><span class="p">);</span>
+<span class="p">}</span>  <span class="k">else</span> <span class="p">{</span>
+   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span> <span class="o">+</span> <span class="s2">&quot; is an odd number&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="p">}</span>
+<span class="nx">IsOdd</span><span class="p">(</span><span class="mf">24</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>24 is an even number
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Time">Time<a class="anchor-link" href="#Time"> </a></h3><p>This code contains a function that takes one number as the parameter and we assume it to be the number of hours. Then, the code determines many days, minutes, and seconds those hours are equivalent to.</p>
+
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="kd">function</span> <span class="nx">DaysHoursMinutesSeconds</span><span class="p">(</span><span class="nx">x</span><span class="p">){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span> <span class="o">+</span> <span class="s2">&quot; hour(s) is equivalent to &quot;</span> <span class="o">+</span> <span class="nx">x</span><span class="o">/</span><span class="mf">24</span> <span class="o">+</span> <span class="s2">&quot; days, &quot;</span> <span class="o">+</span> <span class="nx">x</span><span class="o">*</span><span class="mf">60</span> <span class="o">+</span> <span class="s2">&quot; minutes, and &quot;</span> <span class="o">+</span> <span class="nx">x</span><span class="o">*</span><span class="mf">3600</span> <span class="o">+</span> <span class="s2">&quot; seconds.&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="nx">DaysHoursMinutesSeconds</span><span class="p">(</span><span class="mf">48</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>48 hour(s) is equivalent to 2 days, 2880 minutes, and 172800 seconds.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
 </div>
  
 
