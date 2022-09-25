@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "JavaScript Kernel Post",
-            "content": "JavaScript .",
+            "content": "JavaScript Code . The codes below all use the JavaScript language in order to perform something. . Function . This code defines a function and takes 2 numbers as a parameter and returns the product of the 2 numbers. . function myFunction(a, b) { return a * b; } myFunction(125,5) . 625 . Temperature . The code below takes an integer input that we assume is the degrees in Fahrenheit and then determines the code in Celsius. . function toCelsius(fahrenheit) { return (5/9) * (fahrenheit-32); } toCelsius(0) . 32.22222222222222 . Even/Odd Number . This code contains a function that takes one number as the parameter. Then, it determines if the number is even or odd based on the remainer when divided by 2. . function IsOdd(x){ if (x % 2 == 0) { console.log(x + &quot; is an even number&quot;); } else { console.log(x + &quot; is an odd number&quot;); } } IsOdd(24) . 24 is an even number . Time . This code contains a function that takes one number as the parameter and we assume it to be the number of hours. Then, the code determines many days, minutes, and seconds those hours are equivalent to. . function DaysHoursMinutesSeconds(x){ console.log(x + &quot; hour(s) is equivalent to &quot; + x/24 + &quot; days, &quot; + x*60 + &quot; minutes, and &quot; + x*3600 + &quot; seconds.&quot;) } DaysHoursMinutesSeconds(48) . 48 hour(s) is equivalent to 2 days, 2880 minutes, and 172800 seconds. .",
             "url": "https://taykimmy.github.io/VSCodeProject/jupyter/week%205/2022/09/22/Javascript.html",
             "relUrl": "/jupyter/week%205/2022/09/22/Javascript.html",
             "date": " • Sep 22, 2022"
