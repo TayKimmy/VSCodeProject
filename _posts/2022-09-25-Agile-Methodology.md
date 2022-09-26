@@ -5,7 +5,7 @@ description: Diagram of scrum process and PBL vocabulary
 categories: [markdown, Week 5]
 title: Agile Methodology
 ---
-![]({{ site.baseurl }}/images/Fastpages-agile.png)
+![]({{ site.baseurl }}/images/fastpages-agile.png)
 
 ### Team Member Roles
 - Tay Kim: Backend

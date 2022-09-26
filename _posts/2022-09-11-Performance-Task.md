@@ -23,7 +23,7 @@ layout: notebook
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Some-Ideas-For-the-Projects">Some Ideas For the Projects<a class="anchor-link" href="#Some-Ideas-For-the-Projects"> </a></h2><ul>
 <li>A pac man game that saves the scores of each player and displays a ranking board for the scores.</li>
-<li>A random quiz generator. Save notes in the website and the alogrithm uses the notes to genrate questions for a quiz. The quiz is then scored and the topics missied are highlighted*</li>
+<li>A random quiz generator. Save notes in the website and the alogrithm uses the notes to genrate questions for a quiz. The quiz is then scored and the topics missed are highlighted</li>
 </ul>
 <h2 id="Collegeboard-Requirements">Collegeboard Requirements<a class="anchor-link" href="#Collegeboard-Requirements"> </a></h2><h3 id="Program-Purpose-and-Function">Program Purpose and Function<a class="anchor-link" href="#Program-Purpose-and-Function"> </a></h3><p>The purpose of the program is to randomly generate questions based on a user's notes of key terms/dates/ideas and definitions. The program will take the user's notes and, based on it, select the key terms and output multiple quiz questions which will be displayed randomly. It will score the quiz and tell you what you got wrong and what you need to study on.</p>
 <h3 id="Data-Abstraction">Data Abstraction<a class="anchor-link" href="#Data-Abstraction"> </a></h3><p>The program will contain lists and dictionaries. Every key term will have a definition and these will be stored in a dictionary which will be stored in a list. Or they will be stored in a local database and we will use the objects in the database to create the quiz.</p>
