@@ -1,8 +1,8 @@
 ---
 toc: true
 layout: post
-description: Diagram of scrum process and PBL vocabulary
-categories: [markdown, Week 5]
+description: The hacks for Git Sociology answering the sociology questions
+categories: [markdown, Week 6]
 title: Git Sociology
 ---
 ## Hacks
