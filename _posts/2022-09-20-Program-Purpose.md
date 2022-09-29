@@ -68,7 +68,7 @@ This is a screenshot of the Collegeboad Program Purpose quiz.
 
 ### Idea
 My group had a couple of ideas, but here is our best/main one:
-- A random quiz generator. Save notes in the website and the alogrithm uses the notes to genrate questions for a quiz. The quiz is then scored and the topics missed are highlighted*
+- A random quiz generator. Save notes in the website and the alogrithm uses the notes to genrate questions for a quiz. The quiz is then scored and the topics missed are highlighted
 
 This is good for our educational purpose because this project has complexity and a solid purpose that strives to help people.
 
