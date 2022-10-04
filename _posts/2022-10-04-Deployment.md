@@ -1,9 +1,9 @@
 ---
 toc: true
 layout: post
-description: This is a post that has the notes for the Collegeboard videos on program design
+description: This is a post that has the screenshots for deployment
 categories: [markdown, Week 6]
-title: Collegeboard Program Design Notes
+title: Deployment
 ---
 ### Using IP Address
 I got my individual flask website to run using my group's IP Address from our instance. Here is a screenshot:
