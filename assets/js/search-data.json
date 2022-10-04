@@ -2,7 +2,7 @@
   
     
         "post0": {
-            "title": "Collegeboard Program Design Notes",
+            "title": "Deployment",
             "content": "Using IP Address . I got my individual flask website to run using my group’s IP Address from our instance. Here is a screenshot: . . . Curl . I was able to use the curl command and get an output. The output shows the code for my flask repository home page. Here is a screenshot: . . . Domain . I used freenom to get a DNS and I was able to get my flask website to run using the domain taykimfirstwebsite.tk. Here is a screenshot: . .",
             "url": "https://taykimmy.github.io/VSCodeProject/markdown/week%206/2022/10/04/Deployment.html",
             "relUrl": "/markdown/week%206/2022/10/04/Deployment.html",
