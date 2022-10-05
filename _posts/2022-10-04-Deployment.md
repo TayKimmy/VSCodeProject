@@ -31,6 +31,6 @@ My group also used freenom to get a free DNS and we were able to connect that DN
 
 ---
 ### PS output
-I was also able to run '''sudo docker ps''' and receive the list of all the docker processes with our unique images. Here is a screenshot:
+I was also able to run ```sudo docker ps``` and receive the list of all the docker processes with our unique images. Here is a screenshot:
 
 ![]({{ site.baseurl }}/images/ps-output.png)
