@@ -2,13 +2,10 @@
 keywords: fastai
 description: Practice with identifying and correcting code blocks
 title: Big Idea 1 'Identifying and Correcting Errors'
-layout: default
-badges: false
-permalink: /collegeboard/error
-image: /images/apcsp.png
-categories: [1.B, 4.C]
-type: ap
-week: 7
+toc: true 
+badges: true
+comments: true
+categories: [jupyter, Week 7]
 nb_path: _notebooks/2022-10-03-AP-error_testing.ipynb
 layout: notebook
 ---
@@ -116,18 +113,9 @@ layout: notebook
 
 <div class="output_area">
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">IndexError</span>                                Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">/home/taykim/vscode/VSCodeProject/_notebooks/2022-10-03-AP-error_testing.ipynb Cell 6</span> in <span class="ansi-cyan-fg">&lt;cell line: 5&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/taykim/vscode/VSCodeProject/_notebooks/2022-10-03-AP-error_testing.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=2&#39;&gt;3&lt;/a&gt;</span> i = 1
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/taykim/vscode/VSCodeProject/_notebooks/2022-10-03-AP-error_testing.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=4&#39;&gt;5&lt;/a&gt;</span> while i &lt; 26:
-<span class="ansi-green-fg">----&gt; &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/taykim/vscode/VSCodeProject/_notebooks/2022-10-03-AP-error_testing.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=5&#39;&gt;6&lt;/a&gt;</span>     if alphabetList[i+1] == letter:
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/taykim/vscode/VSCodeProject/_notebooks/2022-10-03-AP-error_testing.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=6&#39;&gt;7&lt;/a&gt;</span>         print(&#34;The letter &#34; + letter + &#34; is the &#34; + str(i) + &#34; letter in the alphabet&#34;)
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/taykim/vscode/VSCodeProject/_notebooks/2022-10-03-AP-error_testing.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=7&#39;&gt;8&lt;/a&gt;</span>     i += 1
-
-<span class="ansi-red-fg">IndexError</span>: list index out of range</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The letter b is the 2 letter in the alphabet
+</pre>
 </div>
 </div>
 
@@ -157,14 +145,28 @@ layout: notebook
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">letter</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What letter would you like to check?&quot;</span><span class="p">)</span>
 
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">alphabetList</span><span class="p">:</span>
-    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">letter</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The letter &quot;</span> <span class="o">+</span> <span class="n">letter</span> <span class="o">+</span> <span class="s2">&quot; is the &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">count</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; letter in the alphabet&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The letter &quot;</span> <span class="o">+</span> <span class="n">letter</span> <span class="o">+</span> <span class="s2">&quot; is the &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">count</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; letter in the alphabet&quot;</span><span class="p">)</span>
     <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The letter z is the 26 letter in the alphabet
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -202,6 +204,20 @@ layout: notebook
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[0, 2, 4, 6, 8, 10]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     {% endraw %}
 
@@ -220,7 +236,7 @@ layout: notebook
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">odds</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
 
 <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">:</span>
     <span class="n">odds</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
@@ -230,6 +246,20 @@ layout: notebook
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1, 3, 5, 7, 9]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -267,6 +297,20 @@ layout: notebook
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[0, 2, 4, 6, 8, 10]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     {% endraw %}
 
@@ -288,13 +332,27 @@ layout: notebook
 <span class="n">odds</span> <span class="o">=</span> <span class="p">[]</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">):</span>
         <span class="n">odds</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">odds</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1, 3, 5, 7, 9]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -328,15 +386,29 @@ layout: notebook
     <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
         <span class="n">newNumbers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-    <span class="k">if</span> <span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
         <span class="n">newNumbers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">newNumbers</span><span class="p">)</span> 
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[2, 4, 5, 6, 8, 10, 10, 12, 14, 15, 16, 18, 20, 20, 22, 24, 25, 26, 28, 30, 30, 32, 34, 35, 36, 38, 40, 40, 42, 44, 45, 46, 48, 50, 50, 52, 54, 55, 56, 58, 60, 60, 62, 64, 65, 66, 68, 70, 70, 72, 74, 75, 76, 78, 80, 80, 82, 84, 85, 86, 88, 90, 90, 92, 94, 95, 96, 98]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -382,10 +454,11 @@ layout: notebook
 <span class="c1">#ideally the code should prompt the user multiple times</span>
 <span class="k">for</span> <span class="n">t</span><span class="p">,</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">menu</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
     <span class="n">item</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please select an item from the menu&quot;</span><span class="p">)</span>
-    <span class="n">total</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="n">menu</span><span class="p">[</span><span class="n">item</span><span class="p">]</span>
     <span class="k">if</span> <span class="n">item</span> <span class="o">==</span> <span class="s2">&quot;break&quot;</span><span class="p">:</span>
         <span class="k">break</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="n">menu</span><span class="p">[</span><span class="n">item</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Total is: $&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">total</span><span class="p">))</span>
 
 <span class="c1">#code should add the price of the menu items selected by the user</span>
 </pre></div>
@@ -404,9 +477,7 @@ layout: notebook
 burger  $3.99
 fries  $1.99
 drink  $0.99
-3.99
-5.98
-6.970000000000001
+Total is: $4.98
 </pre>
 </div>
 </div>
@@ -419,7 +490,7 @@ drink  $0.99
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Hacks">Hacks<a class="anchor-link" href="#Hacks"> </a></h2><blockquote><p>Now is a good time to think about Testing of your teams final project...</p>
+<h3 id="Hacks-Questions">Hacks Questions<a class="anchor-link" href="#Hacks-Questions"> </a></h3><blockquote><p>Now is a good time to think about Testing of your teams final project...</p>
 <ul>
 <li>What errors may arise in your project?</li>
 <li>What are some test cases that can be used?</li>
@@ -430,6 +501,23 @@ drink  $0.99
 </li>
 </ul>
 </blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>Some errors that might arise in our project are:<ul>
+<li>Our notes don't save</li>
+<li>Only one note saves at a time</li>
+<li>Storing notes/inputs for a specific user</li>
+</ul>
+</li>
+<li>Some test cases that can be used are testing user input and/or how output is displayed. We can also put in random notes and see if the questions that appear are relevant to the notes. We can also check if the answers are correct to their respective question.</li>
+<li>We will document any bugs we encounter on our scrum board and/or slack. We can also put possible solutions on them as well.</li>
+<li>Some single tests are putting in a random note on a random subject and checking that the note is saved, and the questions and answers are correct and relevant. </li>
+</ol>
 
 </div>
 </div>

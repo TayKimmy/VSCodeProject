@@ -1,3 +1,6 @@
+---
+layout: post
+---
 Groups Members: Remy Liu, Leonard Wright, Kaitlyn Trinh, Dylan Truong, and Tay Kim
 
 **Brine Shrimp Research Facts**
@@ -257,7 +260,7 @@ Null hypothesis: Addition of sulfuric acid to water will not affect the proporti
 
   - > Changes that can be made to improve the procedure include collecting data until all shrimp die and all leftover eggs hatch (with the shrimp living their entire life cycles). In addition, a specific molarity of sulfuric acid (H<sub>2</sub>SO<sub>4</sub>) may be added to each petri dish for precision.
 
-![](assets/img/2022-08-25-Google-Doc-Post/media/image2.png)
+![]({{ site.url }}{{ site.baseurl }}/assets/img/2022-08-25-Google-Doc-Post/media/image2.png)
 
 > **Introduction**
 
