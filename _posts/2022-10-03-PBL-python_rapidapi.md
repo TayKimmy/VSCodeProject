@@ -1,14 +1,11 @@
 ---
 keywords: fastai
 description: APIs can be found all over the internet.  A great consolidator of many APIs is <mark>RapidAPI</mark>.  In this blog we will use a site to consolidates API stats.  Learning a few lines of code and you can start extracting lots of data from the internet via APIs.  
-title: Python RapidAPI
-toc: true
-image: /images/rapidapi.png
-permalink: /techtalk/rapidapi
-categories: [1.A, 5.B, 5.D]
-tags: [api, rapidapi]
-type: pbl
-week: 7
+title: Application Programming Interface (API)
+toc: true 
+badges: true
+comments: true
+categories: [jupyter, Week 7]
 nb_path: _notebooks/2022-10-03-PBL-python_rapidapi.ipynb
 layout: notebook
 ---
