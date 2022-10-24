@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>API Javascript API | Tay Kim fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="API Javascript API" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Describing use of Javascript code in API and finding similarities" />
+<meta property="og:description" content="Describing use of Javascript code in API and finding similarities" />
+<link rel="canonical" href="https://taykimmy.github.io/VSCodeProject/jupyter/week%209/2022/10/23/Javascript-API-Hacks.html" />
+<meta property="og:url" content="https://taykimmy.github.io/VSCodeProject/jupyter/week%209/2022/10/23/Javascript-API-Hacks.html" />
+<meta property="og:site_name" content="Tay Kim fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-10-23T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="API Javascript API" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-10-23T00:00:00-05:00","datePublished":"2022-10-23T00:00:00-05:00","description":"Describing use of Javascript code in API and finding similarities","headline":"API Javascript API","mainEntityOfPage":{"@type":"WebPage","@id":"https://taykimmy.github.io/VSCodeProject/jupyter/week%209/2022/10/23/Javascript-API-Hacks.html"},"url":"https://taykimmy.github.io/VSCodeProject/jupyter/week%209/2022/10/23/Javascript-API-Hacks.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/VSCodeProject/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://taykimmy.github.io/VSCodeProject/feed.xml" title="Tay Kim fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/VSCodeProject/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/VSCodeProject/">Tay Kim fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/VSCodeProject/_pages/00_Schedule.html">Schedule</a><a class="page-link" href="/VSCodeProject/about/">About Me</a><a class="page-link" href="/VSCodeProject/search/">Search</a><a class="page-link" href="/VSCodeProject/_pages/03_Notes.html">Vocab</a><a class="page-link" href="/VSCodeProject/_pages/04_Other-Subject.html">World History</a><a class="page-link" href="/VSCodeProject/categories/">Tags</a><a class="page-link" href="/VSCodeProject/_pages/06_submenu.html">Submenu</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">API Javascript API</h1><p class="page-description">Describing use of Javascript code in API and finding similarities</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-10-23T00:00:00-05:00" itemprop="datePublished">
+        Oct 23, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      3 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/VSCodeProject/categories/#jupyter">jupyter</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/VSCodeProject/categories/#Week 9">Week 9</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/TayKimmy/VSCodeProject/tree/master/_notebooks/2022-10-23-Javascript-API-Hacks.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/VSCodeProject/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/TayKimmy/VSCodeProject/master?filepath=_notebooks%2F2022-10-23-Javascript-API-Hacks.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/VSCodeProject/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/TayKimmy/VSCodeProject/blob/master/_notebooks/2022-10-23-Javascript-API-Hacks.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/VSCodeProject/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FTayKimmy%2FVSCodeProject%2Fblob%2Fmaster%2F_notebooks%2F2022-10-23-Javascript-API-Hacks.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/VSCodeProject/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#Hacks">Hacks </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Similarities">Similarities </a></li>
+<li class="toc-entry toc-h3"><a href="#Breaking-up-the-code-for-Covid-API">Breaking up the code for Covid API </a></li>
+</ul>
+</li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-10-23-Javascript-API-Hacks.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Hacks">
+<a class="anchor" href="#Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks<a class="anchor-link" href="#Hacks"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Similarities">
+<a class="anchor" href="#Similarities" aria-hidden="true"><span class="octicon octicon-link"></span></a>Similarities<a class="anchor-link" href="#Similarities"> </a>
+</h3>
+<p>There are some similarities that I see with the Javascript in the Jokes API:</p>
+<ul>
+<li>They all have similar syntax with each other</li>
+<li>All connect to the table made using HTML code</li>
+<li>Use a lot of <code>.json</code> and <code>.log</code>
+</li>
+<li>Use <code>fetch</code> a lot as well as <code>if</code> and <code>else</code> statements</li>
+<li>Make use of functions to check and run things</li>
+<li>Use <code>onclick</code> to run a function each time an action occurs</li>
+<li>All do different things using the same API</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Breaking-up-the-code-for-Covid-API">
+<a class="anchor" href="#Breaking-up-the-code-for-Covid-API" aria-hidden="true"><span class="octicon octicon-link"></span></a>Breaking up the code for Covid API<a class="anchor-link" href="#Breaking-up-the-code-for-Covid-API"> </a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The code below makes a table using HTML code and makes 4 columns titled <code>Time</code>, <code>All-time Cases</code>, <code>Recorded Deaths</code>, and <code>Active Cases</code>.
+It also makes an id for each row under those 4 columns with the id name the same as its column name.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="o">&lt;</span><span class="err">!</span><span class="o">--</span> <span class="n">HTML</span> <span class="n">table</span> <span class="n">fragment</span> <span class="k">for</span> <span class="n">page</span> <span class="o">--&gt;</span>
+<span class="o">&lt;</span><span class="n">table</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">thead</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">tr</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">th</span><span class="o">&gt;</span><span class="n">Time</span><span class="o">&lt;/</span><span class="n">th</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">th</span><span class="o">&gt;</span><span class="n">All</span><span class="o">-</span><span class="n">time</span> <span class="n">Cases</span><span class="o">&lt;/</span><span class="n">th</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">th</span><span class="o">&gt;</span><span class="n">Recorded</span> <span class="n">Deaths</span><span class="o">&lt;/</span><span class="n">th</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">th</span><span class="o">&gt;</span><span class="n">Active</span> <span class="n">Cases</span><span class="o">&lt;/</span><span class="n">th</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">tr</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">thead</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">tbody</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">td</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"time"</span><span class="o">&gt;&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">td</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"total_cases"</span><span class="o">&gt;&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">td</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"total_deaths"</span><span class="o">&gt;&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">td</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"active_cases"</span><span class="o">&gt;&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">tbody</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">table</span><span class="o">&gt;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The code below also uses HTML code to output a table with the same columns and titles as the code above. But, this one has a different id with the id name equal to "result".</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="o">&lt;</span><span class="n">table</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">thead</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">tr</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">th</span><span class="o">&gt;</span><span class="n">Country</span><span class="o">&lt;/</span><span class="n">th</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">th</span><span class="o">&gt;</span><span class="n">All</span><span class="o">-</span><span class="n">time</span> <span class="n">Cases</span><span class="o">&lt;/</span><span class="n">th</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">th</span><span class="o">&gt;</span><span class="n">Recorded</span> <span class="n">Deaths</span><span class="o">&lt;/</span><span class="n">th</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">th</span><span class="o">&gt;</span><span class="n">Active</span> <span class="n">Cases</span><span class="o">&lt;/</span><span class="n">th</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">tr</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">thead</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">tbody</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"result"</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="err">!</span><span class="o">--</span> <span class="n">generated</span> <span class="n">rows</span> <span class="o">--&gt;</span>
+    <span class="o">&lt;/</span><span class="n">tbody</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">table</span><span class="o">&gt;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The code below uses the link to the API to extract specific variables and then output them in the "result" section in the HTML table. It also makes headers.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="o">&lt;</span><span class="err">!</span><span class="o">--</span> <span class="n">Script</span> <span class="ow">is</span> <span class="n">layed</span> <span class="n">out</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">sequence</span> <span class="p">(</span><span class="n">no</span> <span class="n">function</span><span class="p">)</span> <span class="ow">and</span> <span class="n">will</span> <span class="n">execute</span> <span class="n">when</span> <span class="n">page</span> <span class="ow">is</span> <span class="n">loaded</span> <span class="o">--&gt;</span>
+<span class="o">&lt;</span><span class="n">script</span><span class="o">&gt;</span>
+    <span class="o">//</span> <span class="n">prepare</span> <span class="n">HTML</span> <span class="n">result</span> <span class="n">container</span> <span class="k">for</span> <span class="n">new</span> <span class="n">output</span>
+    <span class="n">const</span> <span class="n">resultContainer</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s2">"result"</span><span class="p">);</span>
+  
+    <span class="o">//</span> <span class="n">prepare</span> <span class="n">fetch</span> <span class="n">options</span>
+    <span class="n">const</span> <span class="n">url</span> <span class="o">=</span> <span class="s2">"https://flask.nighthawkcodingsociety.com/api/covid/"</span><span class="p">;</span>
+    <span class="n">const</span> <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="n">method</span><span class="p">:</span> <span class="s1">'GET'</span><span class="p">,</span> <span class="o">//</span> <span class="o">*</span><span class="n">GET</span><span class="p">,</span> <span class="n">POST</span><span class="p">,</span> <span class="n">PUT</span><span class="p">,</span> <span class="n">DELETE</span><span class="p">,</span> <span class="n">etc</span><span class="o">.</span>
+      <span class="n">mode</span><span class="p">:</span> <span class="s1">'cors'</span><span class="p">,</span> <span class="o">//</span> <span class="n">no</span><span class="o">-</span><span class="n">cors</span><span class="p">,</span> <span class="o">*</span><span class="n">cors</span><span class="p">,</span> <span class="n">same</span><span class="o">-</span><span class="n">origin</span>
+      <span class="n">cache</span><span class="p">:</span> <span class="s1">'default'</span><span class="p">,</span> <span class="o">//</span> <span class="o">*</span><span class="n">default</span><span class="p">,</span> <span class="n">no</span><span class="o">-</span><span class="n">cache</span><span class="p">,</span> <span class="n">reload</span><span class="p">,</span> <span class="n">force</span><span class="o">-</span><span class="n">cache</span><span class="p">,</span> <span class="n">only</span><span class="o">-</span><span class="k">if</span><span class="o">-</span><span class="n">cached</span>
+      <span class="n">credentials</span><span class="p">:</span> <span class="s1">'omit'</span><span class="p">,</span> <span class="o">//</span> <span class="n">include</span><span class="p">,</span> <span class="o">*</span><span class="n">same</span><span class="o">-</span><span class="n">origin</span><span class="p">,</span> <span class="n">omit</span>
+      <span class="n">headers</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">'Content-Type'</span><span class="p">:</span> <span class="s1">'application/json'</span>
+        <span class="o">//</span> <span class="s1">'Content-Type'</span><span class="p">:</span> <span class="s1">'application/x-www-form-urlencoded'</span><span class="p">,</span>
+      <span class="p">},</span>
+    <span class="p">};</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The code below fetches the url and headers made in the segment of code presented above. The code checks for any response errors in those headers uding an if statement and if there is none, those elements are appended to the HTML table. The responses are also outputted using JSON data.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="o">//</span> <span class="n">fetch</span> <span class="n">the</span> <span class="n">API</span>
+  <span class="n">fetch</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="p">)</span>
+    <span class="o">//</span> <span class="n">response</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">RESTful</span> <span class="s2">"promise"</span> <span class="n">on</span> <span class="nb">any</span> <span class="n">successful</span> <span class="n">fetch</span>
+    <span class="o">.</span><span class="n">then</span><span class="p">(</span><span class="n">response</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="o">//</span> <span class="n">check</span> <span class="k">for</span> <span class="n">response</span> <span class="n">errors</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status</span> <span class="o">!==</span> <span class="mi">200</span><span class="p">)</span> <span class="p">{</span>
+          <span class="n">const</span> <span class="n">errorMsg</span> <span class="o">=</span> <span class="s1">'Database response error: '</span> <span class="o">+</span> <span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="p">;</span>
+          <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">errorMsg</span><span class="p">);</span>
+          <span class="n">const</span> <span class="n">tr</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">createElement</span><span class="p">(</span><span class="s2">"tr"</span><span class="p">);</span>
+          <span class="n">const</span> <span class="n">td</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">createElement</span><span class="p">(</span><span class="s2">"td"</span><span class="p">);</span>
+          <span class="n">td</span><span class="o">.</span><span class="n">innerHTML</span> <span class="o">=</span> <span class="n">errorMsg</span><span class="p">;</span>
+          <span class="n">tr</span><span class="o">.</span><span class="n">appendChild</span><span class="p">(</span><span class="n">td</span><span class="p">);</span>
+          <span class="n">resultContainer</span><span class="o">.</span><span class="n">appendChild</span><span class="p">(</span><span class="n">tr</span><span class="p">);</span>
+          <span class="k">return</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="o">//</span> <span class="n">valid</span> <span class="n">response</span> <span class="n">will</span> <span class="n">have</span> <span class="n">json</span> <span class="n">data</span>
+      <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span><span class="o">.</span><span class="n">then</span><span class="p">(</span><span class="n">data</span> <span class="o">=&gt;</span> <span class="p">{</span>
+          <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+          <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">world_total</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The code below gets all the data specific to the API such as World Data, Country Data, and then are appended to the HTML table. This is achieved through the <code>getElementById</code>. They are appended to their respective row based on whater their data is about. The code also checks for fetch errors and then appends to the table again.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="o">//</span> <span class="n">World</span> <span class="n">Data</span>
+  <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s2">"time"</span><span class="p">)</span><span class="o">.</span><span class="n">innerHTML</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">world_total</span><span class="o">.</span><span class="n">statistic_taken_at</span><span class="p">;</span>
+  <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s2">"total_cases"</span><span class="p">)</span><span class="o">.</span><span class="n">innerHTML</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">world_total</span><span class="o">.</span><span class="n">total_cases</span><span class="p">;</span>
+  <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s2">"total_deaths"</span><span class="p">)</span><span class="o">.</span><span class="n">innerHTML</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">world_total</span><span class="o">.</span><span class="n">total_deaths</span><span class="p">;</span>
+  <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s2">"active_cases"</span><span class="p">)</span><span class="o">.</span><span class="n">innerHTML</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">world_total</span><span class="o">.</span><span class="n">active_cases</span><span class="p">;</span>
+
+  <span class="o">//</span> <span class="n">Country</span> <span class="n">data</span>
+  <span class="k">for</span> <span class="p">(</span><span class="n">const</span> <span class="n">row</span> <span class="n">of</span> <span class="n">data</span><span class="o">.</span><span class="n">countries_stat</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">row</span><span class="p">);</span>
+
+    <span class="o">//</span> <span class="n">tr</span> <span class="k">for</span> <span class="n">each</span> <span class="n">row</span>
+    <span class="n">const</span> <span class="n">tr</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">createElement</span><span class="p">(</span><span class="s2">"tr"</span><span class="p">);</span>
+    <span class="o">//</span> <span class="n">td</span> <span class="k">for</span> <span class="n">each</span> <span class="n">column</span>
+    <span class="n">const</span> <span class="n">name</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">createElement</span><span class="p">(</span><span class="s2">"td"</span><span class="p">);</span>
+    <span class="n">const</span> <span class="n">cases</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">createElement</span><span class="p">(</span><span class="s2">"td"</span><span class="p">);</span>
+    <span class="n">const</span> <span class="n">deaths</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">createElement</span><span class="p">(</span><span class="s2">"td"</span><span class="p">);</span>
+    <span class="n">const</span> <span class="n">active</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">createElement</span><span class="p">(</span><span class="s2">"td"</span><span class="p">);</span>
+
+    <span class="o">//</span> <span class="n">data</span> <span class="ow">is</span> <span class="n">specific</span> <span class="n">to</span> <span class="n">the</span> <span class="n">API</span>
+    <span class="n">name</span><span class="o">.</span><span class="n">innerHTML</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">country_name</span><span class="p">;</span>
+    <span class="n">cases</span><span class="o">.</span><span class="n">innerHTML</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">cases</span><span class="p">;</span> 
+    <span class="n">deaths</span><span class="o">.</span><span class="n">innerHTML</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">deaths</span><span class="p">;</span> 
+    <span class="n">active</span><span class="o">.</span><span class="n">innerHTML</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">active_cases</span><span class="p">;</span> 
+
+    <span class="o">//</span> <span class="n">this</span> <span class="n">builds</span> <span class="n">td</span><span class="s1">'s into tr</span>
+    <span class="n">tr</span><span class="o">.</span><span class="n">appendChild</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+    <span class="n">tr</span><span class="o">.</span><span class="n">appendChild</span><span class="p">(</span><span class="n">cases</span><span class="p">);</span>
+    <span class="n">tr</span><span class="o">.</span><span class="n">appendChild</span><span class="p">(</span><span class="n">deaths</span><span class="p">);</span>
+    <span class="n">tr</span><span class="o">.</span><span class="n">appendChild</span><span class="p">(</span><span class="n">active</span><span class="p">);</span>
+
+    <span class="o">//</span> <span class="n">add</span> <span class="n">HTML</span> <span class="n">to</span> <span class="n">container</span>
+    <span class="n">resultContainer</span><span class="o">.</span><span class="n">appendChild</span><span class="p">(</span><span class="n">tr</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+<span class="p">})</span>
+<span class="o">//</span> <span class="n">catch</span> <span class="n">fetch</span> <span class="n">errors</span> <span class="p">(</span><span class="n">ie</span> <span class="n">ACCESS</span> <span class="n">to</span> <span class="n">server</span> <span class="n">blocked</span><span class="p">)</span>
+<span class="o">.</span><span class="n">catch</span><span class="p">(</span><span class="n">err</span> <span class="o">=&gt;</span> <span class="p">{</span>
+<span class="n">console</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="n">err</span><span class="p">);</span>
+<span class="n">const</span> <span class="n">tr</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">createElement</span><span class="p">(</span><span class="s2">"tr"</span><span class="p">);</span>
+<span class="n">const</span> <span class="n">td</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">createElement</span><span class="p">(</span><span class="s2">"td"</span><span class="p">);</span>
+<span class="n">td</span><span class="o">.</span><span class="n">innerHTML</span> <span class="o">=</span> <span class="n">err</span><span class="p">;</span>
+<span class="n">tr</span><span class="o">.</span><span class="n">appendChild</span><span class="p">(</span><span class="n">td</span><span class="p">);</span>
+<span class="n">resultContainer</span><span class="o">.</span><span class="n">appendChild</span><span class="p">(</span><span class="n">tr</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="TayKimmy/VSCodeProject"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/VSCodeProject/jupyter/week%209/2022/10/23/Javascript-API-Hacks.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/VSCodeProject/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/VSCodeProject/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/VSCodeProject/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Tay&#39;s first fastpage is going to be amazing.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" target="_blank" title="fastai"><svg class="svg-icon grey"><use xlink:href="/VSCodeProject/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" target="_blank" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/VSCodeProject/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
