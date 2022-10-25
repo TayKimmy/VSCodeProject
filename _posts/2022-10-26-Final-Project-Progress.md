@@ -1,9 +1,9 @@
 ---
 toc: true
 layout: post
-description: This is a post for the hacks for CTE
+description: This is a post for our progress on the team final project
 categories: [markdown, Week 10]
-title: CTE
+title: Final Project Progress
 ---
 
 ### Issues
