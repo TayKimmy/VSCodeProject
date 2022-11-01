@@ -1,7 +1,7 @@
 ---
 toc: true
 layout: post
-description: This is a blob post about Night At The Museum
+description: This is a blog post about Night At The Museum
 categories: [markdown, Week 11]
 title: Night At The Museum
 ---
