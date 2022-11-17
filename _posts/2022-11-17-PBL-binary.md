@@ -3,7 +3,7 @@ toc: true
 layout: post
 description: A post on binary
 categories: [markdown, Week 13]
-title: binary math
+title: Binary Math
 ---
 
 <!-- Hack 1: add a character display to text when 8 bits, determine if printable or not printable -->
