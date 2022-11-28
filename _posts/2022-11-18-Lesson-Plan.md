@@ -6,6 +6,7 @@ toc: true
 badges: true
 comments: true
 categories: [jupyter, Week 13]
+type: pbl
 nb_path: _notebooks/2022-11-18-Lesson-Plan.ipynb
 layout: notebook
 ---
@@ -33,7 +34,8 @@ layout: notebook
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numbervariable</span> <span class="o">=</span> <span class="mi">25</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#defining all the variables using the equal sign</span>
+<span class="n">numbervariable</span> <span class="o">=</span> <span class="mi">25</span>
 <span class="n">stringvariable</span> <span class="o">=</span> <span class="s2">&quot;word&quot;</span>
 <span class="n">numberlist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 <span class="n">stringlist</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">]</span>
