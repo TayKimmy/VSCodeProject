@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      5 min read
+      6 min read
     
 </span></p>
 
@@ -187,9 +187,9 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>  <span class="c1"># importing the package - random</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>  <span class="c1">#getting a random integer between 1 and 100</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># printing the random integer</span>
 </pre></div>
 
     </div>
@@ -229,19 +229,19 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
-<span class="k">def</span> <span class="nf">mycloset</span><span class="p">():</span>
-    <span class="n">myclothes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"red shoes"</span><span class="p">,</span> <span class="s2">"green pants"</span><span class="p">,</span> <span class="s2">"tie"</span><span class="p">,</span> <span class="s2">"belt"</span><span class="p">]</span>
-    <span class="n">newclothes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"black shoes"</span><span class="p">,</span> <span class="s2">"white shirt"</span><span class="p">,</span> <span class="s2">"blue socks"</span><span class="p">,</span> <span class="s2">"red jacket"</span><span class="p">]</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">newclothes</span><span class="p">))</span>
-    <span class="n">y</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">myclothes</span><span class="p">))</span>
-    <span class="n">user</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Please decide whether to add or trash an item"</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">user</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"add"</span><span class="p">:</span>
-        <span class="n">myclothes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">newclothes</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
-    <span class="k">elif</span> <span class="n">user</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"trash"</span><span class="p">:</span>
-        <span class="n">myclothes</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">myclothes</span><span class="p">[</span><span class="n">y</span><span class="p">])</span>
-    <span class="k">return</span> <span class="n">myclothes</span>
+<span class="k">def</span> <span class="nf">mycloset</span><span class="p">():</span> <span class="c1">#def function</span>
+    <span class="n">myclothes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"red shoes"</span><span class="p">,</span> <span class="s2">"green pants"</span><span class="p">,</span> <span class="s2">"tie"</span><span class="p">,</span> <span class="s2">"belt"</span><span class="p">]</span> <span class="c1"># defining clothes list</span>
+    <span class="n">newclothes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"black shoes"</span><span class="p">,</span> <span class="s2">"white shirt"</span><span class="p">,</span> <span class="s2">"blue socks"</span><span class="p">,</span> <span class="s2">"red jacket"</span><span class="p">]</span> <span class="c1"># defining new clothes list</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">newclothes</span><span class="p">))</span> <span class="c1"># Creating random integer between 1 and the length of new clothes list</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">myclothes</span><span class="p">))</span> <span class="c1">#Creating random integer between 1 and the length of clothes list</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Please decide whether to add or trash an item"</span><span class="p">)</span> <span class="c1">#creating user input</span>
+    <span class="k">if</span> <span class="n">user</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"add"</span><span class="p">:</span>        <span class="c1"># if user chooses add</span>
+        <span class="n">myclothes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">newclothes</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>   <span class="c1"># adding a random item from new clothes into myclothes</span>
+    <span class="k">elif</span> <span class="n">user</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"trash"</span><span class="p">:</span>      <span class="c1">#if user chooses trash</span>
+        <span class="n">myclothes</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">myclothes</span><span class="p">[</span><span class="n">y</span><span class="p">])</span>      <span class="c1">#removing a random item from myclothes list</span>
+    <span class="k">return</span> <span class="n">myclothes</span>    <span class="c1"># returning the list</span>
 
-<span class="n">mycloset</span><span class="p">()</span>
+<span class="n">mycloset</span><span class="p">()</span>   <span class="c1"># calling function</span>
 </pre></div>
 
     </div>
@@ -288,11 +288,11 @@ window.onload = wrap_img;
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
 
 <span class="k">def</span> <span class="nf">coinflip</span><span class="p">():</span>         <span class="c1">#def function </span>
-    <span class="n">randomflip</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="c1">#picks either 0 or 1 randomly (50/50 chance of either) </span>
-    <span class="k">if</span> <span class="n">randomflip</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="c1">#assigning 0 to be heads--&gt; if 0 is chosen then it will print, "Heads"</span>
+    <span class="n">randomflip</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="c1">#picks 0, 1, or 2 randomly - creating a weighted coin with 33% fail and 66% head</span>
+    <span class="k">if</span> <span class="n">randomflip</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="c1">#assigning 0 to be tails--&gt; if 0 is chosen then it will print, "tails"</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">"Tails"</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">randomflip</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">randomflip</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span> <span class="c1">#assigning 1 to be tails--&gt; if 1 is chosen then it will print, "Tails"</span>
+        <span class="k">if</span> <span class="n">randomflip</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">randomflip</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span> <span class="c1">#assigning 1 or 2 to be heads--&gt; if 1 or 2 is chosen then it will print, "heads"</span>
             <span class="nb">print</span><span class="p">(</span><span class="s2">"Heads"</span><span class="p">)</span>
 
 <span class="c1">#Tossing the coin 5 times:</span>
@@ -347,13 +347,18 @@ Tails
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
 
 <span class="k">def</span> <span class="nf">randomnum</span><span class="p">():</span> <span class="c1"># function for generating random int</span>
-    
+    <span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>   <span class="c1"># random integer from 0 to 255</span>
+    <span class="k">return</span> <span class="n">x</span>    <span class="c1"># returning random integer</span>
 
 <span class="k">def</span> <span class="nf">converttobin</span><span class="p">(</span><span class="n">n</span><span class="p">):</span> <span class="c1"># function for converting decimal to binary</span>
-    
+    <span class="n">binary</span> <span class="o">=</span> <span class="nb">bin</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">binary</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">survivors</span><span class="p">(</span><span class="n">binary</span><span class="p">):</span> <span class="c1"># function to assign position</span>
     <span class="n">survivorstatus</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Jiya"</span><span class="p">,</span> <span class="s2">"Shruthi"</span><span class="p">,</span> <span class="s2">"Noor"</span><span class="p">,</span> <span class="s2">"Ananya"</span> <span class="p">,</span> <span class="s2">"Peter Parker"</span><span class="p">,</span> <span class="s2">"Andrew Garfield"</span><span class="p">,</span> <span class="s2">"Tom Holland"</span><span class="p">,</span> <span class="s2">"Tobey Maguire"</span><span class="p">]</span>
+    <span class="n">number</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="nb">bin</span> <span class="ow">in</span> <span class="n">binary</span><span class="p">:</span>
+        
     <span class="c1"># replace the names above with your choice of people in the house</span>
 </pre></div>
 
