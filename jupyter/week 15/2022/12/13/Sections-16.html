@@ -351,18 +351,47 @@ Tails
     <span class="k">return</span> <span class="n">x</span>    <span class="c1"># returning random integer</span>
 
 <span class="k">def</span> <span class="nf">converttobin</span><span class="p">(</span><span class="n">n</span><span class="p">):</span> <span class="c1"># function for converting decimal to binary</span>
-    <span class="n">binary</span> <span class="o">=</span> <span class="nb">bin</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">binary</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
-
+    <span class="n">binary</span> <span class="o">=</span> <span class="nb">bin</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">"0b"</span><span class="p">,</span> <span class="s2">"0"</span><span class="p">)</span>
+    <span class="n">binary</span> <span class="o">=</span> <span class="n">binary</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">binary</span>
+    
 <span class="k">def</span> <span class="nf">survivors</span><span class="p">(</span><span class="n">binary</span><span class="p">):</span> <span class="c1"># function to assign position</span>
     <span class="n">survivorstatus</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Jiya"</span><span class="p">,</span> <span class="s2">"Shruthi"</span><span class="p">,</span> <span class="s2">"Noor"</span><span class="p">,</span> <span class="s2">"Ananya"</span> <span class="p">,</span> <span class="s2">"Peter Parker"</span><span class="p">,</span> <span class="s2">"Andrew Garfield"</span><span class="p">,</span> <span class="s2">"Tom Holland"</span><span class="p">,</span> <span class="s2">"Tobey Maguire"</span><span class="p">]</span>
-    <span class="n">number</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="nb">bin</span> <span class="ow">in</span> <span class="n">binary</span><span class="p">:</span>
-        
+        <span class="k">if</span> <span class="nb">bin</span> <span class="o">==</span> <span class="s2">"0"</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">survivorstatus</span><span class="p">[</span><span class="n">num</span><span class="p">]</span> <span class="o">+</span> <span class="s2">" is a zombie"</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">survivorstatus</span><span class="p">[</span><span class="n">num</span><span class="p">]</span> <span class="o">+</span> <span class="s2">" is a survivor"</span><span class="p">)</span>
+        <span class="n">num</span> <span class="o">+=</span> <span class="mi">1</span>
+
+
+<span class="n">survivors</span><span class="p">(</span><span class="n">converttobin</span><span class="p">(</span><span class="n">randomnum</span><span class="p">()))</span>
     <span class="c1"># replace the names above with your choice of people in the house</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Jiya is a zombie
+Shruthi is a zombie
+Noor is a zombie
+Ananya is a survivor
+Peter Parker is a zombie
+Andrew Garfield is a zombie
+Tom Holland is a zombie
+Tobey Maguire is a zombie
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
