@@ -90,6 +90,15 @@ Some methods are always installed, such as those with the list methods which we 
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Challenge-2:-Turtle">Challenge 2: Turtle<a class="anchor-link" href="#Challenge-2:-Turtle"> </a></h3><p>Turtle is a python <strong> library which allows you to draw all kinds of different shapes. It's ofter used to teach beginning python learners, but is really cool to use anywhere. Turtle employs a </strong> __ to display what you've done, but unfortunately it's kind of annoying to make work with vscode.</p>
+<p>Task: Have fun with turtle! Create something that uses at least 2 lines of different lengths and 2 turns with different angles, and changes at least one setting about either the pen or canvas. Also use one command that isn't mentioned on the table below(there are a lot). Paste a screenshot of the code and the drawing from repl.it</p>
+<p><a href="https://taykimmy.github.io/VSCodeProject/markdown/week%2014/2022/12/13/Sections-14-15-Screenshots.html">Screenshots</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Challenge-3:-Math">Challenge 3: Math<a class="anchor-link" href="#Challenge-3:-Math"> </a></h3><p>Create a program which asks for a user input of two numbers, and returns the following:</p>
 <ul>
 <li>each number rounded up</li>
@@ -158,6 +167,7 @@ Some methods are always installed, such as those with the list methods which we 
 <h3 id="Homework---Libraries">Homework - Libraries<a class="anchor-link" href="#Homework---Libraries"> </a></h3><p>Option 1: Create a python program which generates a random number between 1 and 10, and use turtle to draw a regular polygon with that many sides. As a hint, remember that the total sum of all the angles in a polygon is (the number of sides - 2) * 180. Note: a regular polygon has all sides and angles the same size. Paste a screenshot of the code and the drawing from repl.it</p>
 <p>Option 2: use the "datetime" package, and looking up documentation, create a program to generate 2 random dates and find the number of days between</p>
 <p>Extra ideas: customize the settings, draw a picture, or something else!</p>
+<p><a href="https://taykimmy.github.io/VSCodeProject/markdown/week%2014/2022/12/13/Sections-14-15-Screenshots.html">Screenshots</a></p>
 
 </div>
 </div>
