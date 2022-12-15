@@ -3,7 +3,7 @@ keywords: fastai
 title: Unit 3 Sections 14-15 Homework and Challenges
 toc: true
 description: This is the homework for Unit 3 Sections 14-15
-categories: [jupyter, Week 15]
+categories: [jupyter, Week 16]
 nb_path: _notebooks/2022-12-12-Sections-14-15-Homework.ipynb
 layout: notebook
 ---
