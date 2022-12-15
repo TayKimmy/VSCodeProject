@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      5 min read
+      10 min read
     
 </span></p>
 
@@ -491,9 +491,13 @@ Roll 6: 6
     <span class="n">word</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">word</span>
 
-<span class="n">questions</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">questions</span> <span class="o">=</span> <span class="mi">6</span>
 <span class="n">correct</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s2">"question"</span><span class="p">:</span><span class="s2">"A researcher gathers data about the effect of Advanced Placement®︎ classes on students' success in college and career, and develops a simulation to show how a sequence of AP classes affect a hypothetical student's pathway.Several school administrators are concerned that the simulation contains bias favoring high-income students, however.?"</span><span class="p">,</span> <span class="s2">"correct_answer"</span><span class="p">:</span><span class="s2">"the simulation may accidentally contain bias due to the exclusion of details"</span><span class="p">,</span> <span class="s2">"incorrect_answer"</span><span class="p">:[</span><span class="s2">"if the simulation is found to contain bias, then it is not possible to remove the bias from the simulation"</span><span class="p">,</span> <span class="s2">"the only way for the simulation to be biased is if the researcher intentionally used data that favored their desired output"</span><span class="p">]},</span>
+    <span class="p">{</span><span class="s2">"question"</span><span class="p">:</span><span class="s2">"Kack is trying to plan his financial future using an online tool. The tool starts off by asking him to input details about his current finances and career. It then lets him choose different future scenarios, such as having children. For each scenario chosen, the tool does some calculations and outputs his projected savings at the ages of 35, 45, and 55.Would that be considered a simulation and why?"</span><span class="p">,</span> <span class="s2">"correct_answer"</span><span class="p">:</span><span class="s2">"yes, it's a simulation because it is an abstraction of a real world scenario that enables the drawing of inferences"</span><span class="p">,</span> <span class="s2">"incorrect_answer"</span><span class="p">:[</span><span class="s2">"no, it's not a simulation because it does not include a visualization of the results"</span><span class="p">,</span> <span class="s2">"no, it's not a simulation because it does not include all the details of his life history and the future financial environment"</span><span class="p">]},</span>
+    <span class="p">{</span><span class="s2">"question"</span><span class="p">:</span><span class="s2">"Sylvia is an industrial engineer working for a sporting goods company. She is developing a baseball bat that can hit balls with higher accuracy and asks their software engineering team to develop a simulation to verify the design.Which of the following details is most important to include in this simulation?"</span><span class="p">,</span> <span class="s2">"correct_answer"</span><span class="p">:</span><span class="s2">"accurate accounting for the effects of wind conditions on the movement of the ball"</span><span class="p">,</span> <span class="s2">"incorrect_answer"</span><span class="p">:[</span><span class="s2">"realistic sound effects based on the material of the baseball bat and the velocity of the hit"</span><span class="p">,</span> <span class="s2">"a depiction of an audience in the stands with lifelike behavior in response to hit accuracy"</span><span class="p">]},</span>
+    <span class="p">{</span><span class="s2">"question"</span><span class="p">:</span><span class="s2">"Ashlynn is an industrial engineer who is trying to design a safer parachute. She creates a computer simulation of the parachute opening at different heights and in different environmental conditions.What are advantages of running the simulation versus an actual experiment?"</span><span class="p">,</span> <span class="s2">"correct_answer"</span><span class="p">:</span><span class="s2">"the simulation will accurately predict the parachute's safety level, while an experiment may be inaccurate due to faulty experimental design"</span><span class="p">,</span> <span class="s2">"incorrect_answer"</span><span class="p">:[</span><span class="s2">"the simulation will not contain any bias that favors one body type over another, while an experiment will be biased"</span><span class="p">,</span> <span class="s2">"the simulation can be run more safely than an actual experiment"</span><span class="p">]},</span>
     <span class="p">{</span><span class="s2">"question"</span><span class="p">:</span><span class="s2">"What is a simulation?"</span><span class="p">,</span> <span class="s2">"correct_answer"</span><span class="p">:</span><span class="s2">"mimic real world situations"</span><span class="p">,</span> <span class="s2">"incorrect_answer"</span><span class="p">:[</span><span class="s2">"a procedure in coding"</span><span class="p">,</span> <span class="s2">"a function of loops"</span><span class="p">]},</span>
     <span class="p">{</span><span class="s2">"question"</span><span class="p">:</span><span class="s2">"What is always true of a simulation of a natural phenomenon?"</span><span class="p">,</span> <span class="s2">"correct_answer"</span><span class="p">:</span><span class="s2">"it abstracts away some details of the real world"</span><span class="p">,</span> <span class="s2">"incorrect_answer"</span><span class="p">:[</span><span class="s2">"the simulation will always be accurate"</span><span class="p">,</span> <span class="s2">"the simulation will always be focused on how damagineg natural phenomenons can be"</span><span class="p">]}]</span>
 
@@ -522,7 +526,27 @@ Roll 6: 6
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Question: What is a simulation?
+<pre>Question: A researcher gathers data about the effect of Advanced Placement®︎ classes on students' success in college and career, and develops a simulation to show how a sequence of AP classes affect a hypothetical student's pathway.Several school administrators are concerned that the simulation contains bias favoring high-income students, however.?
+the simulation may accidentally contain bias due to the exclusion of details
+if the simulation is found to contain bias, then it is not possible to remove the bias from the simulation
+the only way for the simulation to be biased is if the researcher intentionally used data that favored their desired output
+Answer is correct
+Question: Kack is trying to plan his financial future using an online tool. The tool starts off by asking him to input details about his current finances and career. It then lets him choose different future scenarios, such as having children. For each scenario chosen, the tool does some calculations and outputs his projected savings at the ages of 35, 45, and 55.Would that be considered a simulation and why?
+yes, it's a simulation because it is an abstraction of a real world scenario that enables the drawing of inferences
+no, it's not a simulation because it does not include a visualization of the results
+no, it's not a simulation because it does not include all the details of his life history and the future financial environment
+Answer is correct
+Question: Sylvia is an industrial engineer working for a sporting goods company. She is developing a baseball bat that can hit balls with higher accuracy and asks their software engineering team to develop a simulation to verify the design.Which of the following details is most important to include in this simulation?
+accurate accounting for the effects of wind conditions on the movement of the ball
+realistic sound effects based on the material of the baseball bat and the velocity of the hit
+a depiction of an audience in the stands with lifelike behavior in response to hit accuracy
+Answer is incorrect
+Question: Ashlynn is an industrial engineer who is trying to design a safer parachute. She creates a computer simulation of the parachute opening at different heights and in different environmental conditions.What are advantages of running the simulation versus an actual experiment?
+the simulation will accurately predict the parachute's safety level, while an experiment may be inaccurate due to faulty experimental design
+the simulation will not contain any bias that favors one body type over another, while an experiment will be biased
+the simulation can be run more safely than an actual experiment
+Answer is correct
+Question: What is a simulation?
 mimic real world situations
 a procedure in coding
 a function of loops
@@ -531,8 +555,8 @@ Question: What is always true of a simulation of a natural phenomenon?
 it abstracts away some details of the real world
 the simulation will always be accurate
 the simulation will always be focused on how damagineg natural phenomenons can be
-Answer is correct
-You scored 2/2
+Answer is incorrect
+You scored 4/2
 </pre>
 </div>
 </div>
