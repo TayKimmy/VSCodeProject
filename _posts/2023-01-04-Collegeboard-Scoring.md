@@ -5,8 +5,8 @@ description: This is a blog post containing the grades for Collegeboard submissi
 categories: [markdown, Week 16]
 title: Collegeboard Scoring
 ---
-
 ## Submission 1
+
 | Category | Student Score | Collegeboard Score | Comments |
 |-|-|-|-|
 | Program Purpose and Function | 0 | 0 | The written response does not define the program's functionality. |
@@ -19,6 +19,7 @@ title: Collegeboard Scoring
 ---
 
 ## Submission 2
+
 | Category | Student Score | Collegeboard Score | Comments |
 |-|-|-|-|
 | Program Purpose and Function | 1 | 1 | The response describes the program's purpose and functionality, as well as the inputs and outputs of the program. |
