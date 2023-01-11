@@ -28,3 +28,28 @@ title: Collegeboard Scoring
 | Procedural Abstraction | 1 | 1 | Shows two program segments with one showing a procedure with at least one parameter that as called later on in the code |
 | Algorithm Implementation | 1 | 1 | Shows sequencing, selection, and iteration, and explains how the algorithm can be replicated by others. |
 | Testing | 1 | 1 | Describes two calls to the procedure in the previous questions that pass different arguments. The results are also described. |
+
+---
+
+## Submission 3
+
+| Category | Student Score | Collegeboard Score | Comments |
+|-|-|-|-|
+| Program Purpose and Function | 1 | 1 | The response and video shows the input and output of the program, and the response describes the purpose. |
+| Data Abstraction | 1 | 1 | The response contains code segments that shows that data is being stored and used for program purpose.|
+| Managing Complexity | 1 | 1 | A list is shown being used to manage complexity and there is an explanation explaining how. |
+| Procedural Abstraction | 1 | 1 | There are 2 program code segments that shows a student-created procedure with one parameter being called with description. |
+| Algorithm Implementation | 1 | 1 | Sequencing, selection, and iteration is shown and the algorithm is explained with detail. |
+| Testing | 1 | 1 | 2 calls are described with the conditions of each call, and the results of each call is described. |
+
+---
+
+## Submission 4
+| Category | Student Score | Collegeboard Score | Comments |
+|-|-|-|-|
+| Program Purpose and Function | 1 | 1 | The response and video shows the input and output of the program, and the purpose is also defined. |
+| Data Abstraction | 0 | 0 | The response contains code segments that shows that data is being stored but does not show how the list is being used. |
+| Managing Complexity | 0 | 0 | A list is shown being used but it does not manage complexityand the response does not describe how the list manages complexity. |
+| Procedural Abstraction | 1 | 1 | There are 2 program code segments that shows a student-created procedure with at least one parameter being called with description of the procedure. |
+| Algorithm Implementation | 1 | 1 | The algorithm shows sequencing, selection, and iteration, and the purpose is explained. |
+| Testing | 0 | 0 | The response only talks about the conditions of each call, not the arguments. |
