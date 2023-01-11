@@ -5,6 +5,9 @@ description: This is a blog post containing the grades for Collegeboard submissi
 categories: [markdown, Week 16]
 title: Collegeboard Scoring
 ---
+
+# First Week
+
 ## Submission 1
 
 | Category | Student Score | Collegeboard Score | Comments |
@@ -31,16 +34,42 @@ title: Collegeboard Scoring
 
 ---
 
-## Submission 3
+# Second Week
+
+## Submission 1
 
 | Category | Student Score | Collegeboard Score | Comments |
 |-|-|-|-|
-| Program Purpose and Function | 1 | 1 | The response and video shows the input and output of the program, and the response describes the purpose. |
-| Data Abstraction | 1 | 1 | The response contains code segments that shows that data is being stored and used for program purpose.|
-| Managing Complexity | 1 | 1 | A list is shown being used to manage complexity and there is an explanation explaining how. |
-| Procedural Abstraction | 1 | 1 | There are 2 program code segments that shows a student-created procedure with one parameter being called with description. |
-| Algorithm Implementation | 1 | 1 | Sequencing, selection, and iteration is shown and the algorithm is explained with detail. |
+| Program Purpose and Function | 0 | 0 | The response does talk about input and output, but they are switched. The purpose is also not described correctly |
+| Data Abstraction | 0 | 0 | The response contains code segments but it does not actually show the list the respose talks about.|
+| Managing Complexity | 0 | 0 | The response does not show a list managing complexity and the description does not explain either. |
+| Procedural Abstraction | 0 | 0 | The response does not describe how the procedure contributes to overall functionality. |
+| Algorithm Implementation | 0 | 0 | Sequencing, selection, and iteration is shown but the algorithm is not explained with detail. |
 | Testing | 1 | 1 | 2 calls are described with the conditions of each call, and the results of each call is described. |
+
+---
+
+## Submission 2
+| Category | Student Score | Collegeboard Score | Comments |
+|-|-|-|-|
+| Program Purpose and Function | 1 | 1 | The response and video shows the input and output of the program, and the purpose and functionality of the program is also defined. |
+| Data Abstraction | 1 | 1 | The response contains code segments that shows that data is being stored and the list is also shown being used. |
+| Managing Complexity | 1 | 1 | A list is shown being used, it is shown managing complexity, and the response describes how the list manages complexity. |
+| Procedural Abstraction | 1 | 1 | There are 2 program code segments that shows a student-created procedure that is being called later on, with description of the procedure. |
+| Algorithm Implementation | 1 | 1 | The algorithm shows sequencing, selection, and iteration, and the purpose of the algorithm is explained. |
+| Testing | 1 | 1 | The response talks about 2 calls of the function with the conditions and results of each call. |
+
+---
+
+## Submission 3
+| Category | Student Score | Collegeboard Score | Comments |
+|-|-|-|-|
+| Program Purpose and Function | 0 | 0 | The response and video shows the input and output of the program, and the functionality is defined but the program purpose is not described. |
+| Data Abstraction | 1 | 1 | The response shows 2 code segments with data being stored and used, along with the name of the list. |
+| Managing Complexity | 1 | 1 | A list is shown being used to manage complexity and the name of the list is given. |
+| Procedural Abstraction | 1 | 1 | There are 2 program code segments that contains a student-created procedure and the response describes the procedure and how its called. |
+| Algorithm Implementation | 1 | 1 | The algorithm is described with enough detail to be replicated and it shows sequencing, selection, and iteration. |
+| Testing | 1 | 1 | The response contains 2 calls and describes the results, conditions, and call themselves. |
 
 ---
 
@@ -49,7 +78,7 @@ title: Collegeboard Scoring
 |-|-|-|-|
 | Program Purpose and Function | 1 | 1 | The response and video shows the input and output of the program, and the purpose is also defined. |
 | Data Abstraction | 0 | 0 | The response contains code segments that shows that data is being stored but does not show how the list is being used. |
-| Managing Complexity | 0 | 0 | A list is shown being used but it does not manage complexityand the response does not describe how the list manages complexity. |
+| Managing Complexity | 0 | 0 | A list is shown being used but it does not manage complexity and the response does not describe how the list manages complexity. |
 | Procedural Abstraction | 1 | 1 | There are 2 program code segments that shows a student-created procedure with at least one parameter being called with description of the procedure. |
 | Algorithm Implementation | 1 | 1 | The algorithm shows sequencing, selection, and iteration, and the purpose is explained. |
 | Testing | 0 | 0 | The response only talks about the conditions of each call, not the arguments. |
