@@ -111,3 +111,8 @@ The first call adds to the table a new row.
 
 Result of the second call:
 The second call calls another function that will create the table and the buttons.
+
+
+# Happy Face Image - Hacks
+This is the happy face image:
+![]({{ site.baseurl }}/images/Smiley.png)
