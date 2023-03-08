@@ -1,12 +1,9 @@
 ---
 keywords: fastai
-description: Lab will perform alterations on images, manipulate RGB values, and reduce the number of pixels.  College Board requires you to learn about Lossy and Lossless compression.  
-title: Unit 2.2 Data Compression, Images
+description: Blog about Big Idea 2.2 and Hacks
+title: Unit 2.2 Data Compression
 toc: true
-image: /images/python.png
-categories: []
-type: ap
-week: 25
+categories: [jupyter, Week 25]
 nb_path: _notebooks/2023-03-07-AP-unit2-2-compression.ipynb
 layout: notebook
 ---
@@ -62,16 +59,22 @@ layout: notebook
 </blockquote>
 <h3 id="pathlib">pathlib<a class="anchor-link" href="#pathlib"> </a></h3><blockquote><p>File paths are different on Windows versus Mac and Linux.  This can cause problems in a project as you work and deploy on different Operating Systems (OS's), pathlib is a solution to this problem.</p>
 <ul>
-<li>What are commands you use in terminal to access files?</li>
-<li>What are the command you use in Windows terminal to access files?</li>
-<li>What are some of the major differences?</li>
+<li>What are commands you use in terminal to access files?
+I use the ls command to list all the files and I use cd to move into directories. I use cat to read files and sudo nano to open and edit files.</li>
+<li>What are the command you use in Windows terminal to access files?
+I use the dir command to view the files and folders within a directory. To open a file, I can type the name of the file and press ENTER.</li>
+<li>What are some of the major differences?
+The biggest different is the use of different commands to open and access files. For example, ls vs dir.</li>
 </ul>
 </blockquote>
 <p>Provide what you observed, struggled with, or leaned while playing with this code.</p>
 <ul>
-<li>Why is path a big deal when working with images?</li>
-<li>How does the meta data source and label relate to Unit 5 topics?</li>
-<li>Look up IPython, describe why this is interesting in Jupyter Notebooks for both Pandas and Images?</li>
+<li><p>Why is path a big deal when working with images?</p>
+</li>
+<li><p>How does the meta data source and label relate to Unit 5 topics?</p>
+</li>
+<li><p>Look up IPython, describe why this is interesting in Jupyter Notebooks for both Pandas and Images?</p>
+</li>
 </ul>
 
 </div>
