@@ -15,6 +15,7 @@ I got a 46/50 which is 92%
 
 ## Missed Questions
 This is a table containing the questions I missed.
+
 | Question # | Why I missed |
 | - | - |
 | 33 | I got this question wrong because I was careless. I forgot that repeat 1 time is basically not necessary because the code will do it once either way. |
