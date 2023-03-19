@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      7 min read
+      8 min read
     
 </span></p>
 
@@ -142,6 +142,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#Hacks-Answered">Hacks Answered </a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#Data-Abstraction">Data Abstraction </a></li>
+<li class="toc-entry toc-h3"><a href="#Create-New-Table">Create New Table </a></li>
 </ul>
 </li>
 </ul>
@@ -223,7 +224,7 @@ window.onload = wrap_img;
     <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
     
     <span class="c1"># Fetch results of Schema</span>
-    <span class="n">results</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"PRAGMA table_info('users')"</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"PRAGMA table_info('cars')"</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
 
     <span class="c1"># Print the results</span>
     <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
@@ -248,8 +249,9 @@ window.onload = wrap_img;
 <pre>(0, 'id', 'INTEGER', 1, None, 1)
 (1, '_name', 'VARCHAR(255)', 1, None, 0)
 (2, '_uid', 'VARCHAR(255)', 1, None, 0)
-(3, '_password', 'VARCHAR(255)', 1, None, 0)
-(4, '_dob', 'DATE', 0, None, 0)
+(3, '_mascot', 'VARCHAR(255)', 1, None, 0)
+(4, '_car', 'VARCHAR(255)', 1, None, 0)
+(5, '_mile', 'INTEGER', 0, None, 0)
 </pre>
 </div>
 </div>
@@ -308,7 +310,7 @@ window.onload = wrap_img;
     <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
     
     <span class="c1"># Execute a SELECT statement to retrieve data from a table</span>
-    <span class="n">results</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">'SELECT * FROM users'</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">'SELECT * FROM cars'</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
 
     <span class="c1"># Print the results</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
@@ -334,12 +336,12 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>(3, 'Alexander Graham Bell', 'lex', 'sha256$Dx2dCyhzatxD3BiW$1a77786fae173914a5ba5c961a10173b89f4ec8788514832fec27b08ef303cbe', '2023-03-15')
-(4, 'Eli Whitney', 'whit', 'sha256$JRs8ExoL7fV6idBk$d1106da1191177b5fab42db1b01bb6c959b22f3d9b754d53491f993f1f9d6ba2', '2023-03-15')
-(5, 'Indiana Jones', 'indi', 'sha256$cXsfDPtEDeeI0JQ0$1f632e9316f2ac64deb9c1875c0655cf8e1c8f19e76c090d94a3bc4242a4d3f3', '1920-10-21')
-(6, 'Marion Ravenwood', 'raven', 'sha256$ODl4Y4zVsyRPefnP$0e77fe8ee0e0e7fd30bf08d60b9a4d1f12f1b4065cb8f1ec75fab5a0644d4d3f', '1921-10-21')
-(10, 'Nikola Tesla', 'niko', 'sha256$2PMl9yBwtzzBNvXx$3e9225d696e02f0c7090ca04f8f483b1e07140d9ed916a5024af1e9fdd64fa3e', '2023-03-17')
-(11, 'Tay', 'tay', 'sha256$G2GGjNY44TQ1j2jJ$a5f7da225782f860b09dcd20798e71279645e8cd4f026119739a426ea48dddbc', '2000-01-01')
+<pre>(1, 'Cameron Yarbough', 'cam', 'nighthawks', 'Tesla Model Y', 4.21)
+(2, 'Luke Jin', 'luke', 'nighthawks', 'Lamborghini', 4.39)
+(3, 'Adrian Welton', 'adrian', 'wolverines', 'Ferrari', 4.33)
+(4, 'Tom Bell', 'tommy', 'sundevils', 'NIO ec6', 4.19)
+(5, 'Stanley Yan', 'stanley', 'nighthawks', 'Mercedes Benz', 4.38)
+(6, 'Nathan Cristmore', 'nathan', 'falcons', 'Aston Martin', 4.22)
 </pre>
 </div>
 </div>
@@ -385,8 +387,9 @@ window.onload = wrap_img;
 <span class="k">def</span> <span class="nf">create</span><span class="p">():</span>
     <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your name:"</span><span class="p">)</span>
     <span class="n">uid</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your user id:"</span><span class="p">)</span>
-    <span class="n">password</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your password"</span><span class="p">)</span>
-    <span class="n">dob</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your date of birth 'YYYY-MM-DD'"</span><span class="p">)</span>
+    <span class="n">mascot</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your school mascot:"</span><span class="p">)</span>
+    <span class="n">car</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your car:"</span><span class="p">)</span>
+    <span class="n">mile</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your mile time:"</span><span class="p">)</span>
     
     <span class="c1"># Connect to the database file</span>
     <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">database</span><span class="p">)</span>
@@ -396,7 +399,7 @@ window.onload = wrap_img;
 
     <span class="k">try</span><span class="p">:</span>
         <span class="c1"># Execute an SQL command to insert data into a table</span>
-        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"INSERT INTO users (_name, _uid, _password, _dob) VALUES (?, ?, ?, ?)"</span><span class="p">,</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">password</span><span class="p">,</span> <span class="n">dob</span><span class="p">))</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"INSERT INTO cars (_name, _uid, _mascot, _car, _mile) VALUES (?, ?, ?, ?, ?)"</span><span class="p">,</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">mascot</span><span class="p">,</span> <span class="n">car</span><span class="p">,</span> <span class="n">mile</span><span class="p">))</span>
         
         <span class="c1"># Commit the changes to the database</span>
         <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
@@ -423,7 +426,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>A new user record awpoegih has been created
+<pre>A new user record micah has been created
 </pre>
 </div>
 </div>
@@ -472,12 +475,9 @@ window.onload = wrap_img;
 
 <span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="n">uid</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter user id to update"</span><span class="p">)</span>
-    <span class="n">password</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter updated password"</span><span class="p">)</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">password</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
-        <span class="n">message</span> <span class="o">=</span> <span class="s2">"hacked"</span>
-        <span class="n">password</span> <span class="o">=</span> <span class="s1">'gothackednewpassword123'</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">message</span> <span class="o">=</span> <span class="s2">"successfully updated"</span>
+    <span class="n">mascot</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your school mascot:"</span><span class="p">)</span>
+    <span class="n">car</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your car:"</span><span class="p">)</span>
+    <span class="n">mile</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your mile time:"</span><span class="p">)</span>
 
     <span class="c1"># Connect to the database file</span>
     <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">database</span><span class="p">)</span>
@@ -487,12 +487,12 @@ window.onload = wrap_img;
 
     <span class="k">try</span><span class="p">:</span>
         <span class="c1"># Execute an SQL command to update data in a table</span>
-        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"UPDATE users SET _password = ? WHERE _uid = ?"</span><span class="p">,</span> <span class="p">(</span><span class="n">password</span><span class="p">,</span> <span class="n">uid</span><span class="p">))</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"UPDATE cars SET _mascot = ?, _car = ?, _mile = ? WHERE _uid = ?"</span><span class="p">,</span> <span class="p">(</span><span class="n">mascot</span><span class="p">,</span> <span class="n">car</span><span class="p">,</span> <span class="n">mile</span> <span class="p">,</span> <span class="n">uid</span><span class="p">))</span>
         <span class="k">if</span> <span class="n">cursor</span><span class="o">.</span><span class="n">rowcount</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="c1"># The uid was not found in the table</span>
             <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"No uid </span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2"> was not found in the table"</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"The row with user id </span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2"> the password has been </span><span class="si">{</span><span class="n">message</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"The row with user id </span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
             <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
     <span class="k">except</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">Error</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">"Error while executing the UPDATE:"</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
@@ -515,7 +515,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>The row with user id toby the password has been successfully updated
+<pre>The row with user id micah
 </pre>
 </div>
 </div>
@@ -568,7 +568,7 @@ window.onload = wrap_img;
     <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
     
     <span class="k">try</span><span class="p">:</span>
-        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"DELETE FROM users WHERE _uid = ?"</span><span class="p">,</span> <span class="p">(</span><span class="n">uid</span><span class="p">,))</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"DELETE FROM cars WHERE _uid = ?"</span><span class="p">,</span> <span class="p">(</span><span class="n">uid</span><span class="p">,))</span>
         <span class="k">if</span> <span class="n">cursor</span><span class="o">.</span><span class="n">rowcount</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="c1"># The uid was not found in the table</span>
             <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"No uid </span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2"> was not found in the table"</span><span class="p">)</span>
@@ -596,7 +596,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>The row with id 3 was successfully deleted
+<pre>The row with uid micah was successfully deleted
 </pre>
 </div>
 </div>
@@ -671,7 +671,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Error while executing the INSERT: UNIQUE constraint failed: users._uid
+<pre>A new user record  has been created
 </pre>
 </div>
 </div>
@@ -712,10 +712,98 @@ window.onload = wrap_img;
 <a class="anchor" href="#Data-Abstraction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data Abstraction<a class="anchor-link" href="#Data-Abstraction"> </a>
 </h3>
 <p>Data Abstraction is used in 2.4a, as it simplifies the representation of the whole database. Within the classes in the database, objects are used to simplify the data. Each aspect of the user, like name and uid, are an object. It is also apparent when the code is debugged. There are many class variables in local and global, and objects are used.</p>
+<h3 id="Create-New-Table">
+<a class="anchor" href="#Create-New-Table" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create New Table<a class="anchor-link" href="#Create-New-Table"> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+
+<span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">database</span><span class="p">)</span>
+<span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"CREATE TABLE tracks AS SELECT _name, _uid, _mascot, _car, _mile FROM cars;"</span><span class="p">)</span>
+    <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+<span class="k">except</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">Error</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Error while executing the CREATE:"</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
+        
+<span class="c1"># Close the cursor and connection objects</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">read</span><span class="p">():</span>
+    <span class="c1"># Connect to the database file</span>
+    <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">database</span><span class="p">)</span>
+
+    <span class="c1"># Create a cursor object to execute SQL queries</span>
+    <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+    
+    <span class="c1"># Execute a SELECT statement to retrieve data from a table</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">'SELECT * FROM tracks'</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+
+    <span class="c1"># Print the results</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Table is empty"</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+
+    <span class="c1"># Close the cursor and connection objects</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    
+<span class="n">read</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>('Cameron Yarbough', 'cam', 'nighthawks', 'Tesla Model Y', 4.21)
+('Luke Jin', 'luke', 'nighthawks', 'Lamborghini', 4.39)
+('Adrian Welton', 'adrian', 'wolverines', 'Ferrari', 4.33)
+('Tom Bell', 'tommy', 'sundevils', 'NIO ec6', 4.19)
+('Stanley Yan', 'stanley', 'nighthawks', 'Mercedes Benz', 4.38)
+('Nathan Cristmore', 'nathan', 'falcons', 'Aston Martin', 4.22)
+</pre>
+</div>
+</div>
 
 </div>
 </div>
+
 </div>
+    
+
 </div>
 
 

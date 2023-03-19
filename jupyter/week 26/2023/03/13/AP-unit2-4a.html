@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      11 min read
+      10 min read
     
 </span></p>
 
@@ -299,8 +299,6 @@ window.onload = wrap_img;
 <span class="kn">import</span> <span class="nn">json</span>
 
 <span class="kn">from</span> <span class="nn">sqlalchemy.exc</span> <span class="kn">import</span> <span class="n">IntegrityError</span>
-<span class="kn">from</span> <span class="nn">werkzeug.security</span> <span class="kn">import</span> <span class="n">generate_password_hash</span><span class="p">,</span> <span class="n">check_password_hash</span>
-
 
 <span class="sd">''' Tutorial: https://www.sqlalchemy.org/library.html#tutorials, try to get into a Python shell and follow along '''</span>
 
@@ -309,24 +307,24 @@ window.onload = wrap_img;
 <span class="c1"># -- a.) db.Model is like an inner layer of the onion in ORM</span>
 <span class="c1"># -- b.) User represents data we want to store, something that is built on db.Model</span>
 <span class="c1"># -- c.) SQLAlchemy ORM is layer on top of SQLAlchemy Core, then SQLAlchemy engine, SQL</span>
-<span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
-    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">'users'</span>  <span class="c1"># table name is plural, class name is singular</span>
+<span class="k">class</span> <span class="nc">Car</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">'cars'</span>  <span class="c1"># table name is plural, class name is singular</span>
 
     <span class="c1"># Define the User schema with "vars" from object</span>
     <span class="nb">id</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">_name</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span> <span class="n">unique</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
     <span class="n">_uid</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span> <span class="n">unique</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-    <span class="n">_password</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span> <span class="n">unique</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-    <span class="n">_dob</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Date</span><span class="p">)</span>
+    <span class="n">_mascot</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span> <span class="n">unique</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">_car</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span> <span class="n">unique</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">_mile</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
     <span class="c1"># constructor of a User object, initializes the instance variables within object (self)</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s2">"123qwerty"</span><span class="p">,</span> <span class="n">dob</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">today</span><span class="p">()):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">mascot</span><span class="p">,</span> <span class="n">car</span><span class="p">,</span> <span class="n">mile</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">name</span>    <span class="c1"># variables with self prefix become part of the object, </span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_uid</span> <span class="o">=</span> <span class="n">uid</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">set_password</span><span class="p">(</span><span class="n">password</span><span class="p">)</span>
-        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dob</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>  <span class="c1"># not a date type     </span>
-            <span class="n">dob</span> <span class="o">=</span> <span class="n">date</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_dob</span> <span class="o">=</span> <span class="n">dob</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_mascot</span> <span class="o">=</span> <span class="n">mascot</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_car</span> <span class="o">=</span> <span class="n">car</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_mile</span> <span class="o">=</span> <span class="n">mile</span>
 
     <span class="c1"># a name getter method, extracts name from object</span>
     <span class="nd">@property</span>
@@ -352,39 +350,35 @@ window.onload = wrap_img;
     <span class="k">def</span> <span class="nf">is_uid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_uid</span> <span class="o">==</span> <span class="n">uid</span>
     
+    <span class="c1"># a getter method, extracts mascot from object</span>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">password</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_password</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span> <span class="o">+</span> <span class="s2">"..."</span> <span class="c1"># because of security only show 1st characters</span>
+    <span class="k">def</span> <span class="nf">mascot</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mascot</span>
+    
+    <span class="c1"># a setter function, allows mascot to be updated after initial object creation</span>
+    <span class="nd">@mascot</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">mascot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mascot</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_mascot</span> <span class="o">=</span> <span class="n">mascot</span>
 
-    <span class="c1"># update password, this is conventional method used for setter</span>
-    <span class="k">def</span> <span class="nf">set_password</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
-        <span class="sd">"""Create a hashed password."""</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_password</span> <span class="o">=</span> <span class="n">generate_password_hash</span><span class="p">(</span><span class="n">password</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">'sha256'</span><span class="p">)</span>
+    <span class="c1"># a getter method, extracts car from object</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">car</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_car</span>
 
-    <span class="c1"># check password parameter against stored/encrypted password</span>
-    <span class="k">def</span> <span class="nf">is_password</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
-        <span class="sd">"""Check against hashed password."""</span>
-        <span class="n">result</span> <span class="o">=</span> <span class="n">check_password_hash</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_password</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">result</span>
+    <span class="c1"># a setter function, allows car to be updated after initial object creation</span>
+    <span class="nd">@car</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">car</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">car</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_car</span> <span class="o">=</span> <span class="n">car</span>
     
-    <span class="c1"># dob property is returned as string, a string represents date outside object</span>
+    <span class="c1"># a getter method, extracts mile from object</span>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">dob</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">dob_string</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dob</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">'%m-</span><span class="si">%d</span><span class="s1">-%Y'</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">dob_string</span>
+    <span class="k">def</span> <span class="nf">mile</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mile</span>
     
-    <span class="c1"># dob setter, verifies date type before it is set or default to today</span>
-    <span class="nd">@dob</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">dob</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dob</span><span class="p">):</span>
-        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dob</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>  <span class="c1"># not a date type     </span>
-            <span class="n">dob</span> <span class="o">=</span> <span class="n">date</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_dob</span> <span class="o">=</span> <span class="n">dob</span>
-    
-    <span class="c1"># age is calculated field, age is returned according to date of birth</span>
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">age</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">today</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
-        <span class="k">return</span> <span class="n">today</span><span class="o">.</span><span class="n">year</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dob</span><span class="o">.</span><span class="n">year</span> <span class="o">-</span> <span class="p">((</span><span class="n">today</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="n">today</span><span class="o">.</span><span class="n">day</span><span class="p">)</span> <span class="o">&lt;</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_dob</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dob</span><span class="o">.</span><span class="n">day</span><span class="p">))</span>
+    <span class="c1"># a setter function, allows car to be updated after initial object creation</span>
+    <span class="nd">@mile</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">mile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mile</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_mile</span> <span class="o">=</span> <span class="n">mile</span>
     
     <span class="c1"># output content using str(object) is in human readable form</span>
     <span class="c1"># output content using json dumps, this is ready for API response</span>
@@ -410,20 +404,23 @@ window.onload = wrap_img;
             <span class="s2">"id"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
             <span class="s2">"name"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
             <span class="s2">"uid"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">uid</span><span class="p">,</span>
-            <span class="s2">"dob"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">dob</span><span class="p">,</span>
-            <span class="s2">"age"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="p">,</span>
+            <span class="s2">"mascot"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">mascot</span><span class="p">,</span>
+            <span class="s2">"mile"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">mile</span><span class="p">,</span>
+            <span class="s2">"car"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">car</span><span class="p">,</span>
         <span class="p">}</span>
 
-    <span class="c1"># CRUD update: updates user name, password, phone</span>
+    <span class="c1"># CRUD update: updates user name, car, phone</span>
     <span class="c1"># returns self</span>
-    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">""</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s2">""</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s2">""</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">""</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s2">""</span><span class="p">,</span> <span class="n">mascot</span><span class="o">=</span><span class="s2">""</span><span class="p">,</span> <span class="n">car</span><span class="o">=</span><span class="s2">""</span><span class="p">):</span>
         <span class="sd">"""only updates values with length"""</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">uid</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">uid</span> <span class="o">=</span> <span class="n">uid</span>
-        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">password</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">set_password</span><span class="p">(</span><span class="n">password</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">mascot</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">mascot</span> <span class="o">=</span> <span class="n">mascot</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">car</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_car</span> <span class="o">=</span> <span class="n">car</span>
         <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
         <span class="k">return</span> <span class="bp">self</span>
 
@@ -475,32 +472,32 @@ window.onload = wrap_img;
 
 
 <span class="c1"># Builds working data for testing</span>
-<span class="k">def</span> <span class="nf">initUsers</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">initCars</span><span class="p">():</span>
     <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
         <span class="sd">"""Create database and tables"""</span>
         <span class="n">db</span><span class="o">.</span><span class="n">create_all</span><span class="p">()</span>
         <span class="sd">"""Tester data for table"""</span>
-        <span class="n">u1</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'Thomas Edison'</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">'toby'</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">'123toby'</span><span class="p">,</span> <span class="n">dob</span><span class="o">=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">1847</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">))</span>
-        <span class="n">u2</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'Nikola Tesla'</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">'niko'</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">'123niko'</span><span class="p">)</span>
-        <span class="n">u3</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'Alexander Graham Bell'</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">'lex'</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">'123lex'</span><span class="p">)</span>
-        <span class="n">u4</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'Eli Whitney'</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">'whit'</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">'123whit'</span><span class="p">)</span>
-        <span class="n">u5</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'Indiana Jones'</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">'indi'</span><span class="p">,</span> <span class="n">dob</span><span class="o">=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">1920</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">21</span><span class="p">))</span>
-        <span class="n">u6</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'Marion Ravenwood'</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">'raven'</span><span class="p">,</span> <span class="n">dob</span><span class="o">=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">1921</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">21</span><span class="p">))</span>
+        <span class="n">u1</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'Cameron Yarbough'</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s2">"cam"</span><span class="p">,</span> <span class="n">mascot</span><span class="o">=</span><span class="s1">'nighthawks'</span><span class="p">,</span> <span class="n">mile</span><span class="o">=</span><span class="mf">4.21</span><span class="p">,</span> <span class="n">car</span><span class="o">=</span><span class="s1">'Tesla Model Y'</span><span class="p">)</span>
+        <span class="n">u2</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'Luke Jin'</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s2">"luke"</span><span class="p">,</span> <span class="n">mascot</span><span class="o">=</span><span class="s1">'nighthawks'</span><span class="p">,</span> <span class="n">mile</span><span class="o">=</span><span class="mf">4.39</span><span class="p">,</span> <span class="n">car</span><span class="o">=</span><span class="s1">'Lamborghini'</span><span class="p">)</span>
+        <span class="n">u3</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'Adrian Welton'</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s2">"adrian"</span><span class="p">,</span> <span class="n">mascot</span><span class="o">=</span><span class="s1">'wolverines'</span><span class="p">,</span> <span class="n">mile</span><span class="o">=</span><span class="mf">4.33</span><span class="p">,</span> <span class="n">car</span><span class="o">=</span><span class="s1">'Ferrari'</span><span class="p">)</span>
+        <span class="n">u4</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'Tom Bell'</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s2">"tommy"</span><span class="p">,</span> <span class="n">mascot</span><span class="o">=</span><span class="s1">'sundevils'</span><span class="p">,</span> <span class="n">mile</span><span class="o">=</span><span class="mf">4.19</span><span class="p">,</span> <span class="n">car</span><span class="o">=</span><span class="s1">'NIO ec6'</span><span class="p">)</span>
+        <span class="n">u5</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'Stanley Yan'</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s2">"stanley"</span><span class="p">,</span> <span class="n">mascot</span><span class="o">=</span><span class="s1">'nighthawks'</span><span class="p">,</span> <span class="n">mile</span><span class="o">=</span><span class="mf">4.38</span><span class="p">,</span> <span class="n">car</span><span class="o">=</span><span class="s1">'Mercedes Benz'</span><span class="p">)</span>
+        <span class="n">u6</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'Nathan Cristmore'</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s2">"nathan"</span><span class="p">,</span> <span class="n">mascot</span><span class="o">=</span><span class="s1">'falcons'</span><span class="p">,</span> <span class="n">mile</span><span class="o">=</span><span class="mf">4.22</span><span class="p">,</span> <span class="n">car</span><span class="o">=</span><span class="s1">'Aston Martin'</span><span class="p">)</span>
 
 
-        <span class="n">users</span> <span class="o">=</span> <span class="p">[</span><span class="n">u1</span><span class="p">,</span> <span class="n">u2</span><span class="p">,</span> <span class="n">u3</span><span class="p">,</span> <span class="n">u4</span><span class="p">,</span> <span class="n">u5</span><span class="p">,</span> <span class="n">u6</span><span class="p">]</span>
+        <span class="n">cars</span> <span class="o">=</span> <span class="p">[</span><span class="n">u1</span><span class="p">,</span> <span class="n">u2</span><span class="p">,</span> <span class="n">u3</span><span class="p">,</span> <span class="n">u4</span><span class="p">,</span> <span class="n">u5</span><span class="p">,</span> <span class="n">u6</span><span class="p">]</span>
 
-        <span class="sd">"""Builds sample user/note(s) data"""</span>
-        <span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">users</span><span class="p">:</span>
+        <span class="sd">"""Builds sample Track/note(s) data"""</span>
+        <span class="k">for</span> <span class="n">car</span> <span class="ow">in</span> <span class="n">cars</span><span class="p">:</span>
             <span class="k">try</span><span class="p">:</span>
-                <span class="sd">'''add user to table'''</span>
-                <span class="nb">object</span> <span class="o">=</span> <span class="n">user</span><span class="o">.</span><span class="n">create</span><span class="p">()</span>
+                <span class="sd">'''add Track to table'''</span>
+                <span class="nb">object</span> <span class="o">=</span> <span class="n">car</span><span class="o">.</span><span class="n">create</span><span class="p">()</span>
                 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Created new uid </span><span class="si">{</span><span class="nb">object</span><span class="o">.</span><span class="n">uid</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
             <span class="k">except</span><span class="p">:</span>  <span class="c1"># error raised if object nit created</span>
                 <span class="sd">'''fails with bad or duplicate data'''</span>
-                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Records exist uid </span><span class="si">{</span><span class="n">user</span><span class="o">.</span><span class="n">uid</span><span class="si">}</span><span class="s2">, or error."</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Records exist uid </span><span class="si">{</span><span class="n">car</span><span class="o">.</span><span class="n">uid</span><span class="si">}</span><span class="s2">, or error."</span><span class="p">)</span>
                 
-<span class="n">initUsers</span><span class="p">()</span>
+<span class="n">initCars</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -513,12 +510,12 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Created new uid toby
-Records exist uid niko, or error.
-Created new uid lex
-Records exist uid whit, or error.
-Created new uid indi
-Records exist uid raven, or error.
+<pre>Created new uid cam
+Created new uid luke
+Created new uid adrian
+Created new uid tommy
+Created new uid stanley
+Created new uid nathan
 </pre>
 </div>
 </div>
@@ -564,20 +561,18 @@ Records exist uid raven, or error.
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">find_by_uid</span><span class="p">(</span><span class="n">uid</span><span class="p">):</span>
     <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
-        <span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">filter_by</span><span class="p">(</span><span class="n">_uid</span><span class="o">=</span><span class="n">uid</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+        <span class="n">user</span> <span class="o">=</span> <span class="n">Car</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">filter_by</span><span class="p">(</span><span class="n">_uid</span><span class="o">=</span><span class="n">uid</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">user</span> <span class="c1"># returns user object</span>
 
 <span class="c1"># Check credentials by finding user and verify password</span>
-<span class="k">def</span> <span class="nf">check_credentials</span><span class="p">(</span><span class="n">uid</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">check_credentials</span><span class="p">(</span><span class="n">uid</span><span class="p">):</span>
     <span class="c1"># query email and return user record</span>
     <span class="n">user</span> <span class="o">=</span> <span class="n">find_by_uid</span><span class="p">(</span><span class="n">uid</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">user</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">return</span> <span class="kc">False</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">is_password</span><span class="p">(</span><span class="n">password</span><span class="p">)):</span>
-        <span class="k">return</span> <span class="kc">True</span>
-    <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="kc">True</span>
         
-<span class="n">check_credentials</span><span class="p">(</span><span class="s2">"indi"</span><span class="p">,</span> <span class="s2">"123qwerty"</span><span class="p">)</span>
+<span class="n">check_credentials</span><span class="p">(</span><span class="s2">"cam"</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -661,21 +656,19 @@ Records exist uid raven, or error.
     
     <span class="c1"># request value that ensure creating valid object</span>
     <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your name:"</span><span class="p">)</span>
-    <span class="n">password</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your password"</span><span class="p">)</span>
+    <span class="n">mascot</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your school mascot:"</span><span class="p">)</span>
+    <span class="n">car</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your car:"</span><span class="p">)</span>
+    <span class="n">mile</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your mile time:"</span><span class="p">)</span>
     
     <span class="c1"># Initialize User object before date</span>
-    <span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> 
+    <span class="n">user</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> 
                 <span class="n">uid</span><span class="o">=</span><span class="n">uid</span><span class="p">,</span> 
-                <span class="n">password</span><span class="o">=</span><span class="n">password</span>
+                <span class="n">mascot</span><span class="o">=</span><span class="n">mascot</span><span class="p">,</span>
+                <span class="n">car</span><span class="o">=</span><span class="n">car</span><span class="p">,</span>
+                <span class="n">mile</span><span class="o">=</span><span class="n">mile</span>
                 <span class="p">)</span>
     
     <span class="c1"># create user.dob, fail with today as dob</span>
-    <span class="n">dob</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your date of birth 'YYYY-MM-DD'"</span><span class="p">)</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">user</span><span class="o">.</span><span class="n">dob</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">dob</span><span class="p">,</span> <span class="s1">'%Y-%m-</span><span class="si">%d</span><span class="s1">'</span><span class="p">)</span><span class="o">.</span><span class="n">date</span><span class="p">()</span>
-    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
-        <span class="n">user</span><span class="o">.</span><span class="n">dob</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Invalid date </span><span class="si">{</span><span class="n">dob</span><span class="si">}</span><span class="s2"> require YYYY-mm-dd, date defaulted to </span><span class="si">{</span><span class="n">user</span><span class="o">.</span><span class="n">dob</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
            
     <span class="c1"># write object to database</span>
     <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
@@ -698,8 +691,8 @@ Records exist uid raven, or error.
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Created
- {'id': 11, 'name': 'Tay', 'uid': 'tay', 'dob': '01-01-2000', 'age': 23}
+<pre>Found
+ {'id': 4, 'name': 'Tom Bell', 'uid': 'tommy', 'mascot': 'sundevils', 'mile': 4.19, 'car': 'NIO ec6'}
 </pre>
 </div>
 </div>
@@ -747,7 +740,7 @@ Records exist uid raven, or error.
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># SQLAlchemy extracts all users from database, turns each user into JSON</span>
 <span class="k">def</span> <span class="nf">read</span><span class="p">():</span>
     <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
-        <span class="n">table</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+        <span class="n">table</span> <span class="o">=</span> <span class="n">Car</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
     <span class="n">json_ready</span> <span class="o">=</span> <span class="p">[</span><span class="n">user</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> <span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">table</span><span class="p">]</span> <span class="c1"># "List Comprehensions", for each user add user.read() to list</span>
     <span class="k">return</span> <span class="n">json_ready</span>
 
@@ -766,39 +759,48 @@ Records exist uid raven, or error.
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[{'id': 3,
-  'name': 'Alexander Graham Bell',
-  'uid': 'lex',
-  'dob': '03-15-2023',
-  'age': 0},
+<pre>[{'id': 1,
+  'name': 'Cameron Yarbough',
+  'uid': 'cam',
+  'mascot': 'nighthawks',
+  'mile': 4.21,
+  'car': 'Tesla Model Y'},
+ {'id': 2,
+  'name': 'Luke Jin',
+  'uid': 'luke',
+  'mascot': 'nighthawks',
+  'mile': 4.39,
+  'car': 'Lamborghini'},
+ {'id': 3,
+  'name': 'Adrian Welton',
+  'uid': 'adrian',
+  'mascot': 'wolverines',
+  'mile': 4.33,
+  'car': 'Ferrari'},
  {'id': 4,
-  'name': 'Eli Whitney',
-  'uid': 'whit',
-  'dob': '03-15-2023',
-  'age': 0},
+  'name': 'Tom Bell',
+  'uid': 'tommy',
+  'mascot': 'sundevils',
+  'mile': 4.19,
+  'car': 'NIO ec6'},
  {'id': 5,
-  'name': 'Indiana Jones',
-  'uid': 'indi',
-  'dob': '10-21-1920',
-  'age': 102},
+  'name': 'Stanley Yan',
+  'uid': 'stanley',
+  'mascot': 'nighthawks',
+  'mile': 4.38,
+  'car': 'Mercedes Benz'},
  {'id': 6,
-  'name': 'Marion Ravenwood',
-  'uid': 'raven',
-  'dob': '10-21-1921',
-  'age': 101},
- {'id': 7, 'name': 'tay', 'uid': 'wofeih', 'dob': '12-12-2000', 'age': 22},
- {'id': 8, 'name': 'Tay', 'uid': 'roih', 'dob': '12-12-2011', 'age': 11},
- {'id': 9,
-  'name': 'Thomas Edison',
-  'uid': 'toby',
-  'dob': '02-11-1847',
-  'age': 176},
- {'id': 10,
-  'name': 'Nikola Tesla',
-  'uid': 'niko',
-  'dob': '03-17-2023',
-  'age': 0},
- {'id': 11, 'name': '', 'uid': '', 'dob': '03-17-2023', 'age': 0}]</pre>
+  'name': 'Nathan Cristmore',
+  'uid': 'nathan',
+  'mascot': 'falcons',
+  'mile': 4.22,
+  'car': 'Aston Martin'},
+ {'id': 7,
+  'name': 'Micah Senn',
+  'uid': 'micah',
+  'mascot': 'cougars',
+  'mile': 4.38,
+  'car': 'Bugatti'}]</pre>
 </div>
 
 </div>
@@ -828,21 +830,22 @@ Records exist uid raven, or error.
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="c1"># optimize user time to see if uid exists</span>
     <span class="n">uid</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your user id:"</span><span class="p">)</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">find_by_uid</span><span class="p">(</span><span class="n">uid</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">user</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">pass</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"No user id </span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2"> found"</span><span class="p">)</span>
+        <span class="k">return</span>
     <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your name:"</span><span class="p">)</span>
-    <span class="n">password</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your password"</span><span class="p">)</span>
-    <span class="c1"># create user.dob, fail with today as dob</span>
-    <span class="n">dob</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your date of birth 'YYYY-MM-DD'"</span><span class="p">)</span>
-           
-    <span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> 
+    <span class="n">mascot</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your school mascot:"</span><span class="p">)</span>
+    <span class="n">car</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your car:"</span><span class="p">)</span>
+    
+    <span class="c1"># Initialize User object before date</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> 
                 <span class="n">uid</span><span class="o">=</span><span class="n">uid</span><span class="p">,</span> 
-                <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">,</span>
-                <span class="n">dob</span><span class="o">=</span><span class="n">dob</span>
+                <span class="n">mascot</span><span class="o">=</span><span class="n">mascot</span><span class="p">,</span>
+                <span class="n">car</span><span class="o">=</span><span class="n">car</span><span class="p">,</span>
                 <span class="p">)</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">user</span><span class="o">.</span><span class="n">dob</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">dob</span><span class="p">,</span> <span class="s1">'%Y-%m-</span><span class="si">%d</span><span class="s1">'</span><span class="p">)</span><span class="o">.</span><span class="n">date</span><span class="p">()</span>
-    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
-        <span class="n">user</span><span class="o">.</span><span class="n">dob</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Invalid date </span><span class="si">{</span><span class="n">dob</span><span class="si">}</span><span class="s2"> require YYYY-mm-dd, date defaulted to </span><span class="si">{</span><span class="n">user</span><span class="o">.</span><span class="n">dob</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
     <span class="c1"># write object to database</span>
     <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
         <span class="k">try</span><span class="p">:</span>
@@ -865,7 +868,7 @@ Records exist uid raven, or error.
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Updated
- {'id': None, 'name': 'Tay', 'uid': 'tay', 'dob': '12-12-1990', 'age': 32}
+ {'id': None, 'name': 'Tom Bell', 'uid': 'tommy', 'mascot': 'sundevils', 'mile': '4.19', 'car': 'Hyundai Palisade'}
 </pre>
 </div>
 </div>
@@ -906,7 +909,7 @@ Records exist uid raven, or error.
     <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
     
     <span class="k">try</span><span class="p">:</span>
-        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"DELETE FROM users WHERE id = ?"</span><span class="p">,</span> <span class="p">(</span><span class="nb">id</span><span class="p">,))</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"DELETE FROM cars WHERE id = ?"</span><span class="p">,</span> <span class="p">(</span><span class="nb">id</span><span class="p">))</span>
         <span class="k">if</span> <span class="n">cursor</span><span class="o">.</span><span class="n">rowcount</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="c1"># The id was not found in the table</span>
             <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"No id </span><span class="si">{</span><span class="nb">id</span><span class="si">}</span><span class="s2"> was not found in the table"</span><span class="p">)</span>
@@ -933,7 +936,7 @@ Records exist uid raven, or error.
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>The row with id 5 was successfully deleted
+<pre>The row with id 7 was successfully deleted
 </pre>
 </div>
 </div>
