@@ -23,6 +23,8 @@ How to find internships:
 ## Programs
 - Summer Scholars Program
     - Is a 10 week summer program that provides students with an intensive research experience together with enrichment activities aimed at career development. It also helps preparation for graduate school
+- Quantum Bridge Program
+    - Incoming students get to work and research in the field of quantum mechanics and physics
 - Other programs:
     - Chemistry and Biochemistry Targeted Learning
 
