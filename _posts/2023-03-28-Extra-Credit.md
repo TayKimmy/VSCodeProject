@@ -58,3 +58,8 @@ Scholarships and Grants:
 - A career in biomedical, environmental, chemical, and electronics fields
 - A career in a variety of government agencies
 - Become an educator either in K-12 or higher ed.
+
+---
+
+## Stem Activity Video
+[Link](https://www.wevideo.com/view/3013365954)
