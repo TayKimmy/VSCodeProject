@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: This is a blog post that contains my Big Idea 2 Quiz Results
-categories: [markdown, Week 25]
+categories: [markdown, Week 27]
 title: Big Idea 2 Quiz
 ---
 ## Results
