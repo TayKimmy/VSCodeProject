@@ -53,7 +53,7 @@ Scholarships and Grants:
 
 ---
 
-## Life after CUSSM
+## Life after CSUSM
 - Continue ontu graduate school and other professional programs
 - A career in biomedical, environmental, chemical, and electronics fields
 - A career in a variety of government agencies
@@ -63,3 +63,8 @@ Scholarships and Grants:
 
 ## Stem Activity Video
 [Link](https://www.wevideo.com/view/3013365954)
+
+---
+
+## Takeaways
+Through this opportunity, I learned much more about the California State University at San Marcos, such as its classes and departments. I learned about pathways I can take there and good opportunities given at CSUSM. I also learned about scholarships, grants, loans, internships, and more. I learned about advantanges and downfalls of doing certain things and I gained advice about college applications. I also was able to narrow down my choice of college majors/pathway and what colleges I should apply to. At the end of class we did a small hands-on experience with electrical engineering, which was not only fun and interactive, but piqued my interest in the engineering field.
