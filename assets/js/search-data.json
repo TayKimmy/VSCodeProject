@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "CPT Planning",
-            "content": "Plans . I will do something similar to my Tri 2 project, where I have a table with like and dislike. Instead of like and dislike and delete (CORS policy is too hard). . Frontend . I want my frontend .",
+            "content": "Plans . I will do something similar to my Tri 2 project, where I have a table with like and dislike. Instead of like and dislike and delete (CORS policy is too hard). I will do something like a notes page, where users can write a note in a table and save their thing. If possible, I will add a delete so that users can delete their note. . Frontend . I want my frontend to look more cooler and more interactive so that users are more likely to use my program. I want something bright and colorful and I plan to add some sort of animations. Ultimately, frontend is not the most important and will only be added if there is time. . Backend . I will change the CORS policy so that delete and possibly update will be allowed. I will also change the theme of my program to not be cars, but instead notes. I will also change the database so it fits my new theme better. .",
             "url": "https://taykimmy.github.io/VSCodeProject/markdown/week%2027/2023/03/27/CPT-plan.html",
             "relUrl": "/markdown/week%2027/2023/03/27/CPT-plan.html",
             "date": " • Mar 27, 2023"
