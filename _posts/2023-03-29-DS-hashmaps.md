@@ -456,6 +456,14 @@ producer: {&#39;Louis Bell&#39;, &#39;Jack Antonoff&#39;, &#39;Frank Dukes&#39;,
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Hacks-Answered">Hacks Answered<a class="anchor-link" href="#Hacks-Answered"> </a></h2><h3 id="Dictionary-vs-LIst">Dictionary vs LIst<a class="anchor-link" href="#Dictionary-vs-LIst"> </a></h3><p><img src="/VSCodeProject/images/copied_from_nb/images/list-v-dictionary.png" alt=""></p>
+<h3 id="Pros-and-Cons-of-Hashmaps">Pros and Cons of Hashmaps<a class="anchor-link" href="#Pros-and-Cons-of-Hashmaps"> </a></h3><p><img src="/VSCodeProject/images/copied_from_nb/images/pros-cons-hashtable.png" alt=""></p>
+
+</div>
+</div>
+</div>
 </div>
  
 
