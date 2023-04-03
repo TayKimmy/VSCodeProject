@@ -464,6 +464,205 @@ producer: {&#39;Louis Bell&#39;, &#39;Jack Antonoff&#39;, &#39;Frank Dukes&#39;,
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Build-own-album">Build own album<a class="anchor-link" href="#Build-own-album"> </a></h3>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">album_v2</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Legends Never Die&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;artist&quot;</span><span class="p">:</span> <span class="s2">&quot;Juice Wrld&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="mi">2020</span><span class="p">,</span>
+    <span class="s2">&quot;genre&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Hip Pop&quot;</span><span class="p">,</span> <span class="s2">&quot;Rap&quot;</span><span class="p">,</span> <span class="s2">&quot;Emo Rap&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;tracks&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="mi">1</span><span class="p">:</span> <span class="s2">&quot;Life&#39;s a Mess&quot;</span><span class="p">,</span>
+        <span class="mi">2</span><span class="p">:</span> <span class="s2">&quot;Come &amp; Go (feat. Marshmello)&quot;</span><span class="p">,</span>
+        <span class="mi">3</span><span class="p">:</span> <span class="s2">&quot;Tell Me U Luv Me&quot;</span><span class="p">,</span>
+        <span class="mi">4</span><span class="p">:</span> <span class="s2">&quot;Hate the Other Side (feat. Marshmello, Polo G &amp; Kid Laroi)&quot;</span><span class="p">,</span>
+        <span class="mi">5</span><span class="p">:</span> <span class="s2">&quot;Wishing Well&quot;</span><span class="p">,</span>
+        <span class="mi">6</span><span class="p">:</span> <span class="s2">&quot;The Man, the Myth, the Legend&quot;</span><span class="p">,</span>
+        <span class="mi">7</span><span class="p">:</span> <span class="s2">&quot;Man of the Year (999)&quot;</span><span class="p">,</span>
+        <span class="mi">8</span><span class="p">:</span> <span class="s2">&quot;Up Up and Away&quot;</span><span class="p">,</span>
+        <span class="mi">9</span><span class="p">:</span> <span class="s2">&quot;Can&#39;t Die&quot;</span><span class="p">,</span>
+        <span class="mi">10</span><span class="p">:</span> <span class="s2">&quot;Get Through it&quot;</span><span class="p">,</span>
+        <span class="mi">11</span><span class="p">:</span> <span class="s2">&quot;Titanic&quot;</span><span class="p">,</span>
+        <span class="mi">12</span><span class="p">:</span> <span class="s2">&quot;Righteous&quot;</span><span class="p">,</span>
+        <span class="mi">13</span><span class="p">:</span> <span class="s2">&quot;Blood on My Jeans&quot;</span><span class="p">,</span>
+        <span class="mi">14</span><span class="p">:</span> <span class="s2">&quot;Conversations&quot;</span><span class="p">,</span>
+        <span class="mi">15</span><span class="p">:</span> <span class="s2">&quot;Bad Energy&quot;</span><span class="p">,</span>
+        <span class="mi">16</span><span class="p">:</span> <span class="s2">&quot;Stay High)&quot;</span><span class="p">,</span>
+        <span class="mi">17</span><span class="p">:</span> <span class="s2">&quot;I Want It&quot;</span><span class="p">,</span>
+        <span class="mi">18</span><span class="p">:</span> <span class="s2">&quot;Fighting Demons&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1"># What data structures do you see?</span>
+<span class="c1"># I see lists, strings, integers, and dictionaries</span>
+
+
+<span class="c1"># Printing the dictionary</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">album_v2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;title&#39;: &#39;Legends Never Die&#39;, &#39;artist&#39;: &#39;Juice Wrld&#39;, &#39;year&#39;: 2020, &#39;genre&#39;: [&#39;Hip Pop&#39;, &#39;Rap&#39;, &#39;Emo Rap&#39;], &#39;tracks&#39;: {1: &#34;Life&#39;s a Mess&#34;, 2: &#39;Come &amp; Go (feat. Marshmello)&#39;, 3: &#39;Tell Me U Luv Me&#39;, 4: &#39;Hate the Other Side (feat. Marshmello, Polo G &amp; Kid Laroi)&#39;, 5: &#39;Wishing Well&#39;, 6: &#39;The Man, the Myth, the Legend&#39;, 7: &#39;Man of the Year (999)&#39;, 8: &#39;Up Up and Away&#39;, 9: &#34;Can&#39;t Die&#34;, 10: &#39;Get Through it&#39;, 11: &#39;Titanic&#39;, 12: &#39;Righteous&#39;, 13: &#39;Blood on My Jeans&#39;, 14: &#39;Conversations&#39;, 15: &#39;Bad Energy&#39;, 16: &#39;Stay High)&#39;, 17: &#39;I Want It&#39;, 18: &#39;Fighting Demons&#39;}}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">album_v2</span><span class="o">.</span><span class="n">items</span><span class="p">():</span> <span class="c1"># iterate using a for loop for key and value</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">album_v2</span><span class="p">[</span><span class="s2">&quot;tracks&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; : &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
+
+
+<span class="c1"># Write your own code to print tracks in readable format</span>
+<span class="c1">#</span>
+<span class="c1">#</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>title: Legends Never Die
+artist: Juice Wrld
+year: 2020
+genre: [&#39;Hip Pop&#39;, &#39;Rap&#39;, &#39;Emo Rap&#39;]
+tracks: {1: &#34;Life&#39;s a Mess&#34;, 2: &#39;Come &amp; Go (feat. Marshmello)&#39;, 3: &#39;Tell Me U Luv Me&#39;, 4: &#39;Hate the Other Side (feat. Marshmello, Polo G &amp; Kid Laroi)&#39;, 5: &#39;Wishing Well&#39;, 6: &#39;The Man, the Myth, the Legend&#39;, 7: &#39;Man of the Year (999)&#39;, 8: &#39;Up Up and Away&#39;, 9: &#34;Can&#39;t Die&#34;, 10: &#39;Get Through it&#39;, 11: &#39;Titanic&#39;, 12: &#39;Righteous&#39;, 13: &#39;Blood on My Jeans&#39;, 14: &#39;Conversations&#39;, 15: &#39;Bad Energy&#39;, 16: &#39;Stay High)&#39;, 17: &#39;I Want It&#39;, 18: &#39;Fighting Demons&#39;}
+1 : Life&#39;s a Mess
+2 : Come &amp; Go (feat. Marshmello)
+3 : Tell Me U Luv Me
+4 : Hate the Other Side (feat. Marshmello, Polo G &amp; Kid Laroi)
+5 : Wishing Well
+6 : The Man, the Myth, the Legend
+7 : Man of the Year (999)
+8 : Up Up and Away
+9 : Can&#39;t Die
+10 : Get Through it
+11 : Titanic
+12 : Righteous
+13 : Blood on My Jeans
+14 : Conversations
+15 : Bad Energy
+16 : Stay High)
+17 : I Want It
+18 : Fighting Demons
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">album_v2</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;tracks&#39;</span><span class="p">)[</span><span class="mi">4</span><span class="p">])</span>
+<span class="c1"># or</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">album_v2</span><span class="p">[</span><span class="s1">&#39;tracks&#39;</span><span class="p">][</span><span class="mi">4</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Hate the Other Side (feat. Marshmello, Polo G &amp; Kid Laroi)
+Hate the Other Side (feat. Marshmello, Polo G &amp; Kid Laroi)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">album_v2</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;tracks&#39;</span><span class="p">))</span>
+<span class="c1"># or</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">album_v2</span><span class="p">[</span><span class="s1">&#39;tracks&#39;</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{1: &#34;Life&#39;s a Mess&#34;, 2: &#39;Come &amp; Go (feat. Marshmello)&#39;, 3: &#39;Tell Me U Luv Me&#39;, 4: &#39;Hate the Other Side (feat. Marshmello, Polo G &amp; Kid Laroi)&#39;, 5: &#39;Wishing Well&#39;, 6: &#39;The Man, the Myth, the Legend&#39;, 7: &#39;Man of the Year (999)&#39;, 8: &#39;Up Up and Away&#39;, 9: &#34;Can&#39;t Die&#34;, 10: &#39;Get Through it&#39;, 11: &#39;Titanic&#39;, 12: &#39;Righteous&#39;, 13: &#39;Blood on My Jeans&#39;, 14: &#39;Conversations&#39;, 15: &#39;Bad Energy&#39;, 16: &#39;Stay High)&#39;, 17: &#39;I Want It&#39;, 18: &#39;Fighting Demons&#39;}
+{1: &#34;Life&#39;s a Mess&#34;, 2: &#39;Come &amp; Go (feat. Marshmello)&#39;, 3: &#39;Tell Me U Luv Me&#39;, 4: &#39;Hate the Other Side (feat. Marshmello, Polo G &amp; Kid Laroi)&#39;, 5: &#39;Wishing Well&#39;, 6: &#39;The Man, the Myth, the Legend&#39;, 7: &#39;Man of the Year (999)&#39;, 8: &#39;Up Up and Away&#39;, 9: &#34;Can&#39;t Die&#34;, 10: &#39;Get Through it&#39;, 11: &#39;Titanic&#39;, 12: &#39;Righteous&#39;, 13: &#39;Blood on My Jeans&#39;, 14: &#39;Conversations&#39;, 15: &#39;Bad Energy&#39;, 16: &#39;Stay High)&#39;, 17: &#39;I Want It&#39;, 18: &#39;Fighting Demons&#39;}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
 </div>
  
 
