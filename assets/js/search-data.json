@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "MCQ Test 4 and Corrections",
-            "content": "Results . I got a /50 or a % . . Corrections .",
+            "content": "Results . I got a 45/50 or a 90% . . Corrections . | Questions I missed | Why I missed it | |-|-| | Question 17 | I misclicked the right answer. I knew the answer was B but I somehow clicked C. | | Question 27 | I got this question wrong because I thought all the other answer choices did not show lossless transformation. In reality, the others can be lossless if there is a way to revert back to the orginal, which is what the correct answer does. | | Question 36 | I got this questions wrong because I was slightly confused with what heuristic meant. I thought the question was asking where a simple algorithm could be used but it was asking where a simple approach could be used for a very timeful problem. | | Question 37 | I got this question wrong because I thought a quadratic time complexity was an unreasonable amount of time when it actually is reasonable. | | Question 49 | I got this question wrong because the code segment I chose compares the first element to itself as well, always resulting in true. The correct code segment starts at index 2 and also accounts for the exception of index 1 by subtracting the length of the list by 1 as well. | .",
             "url": "https://taykimmy.github.io/VSCodeProject/markdown/week%2028/2023/04/02/MCQ-4.html",
             "relUrl": "/markdown/week%2028/2023/04/02/MCQ-4.html",
             "date": " • Apr 2, 2023"
