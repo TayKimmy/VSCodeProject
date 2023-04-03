@@ -663,6 +663,13 @@ Hate the Other Side (feat. Marshmello, Polo G &amp; Kid Laroi)
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Favorite-Taylor-Swift-Song-Seed">Favorite Taylor Swift Song Seed<a class="anchor-link" href="#Favorite-Taylor-Swift-Song-Seed"> </a></h2><p>My favorite Taylor Swift song is Love Story. I first heard it in many Instagram edits and I loved the catchy tune. I was also reading Romeo and Juliet at the time, and I greatly appreciated the reference to the great romance tragedy classic by William Shakespeare. I also liked the theme of young romance and it helped me relate to it. A song of impossible fantasy. I also loved the melody and it was very easy to hum or sing along to. I also enjoyed Taylor Swift's singing in the song, which was soft yet powerful. She sang in way that made the lyrics stand out and enabled me to hear it clearly.</p>
+
+</div>
+</div>
+</div>
 </div>
  
 
