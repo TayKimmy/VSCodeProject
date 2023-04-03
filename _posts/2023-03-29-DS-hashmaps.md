@@ -665,7 +665,12 @@ Hate the Other Side (feat. Marshmello, Polo G &amp; Kid Laroi)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Favorite-Taylor-Swift-Song-Seed">Favorite Taylor Swift Song Seed<a class="anchor-link" href="#Favorite-Taylor-Swift-Song-Seed"> </a></h2><p>My favorite Taylor Swift song is Love Story. I first heard it in many Instagram edits and I loved the catchy tune. I was also reading Romeo and Juliet at the time, and I greatly appreciated the reference to the great romance tragedy classic by William Shakespeare. I also liked the theme of young romance and it helped me relate to it. A song of impossible fantasy. I also loved the melody and it was very easy to hum or sing along to. I also enjoyed Taylor Swift's singing in the song, which was soft yet powerful. She sang in way that made the lyrics stand out and enabled me to hear it clearly.</p>
+<h2 id="Favorite-Taylor-Swift-Song-Seed">Favorite Taylor Swift Song Seed<a class="anchor-link" href="#Favorite-Taylor-Swift-Song-Seed"> </a></h2><p>My favorite Taylor Swift song is Love Story. Love Story is on many of my Spotify playlists that I listen to frequently because I like it so much. I first heard it in many Instagram edits and I loved the catchy tune. I was also reading Romeo and Juliet at the time, and I greatly appreciated the reference to the great romance tragedy classic by William Shakespeare. I also liked the theme of young romance and it helped me relate to it. A song of impossible fantasy. I also loved the melody and it was very easy to hum or sing along to. I also enjoyed Taylor Swift's singing in the song, which was soft yet powerful. She sang in way that made the lyrics stand out and enabled me to hear it clearly. I especially liked the parts where the dad says "Stay Away from Juliet" because it shows a kind of forbidden love. I also like the part 
+"Marry me, Juliet, you'll never have to be alone
+I love you, and that's all I really know
+I talked to your dad, go pick out a white dress
+It's a love story, baby, just say yes"
+because it shows a happy ending and this part of song is especially exciting. I just enjoyed the calmness of the song and this is one of the greatest songs ever.</p>
 
 </div>
 </div>
