@@ -21,16 +21,16 @@ List specification of your Computer, or Computers if working as Pair/Trio
 - OS: Windows 11 Home
 
 Define or describe usage of Computer using Computer Programs. Pictures are preferred over a lot of text.  Use your experience.
-- Input devices - 
-- Output devices - 
+- Input devices - A physical piece of hardware that connects to a primary device, such as a computer, in order to provide user input
+- Output devices - Any hardware device used to send data from a computer to another device or user
 ![Input and Output Devices]({{site.baseurl}}/images/input_output_devices.jpg)
-- Program File - 
-- Program Code - 
-- Processes - 
-- Ports - 
-- Data File - 
-- Inspect Running Code - 
-- Inspect Variables - 
+- Program File - The directory name of a standard folder in Microsoft Windows operating systems in which applications that are not part of the operating system are conventionally installed
+- Program Code - Tells a machine which actions to perform and how to complete tasks.
+- Processes - An instance of a program running in a computer
+- Ports - A virtual point where network connections start and end
+- Data File - A computer file which stores data to be used by a computer application or system, including input and output data
+- Inspect Running Code - A feature of modern web browsers that enables anyone to view and edit a website's source code, including its HTML, CSS, JavaScript, and media files
+- Inspect Variables - A way of storing data; inspecting them can see all the stored date
 
 
 ![Computer Hardware]({{site.baseurl}}/images/cpu.jpeg)
