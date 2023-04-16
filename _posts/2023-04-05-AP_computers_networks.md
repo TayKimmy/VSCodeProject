@@ -30,8 +30,7 @@ Define or describe usage of Computer using Computer Programs. Pictures are prefe
 - Ports - A virtual point where network connections start and end
 - Data File - A computer file which stores data to be used by a computer application or system, including input and output data
 - Inspect Running Code - A feature of modern web browsers that enables anyone to view and edit a website's source code, including its HTML, CSS, JavaScript, and media files
-- Inspect Variables - A way of storing data; inspecting them can see all the stored date
-
+- Inspect Variables - A way of storing data; inspecting them can see all the stored data
 
 ![Computer Hardware]({{site.baseurl}}/images/cpu.jpeg)
 
