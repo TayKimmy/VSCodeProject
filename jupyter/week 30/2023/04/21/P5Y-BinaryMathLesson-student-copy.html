@@ -219,17 +219,17 @@ window.onload = wrap_img;
 <tr>
 <td>&lt;&lt;</td>
 <td>Left Shift</td>
-<td>Moves the inputs to the left,</td>
+<td>Moves the inputs to the left by the number of places specified.</td>
 </tr>
 <tr>
 <td>&gt;&gt;</td>
 <td>Right Shift</td>
-<td></td>
+<td>Moves the inputs to the right by the number of places specified.</td>
 </tr>
 <tr>
 <td>&gt;&gt;&gt;</td>
 <td>Zero-fill Right Shift</td>
-<td></td>
+<td>Moves the entire binary sequence with the sign bit, zeros are used to fill blank space</td>
 </tr>
 </tbody>
 </table>
@@ -473,6 +473,14 @@ guesses:  5
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>They are similar because both check if the target is greater or lower than either the middle (binary search) or the hidden number (guess game). The way you play the guess the number game effectively is basically binary search. You want to first guess 50 because it is the middle, and then guess 75 if higher, or 25 if lower, and keep going.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
