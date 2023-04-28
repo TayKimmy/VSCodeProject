@@ -23,6 +23,9 @@ layout: notebook
 <li>What are Lists?<ul>
 <li>Lists are an ordered sequence of elements, where each element is a variable</li>
 <li>Unlike dictionaries, lists' keys are all integers that describe the order of the list</li>
+<li>Elements in a list can be accessed using index numbers</li>
+<li>Built in functions such as <code>len()</code>, <code>min()</code>, <code>max()</code>, and <code>sum()</code></li>
+<li>Elements can be easily added and removed - <code>append()</code>, <code>insert()</code>, <code>remove()</code>, and <code>pop()</code></li>
 </ul>
 </li>
 </ul>
@@ -30,7 +33,9 @@ layout: notebook
 <ul>
 <li>Playlist of songs</li>
 <li>names of students in a class</li>
-<li><p>contacts on your phone</p>
+<li>contacts on your phone</li>
+<li>Grocery List</li>
+<li><p>List of integers - maybe numbers of favorite soccer players</p>
 </li>
 <li><p>Each element of a string is referenced by an index (which is a number) and they generally start 0 but for the AP Exam it starts at 1.</p>
 <ul>
@@ -46,6 +51,9 @@ layout: notebook
 <li>There can also be a list of test scores so if they need to be curved then the same calculation can be applied to the list (that has all the students) instead of doing the calculations one at a time</li>
 </ul>
 </li>
+<li>Related data can be grouped together</li>
+<li>Lists can be iterated using a <code>for</code> loop, which enables multiple elements to be accessed</li>
+<li>There are many built in functions for lists</li>
 </ul>
 
 </div>
@@ -57,6 +65,7 @@ layout: notebook
 <ul>
 <li>Why do you think lists are helpful? What word does College Board like to use to describe the function of lists?</li>
 </ul>
+<p>Lists are helpful because it helps manage complexity by making code easier to read and use. Using lists also help us to use built in functions that enable us to perform a task much more quickly. Collegeboard likes to use the word "abstraction" to describe the function of lists, as complex data structures are simplified.</p>
 
 </div>
 </div>
@@ -131,11 +140,11 @@ person {&#39;name&#39;: &#39;Sri Kotturi&#39;, &#39;age&#39;: 16, &#39;score&#39
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Mathematical-Expressions">Mathematical Expressions<a class="anchor-link" href="#Mathematical-Expressions"> </a></h2><p>What is the output of the cell below? What Mathematical Expressions do you see being used? (List them below.)
-The output of the cell is 10.</p>
+<h2 id="Mathematical-Expressions">Mathematical Expressions<a class="anchor-link" href="#Mathematical-Expressions"> </a></h2><p>What is the output of the cell below? What Mathematical Expressions do you see being used? (List them below.)</p>
+<p>The output of the cell is 10.</p>
 <ul>
-<li>Addition</li>
-<li>Floor division</li>
+<li>Addition - to add the 2 grades</li>
+<li>Floor division - to divide the sum of the two grades to the lower integer when rounded</li>
 </ul>
 
 </div>
@@ -234,6 +243,9 @@ The output of the cell is 10.</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Selection">Selection<a class="anchor-link" href="#Selection"> </a></h1><p>Selection refers to the process of making decisions in a program based on certain conditions. It is normally done with conditional statements.</p>
+<ul>
+<li>Allows coders to create programs that make decisions based on input or other factors and respond</li>
+</ul>
 <h2 id="Conditionals">Conditionals<a class="anchor-link" href="#Conditionals"> </a></h2><p>What is a conditional?:</p>
 <ul>
 <li>Statement that allows code to execute different instructions if a certain condition is true or false</li>
@@ -540,14 +552,15 @@ I guessed your number 88!
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>higher
+<pre>lower
+higher
+higher
+higher
+higher
+higher
 lower
 lower
-lower
-lower
-lower
-lower
-You guessed the correct number : 22!
+You guessed the correct number : 37!
 </pre>
 </div>
 </div>
@@ -572,18 +585,26 @@ You guessed the correct number : 22!
 <h2 id="Important-Terms">Important Terms<a class="anchor-link" href="#Important-Terms"> </a></h2><p><strong>What is an algorithm?</strong></p>
 <ul>
 <li>it is a finite set of instructions that accomplishes a specific task</li>
+<li>Step-by-step process that takes an input, performs steps, and produces output</li>
+<li>Can be simple or complex<ul>
+<li>Examples are pseudocode, charts, actual code, etc.</li>
+</ul>
+</li>
 </ul>
 <p><strong>Sequencing</strong></p>
 <ul>
 <li>means that there is an order in which to do things</li>
+<li>It is the order in which steps or instructions are executed by the program</li>
 </ul>
 <p><strong>Selection</strong></p>
 <ul>
 <li>Helps to choose two different outcomes based off of a decision that the programmer wants to make</li>
+<li>Typically achieved through conditional statements</li>
 </ul>
 <p><strong>Iteration</strong></p>
 <ul>
 <li>Repeat something until the condition is met. (also referred to as repetition)</li>
+<li>Allows a program to perform the same or similar operations on data, or to perform certain tasks until desired outcome</li>
 </ul>
 <h2 id="Calling-and-Developing-Procedures">Calling and Developing Procedures<a class="anchor-link" href="#Calling-and-Developing-Procedures"> </a></h2><ul>
 <li>A procedure is a sequence of instructions that performs a specific task.</li>
@@ -1255,6 +1276,37 @@ Alice wins the game!
 </div>
 </div>
 </div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="kn">from</span> <span class="nn">flask_sqlalchemy</span> <span class="kn">import</span> <span class="n">SQLAlchemy</span>
+
+<span class="c1"># Setup of key Flask object (app)</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="c1"># Setup SQLAlchemy object and properties for the database (db)</span>
+<span class="n">database</span> <span class="o">=</span> <span class="s1">&#39;sqlite:///sqlite.db&#39;</span>  <span class="c1"># path and filename of database</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;SQLALCHEMY_TRACK_MODIFICATIONS&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;SQLALCHEMY_DATABASE_URI&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">database</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;SECRET_KEY&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;SECRET_KEY&#39;</span>
+<span class="n">db</span> <span class="o">=</span> <span class="n">SQLAlchemy</span><span class="p">()</span>
+
+
+<span class="c1"># This belongs in place where it runs once per project</span>
+<span class="n">db</span><span class="o">.</span><span class="n">init_app</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="The-Model-File">The Model File<a class="anchor-link" href="#The-Model-File"> </a></h2><p>The model file plays a crucial role in the formation of the database.</p>
@@ -1383,29 +1435,6 @@ Alice wins the game!
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">/home/taykim/vscode/VSCodeProject/_notebooks/2023-04-25-studenttemplate.ipynb Cell 54</span> in <span class="ansi-cyan-fg">&lt;cell line: 7&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/taykim/vscode/VSCodeProject/_notebooks/2023-04-25-studenttemplate.ipynb#Y104sdnNjb2RlLXJlbW90ZQ%3D%3D?line=3&#39;&gt;4&lt;/a&gt;</span> from sqlalchemy.exc import IntegrityError
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/taykim/vscode/VSCodeProject/_notebooks/2023-04-25-studenttemplate.ipynb#Y104sdnNjb2RlLXJlbW90ZQ%3D%3D?line=5&#39;&gt;6&lt;/a&gt;</span> # Define the User class to manage actions in the &#39;users&#39; table
-<span class="ansi-green-fg">----&gt; &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/taykim/vscode/VSCodeProject/_notebooks/2023-04-25-studenttemplate.ipynb#Y104sdnNjb2RlLXJlbW90ZQ%3D%3D?line=6&#39;&gt;7&lt;/a&gt;</span> class User(db.Model):
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/taykim/vscode/VSCodeProject/_notebooks/2023-04-25-studenttemplate.ipynb#Y104sdnNjb2RlLXJlbW90ZQ%3D%3D?line=7&#39;&gt;8&lt;/a&gt;</span>     __tablename__ = &#39;players&#39;  # table name is plural, class name is singular
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/taykim/vscode/VSCodeProject/_notebooks/2023-04-25-studenttemplate.ipynb#Y104sdnNjb2RlLXJlbW90ZQ%3D%3D?line=9&#39;&gt;10&lt;/a&gt;</span>     # Define the User schema with &#34;vars&#34; from object
-
-<span class="ansi-red-fg">NameError</span>: name &#39;db&#39; is not defined</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -1660,9 +1689,241 @@ Created user with username &#34;Un Bea Table&#34;.
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># If you&#39;ve already run the db.init_app(app) function while in this notebook,</span>
 <span class="c1"># don&#39;t do it again until you&#39;ve closed it!</span>
+<span class="c1">#importing necessary items</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">base64</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy.exc</span> <span class="kn">import</span> <span class="n">IntegrityError</span>
+
+<span class="c1"># Define the User class to manage actions in the &#39;users&#39; table</span>
+<span class="k">class</span> <span class="nc">Game</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;games&#39;</span>  <span class="c1"># table name is plural, class name is singular</span>
+
+    <span class="c1"># Define the User schema with &quot;vars&quot; from object</span>
+    <span class="nb">id</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">_name</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span> <span class="n">unique</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">_score</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Integer</span><span class="p">,</span> <span class="n">unique</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">_wins</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Integer</span><span class="p">,</span> <span class="n">unique</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+    <span class="c1"># constructor of a User object, initializes the instance variables within object (self)</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">score</span><span class="p">,</span> <span class="n">wins</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_score</span> <span class="o">=</span> <span class="n">score</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_wins</span> <span class="o">=</span> <span class="n">wins</span>
+
+    <span class="c1"># a name getter method, extracts name from object</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_name</span>
+    
+    <span class="c1"># a setter function, allows name to be updated after initial object creation</span>
+    <span class="nd">@name</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">name</span>
+    
+    <span class="c1"># a getter method, extracts score from object</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">score</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_score</span>
+    
+    <span class="c1"># a setter function, allows score to be updated after initial object creation</span>
+    <span class="nd">@score</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">score</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">score</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_score</span> <span class="o">=</span> <span class="n">score</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">wins</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_wins</span>
+    
+    <span class="nd">@wins</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">wins</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wins</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_wins</span> <span class="o">=</span> <span class="n">wins</span>
+    
+    <span class="c1"># output content using str(object) in human readable form, uses getter</span>
+    <span class="c1"># output content using json dumps, this is ready for API response</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+
+    <span class="c1"># CRUD create/add a new record to the table</span>
+    <span class="c1"># returns self or None on error</span>
+    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c1"># creates a person object from User(db.Model) class, passes initializers</span>
+            <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>  <span class="c1"># add prepares to persist person object to Users table</span>
+            <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>  <span class="c1"># SqlAlchemy &quot;unit of work pattern&quot; requires a manual commit</span>
+            <span class="k">return</span> <span class="bp">self</span>
+        <span class="k">except</span> <span class="n">IntegrityError</span><span class="p">:</span>
+            <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="c1"># CRUD read converts self to dictionary</span>
+    <span class="c1"># returns dictionary</span>
+    <span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="s2">&quot;score&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">score</span><span class="p">,</span>
+            <span class="s2">&quot;wins&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">wins</span>
+        <span class="p">}</span>
+
+    <span class="c1"># CRUD update: updates user name, password, phone</span>
+    <span class="c1"># returns self</span>
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">score</span><span class="p">,</span> <span class="n">wins</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;only updates values with length&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="k">if</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">score</span> <span class="o">=</span> <span class="n">score</span>
+        <span class="k">if</span> <span class="n">wins</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">wins</span> <span class="o">=</span> <span class="n">wins</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="c1"># CRUD delete: remove self</span>
+    <span class="c1"># None</span>
+    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+
+<span class="sd">&quot;&quot;&quot;Database Creation and Testing &quot;&quot;&quot;</span>
+
+<span class="c1"># Builds working data for testing</span>
+<span class="k">def</span> <span class="nf">initGame</span><span class="p">():</span>
+    <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
+        <span class="sd">&quot;&quot;&quot;Create database and tables&quot;&quot;&quot;</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">create_all</span><span class="p">()</span>
+        <span class="sd">&quot;&quot;&quot;Tester data for table&quot;&quot;&quot;</span>
+        <span class="n">u1</span> <span class="o">=</span> <span class="n">Game</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="n">score</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">wins</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">u2</span> <span class="o">=</span> <span class="n">Game</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Bob&quot;</span><span class="p">,</span> <span class="n">score</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">wins</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">u3</span> <span class="o">=</span> <span class="n">Game</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Tim&quot;</span><span class="p">,</span> <span class="n">score</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">wins</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">u4</span> <span class="o">=</span> <span class="n">Game</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Robert&quot;</span><span class="p">,</span> <span class="n">score</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">wins</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+        <span class="n">users</span> <span class="o">=</span> <span class="p">[</span><span class="n">u1</span><span class="p">,</span> <span class="n">u2</span><span class="p">,</span> <span class="n">u3</span><span class="p">,</span> <span class="n">u4</span><span class="p">]</span>
+
+        <span class="sd">&quot;&quot;&quot;Builds sample user/note(s) data&quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">users</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">user</span><span class="o">.</span><span class="n">create</span><span class="p">()</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Created user with name &quot;</span><span class="si">{</span><span class="n">user</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">&quot;.&#39;</span><span class="p">)</span>
+            <span class="k">except</span> <span class="n">IntegrityError</span><span class="p">:</span>
+                <span class="sd">&#39;&#39;&#39;fails with bad or duplicate data&#39;&#39;&#39;</span>
+                <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Records exist, duplicate email, or error: </span><span class="si">{</span><span class="n">user</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Blueprint</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">jsonify</span>
+<span class="kn">from</span> <span class="nn">flask_restful</span> <span class="kn">import</span> <span class="n">Api</span><span class="p">,</span> <span class="n">Resource</span> <span class="c1"># used for REST API building</span>
+
+<span class="n">game_api</span> <span class="o">=</span> <span class="n">Blueprint</span><span class="p">(</span><span class="s1">&#39;game_api&#39;</span><span class="p">,</span> <span class="vm">__name__</span><span class="p">,</span>
+                   <span class="n">url_prefix</span><span class="o">=</span><span class="s1">&#39;/api/games&#39;</span><span class="p">)</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">Api</span><span class="p">(</span><span class="n">game_api</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">GameAPI</span><span class="p">:</span>        
+    <span class="k">class</span> <span class="nc">_Create</span><span class="p">(</span><span class="n">Resource</span><span class="p">):</span> 
+        <span class="k">def</span> <span class="nf">post</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="n">body</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">get_json</span><span class="p">()</span>
+            <span class="n">name</span> <span class="o">=</span> <span class="n">body</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">name</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;name is missing, or is less than a character&#39;</span><span class="p">},</span> <span class="mi">400</span>
+            <span class="c1"># validate uid</span>
+            <span class="n">score</span> <span class="o">=</span> <span class="n">body</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;score&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">score</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">score</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;score is missing, or is less than 1&#39;</span><span class="p">},</span> <span class="mi">400</span>
+            <span class="n">win</span> <span class="o">=</span> <span class="n">body</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;win&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">win</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;win is missing&#39;</span><span class="p">},</span> <span class="mi">400</span>
+            <span class="n">uo</span> <span class="o">=</span> <span class="n">Game</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> 
+                      <span class="n">score</span><span class="o">=</span><span class="n">score</span><span class="p">,</span>
+                      <span class="n">win</span><span class="o">=</span><span class="n">win</span><span class="p">)</span>
+            
+            <span class="n">user</span> <span class="o">=</span> <span class="n">uo</span><span class="o">.</span><span class="n">create</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">user</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">jsonify</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+            <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;Processed </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">, either a format error or a duplicate&#39;</span><span class="p">},</span> <span class="mi">400</span>
+    
+    <span class="k">class</span> <span class="nc">_Read</span><span class="p">(</span><span class="n">Resource</span><span class="p">):</span>
+        <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="n">users</span> <span class="o">=</span> <span class="n">Game</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>   
+            <span class="n">json_ready</span> <span class="o">=</span> <span class="p">[</span><span class="n">user</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> <span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">users</span><span class="p">]</span> 
+            <span class="k">return</span> <span class="n">jsonify</span><span class="p">(</span><span class="n">json_ready</span><span class="p">)</span> 
+
+    <span class="k">class</span> <span class="nc">_Update</span><span class="p">(</span><span class="n">Resource</span><span class="p">):</span>
+        <span class="k">def</span> <span class="nf">put</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="n">body</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">get_json</span><span class="p">()</span> 
+            <span class="nb">id</span> <span class="o">=</span> <span class="n">body</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">)</span>
+            <span class="n">name</span> <span class="o">=</span> <span class="n">body</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)</span>
+            <span class="n">score</span> <span class="o">=</span> <span class="n">body</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;score&#39;</span><span class="p">)</span>
+            <span class="n">win</span> <span class="o">=</span> <span class="n">body</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;win&#39;</span><span class="p">)</span>
+            <span class="n">user</span> <span class="o">=</span> <span class="n">Game</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
+            <span class="n">user</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">score</span><span class="o">=</span><span class="n">score</span><span class="p">,</span> <span class="n">win</span><span class="o">=</span><span class="n">win</span><span class="p">)</span>
+            <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">user</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="si">}</span><span class="s2"> Updated&quot;</span>
+
+    <span class="k">class</span> <span class="nc">_Delete</span><span class="p">(</span><span class="n">Resource</span><span class="p">):</span>
+        <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="n">body</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">get_json</span><span class="p">()</span>
+            <span class="nb">id</span> <span class="o">=</span> <span class="n">body</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">)</span>
+            <span class="n">user</span> <span class="o">=</span> <span class="n">Game</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
+            <span class="n">user</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+            <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">user</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="si">}</span><span class="s2"> Has been deleted&quot;</span>
+
+    <span class="n">api</span><span class="o">.</span><span class="n">add_resource</span><span class="p">(</span><span class="n">_Create</span><span class="p">,</span> <span class="s1">&#39;/create&#39;</span><span class="p">)</span>
+    <span class="n">api</span><span class="o">.</span><span class="n">add_resource</span><span class="p">(</span><span class="n">_Read</span><span class="p">,</span> <span class="s1">&#39;/&#39;</span><span class="p">)</span>
+    <span class="n">api</span><span class="o">.</span><span class="n">add_resource</span><span class="p">(</span><span class="n">_Update</span><span class="p">,</span> <span class="s1">&#39;/update&#39;</span><span class="p">)</span>
+    <span class="n">api</span><span class="o">.</span><span class="n">add_resource</span><span class="p">(</span><span class="n">_Delete</span><span class="p">,</span> <span class="s1">&#39;/delete&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">initGame</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Created user with name &#34;Alice&#34;.
+Created user with name &#34;Bob&#34;.
+Created user with name &#34;Tim&#34;.
+Created user with name &#34;Robert&#34;.
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -1680,10 +1941,17 @@ Created user with username &#34;Un Bea Table&#34;.
 <p>Here are some ideas for ways to increase your score above a 2.7:</p>
 <ul>
 <li>Make a frontend version of your simulation that can be interacted with on your blog</li>
-<li>Connect your simulation to the database you create</li>
+<li>Connect your simulation to the database you create - my database is connected to my simulation in that the database stores the scores and amount of wins a certain player has.</li>
 <li>Create a menu that allows a user to make an entry in your database (CRUD functions within it)</li>
 <li>You can establish a relationship between two classes/tables in your database (see the relationship between the User and Note classes in the Nighthawk Coders flask repository)</li>
 </ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Image">Image<a class="anchor-link" href="#Image"> </a></h3><p><img src="/VSCodeProject/images/copied_from_nb/images/games.png" alt="Games"></p>
 
 </div>
 </div>
