@@ -154,48 +154,54 @@ I also take AP World History, AP Chemistry, and AP Calculus AB.</p>
   </tbody>
 </table>
 
-<table>
-  <thead>
-    <tr>
-      <th>S.NO</th>
-      <th>Week 4</th>
-      <th>Week 5</th>
-      <th>Week 6</th>
-      <th>Week 7</th>
-      <th>Week 8</th>
-      <th>Week 9</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td><a href="https://taykimmy.github.io/VSCodeProject/markdown/week%204/2022/09/13/Collaboration.html">Collegeboard Collaboration Notes</a></td>
-      <td><a href="https://taykimmy.github.io/VSCodeProject/markdown/week%205/2022/09/20/Program-Purpose.html">Collegeboard Program Purpose Notes</a></td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td><a href="https://taykimmy.github.io/VSCodeProject/markdown/week%204/2022/09/16/Focus-and-Habits.html">Focus and Habits Notes</a></td>
-      <td><a href="https://taykimmy.github.io/VSCodeProject/markdown/week%205/2022/09/22/HTML.html">HTML and JavaScript fragments</a></td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td> </td>
-      <td><a href="https://taykimmy.github.io/VSCodeProject/jupyter/week%205/2022/09/22/Javascript.html">JavaScript Kernel Post</a></td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<p>| S.NO | Week 4 | Week 5 | Week 6 | Week 7 | Week 8 | Week 9 |
+|-|-|
+| 1 | <a href="https://taykimmy.github.io/VSCodeProject/markdown/week%204/2022/09/13/Collaboration.html">Collegeboard Collaboration Notes</a> | <a href="https://taykimmy.github.io/VSCodeProject/markdown/week%205/2022/09/20/Program-Purpose.html">Collegeboard Program Purpose Notes</a> |  |  |  |  |
+| 2 | <a href="https://taykimmy.github.io/VSCodeProject/markdown/week%204/2022/09/16/Focus-and-Habits.html">Focus and Habits Notes</a> | <a href="https://taykimmy.github.io/VSCodeProject/markdown/week%205/2022/09/22/HTML.html">HTML and JavaScript fragments</a> |  |  |  |  |
+| 3 |  | <a href="https://taykimmy.github.io/VSCodeProject/jupyter/week%205/2022/09/22/Javascript.html">JavaScript Kernel Post</a> |  |  |  |  |
+&lt;!DOCTYPE html&gt;</p>
+<style>
+    @mixin button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #f8057e;
+    border-radius: 5px;
+    background-color: #04f886;
+    color: #1d1c1c;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    
+    &:hover {
+      background-color: #ccc;
+      color: #fff;
+    }
+  }
+  .primary-btn {
+    @include button;
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .secondary-btn {
+    @extend .primary-btn;
+    background-color: #6c757d;
+  }
+  
+</style>
+
+<html>
+<head>
+</head>
+    <body>
+        <div class="button">
+            <button class="primary-btn">First Button</button>
+            <button class="secondary-btn">Second Button</button>
+        </div>
+    </body>
+</html>
 
 <h1 id="posts">Posts</h1>
 
