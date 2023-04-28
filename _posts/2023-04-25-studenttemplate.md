@@ -270,6 +270,20 @@ The output of the cell is 10.</p>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>x is positive
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     {% endraw %}
 
@@ -687,7 +701,9 @@ You guessed the correct number : 22!
 <pre><code>- O(N)
 - O(N*log(N))
 - O(N * Sqrt(N))
-- O(N*N)</code></pre>
+- O(N*N)
+</code></pre>
+<p>The time complexity will be O(N*N) because there is a nested for loop - or two for loops consecutively - which causes the time complexity of N to be squared.</p>
 
 </div>
 </div>
@@ -990,7 +1006,8 @@ The difference between the value and the index is 200.
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="While-Loops">While Loops<a class="anchor-link" href="#While-Loops"> </a></h3><p>While loops aren't used in the program, but they offer a different way to repeat a set of instructions in a program. The procedure below the <code>while [condition]</code> line will occur until the condition is made not true.</p>
-<p><strong>Student Interaction</strong>: How could this <code>build</code> function be altered to function with a <strong>while loop</strong> within it?</p>
+<p><strong>Student Interaction</strong>: How could this <code>build</code> function be altered to function with a <strong>while loop</strong> within it?
+A while loop could be used to run only when <code>val</code> is in the range 2 and 15, like <code>while val&lt;15</code> and <code>while val&gt;2</code>.</p>
 
 </div>
 </div>
@@ -1135,6 +1152,20 @@ The difference between the value and the index is 200.
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>I have coded a dice game. 
+Rules:</p>
+<ul>
+<li>Two players take turns rolling a six-sided die.</li>
+<li>The first player to roll a 6 wins.</li>
+<li>If a player rolls a 1, their turn ends and they get no points for that turn.</li>
+<li>The first player to win 3 rounds wins the game.</li>
+</ul>
+
+</div>
+</div>
+</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -1150,9 +1181,66 @@ The difference between the value and the index is 200.
 <span class="c1"># What kind of iteration happens in the real world?</span>
 <span class="c1"># What occurs repeatedly, even over a long period of time?</span>
 <span class="c1"># You could model the results of a disease spreading through a population without it taking IRL years.</span>
+<span class="kn">import</span> <span class="nn">random</span>
+
+<span class="n">player1</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Alice&#39;</span><span class="p">,</span> <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+<span class="n">player2</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Bob&#39;</span><span class="p">,</span> <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+
+<span class="k">def</span> <span class="nf">roll_dice</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="n">player1</span><span class="p">[</span><span class="s1">&#39;score&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">3</span> <span class="ow">and</span> <span class="n">player2</span><span class="p">[</span><span class="s1">&#39;score&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
+    <span class="n">p1_roll</span> <span class="o">=</span> <span class="n">roll_dice</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">p1_roll</span> <span class="o">==</span> <span class="mi">6</span><span class="p">:</span>
+        <span class="n">player1</span><span class="p">[</span><span class="s1">&#39;score&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">player1</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> rolled a 6 and wins the round!&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">p1_roll</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">player1</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> rolled a 1 and gets no points this round.&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">player1</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> rolled a </span><span class="si">{</span><span class="n">p1_roll</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+    
+    <span class="n">p2_roll</span> <span class="o">=</span> <span class="n">roll_dice</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">p2_roll</span> <span class="o">==</span> <span class="mi">6</span><span class="p">:</span>
+        <span class="n">player2</span><span class="p">[</span><span class="s1">&#39;score&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">player2</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> rolled a 6 and wins the round!&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">p2_roll</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">player2</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> rolled a 1 and gets no points this round.&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">player2</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> rolled a </span><span class="si">{</span><span class="n">p2_roll</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+    
+<span class="k">if</span> <span class="n">player1</span><span class="p">[</span><span class="s1">&#39;score&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">player1</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> wins the game!&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">player2</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> wins the game!&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Alice rolled a 6 and wins the round!
+Bob rolled a 4.
+Alice rolled a 4.
+Bob rolled a 6 and wins the round!
+Alice rolled a 1 and gets no points this round.
+Bob rolled a 5.
+Alice rolled a 1 and gets no points this round.
+Bob rolled a 2.
+Alice rolled a 6 and wins the round!
+Bob rolled a 4.
+Alice rolled a 6 and wins the round!
+Bob rolled a 4.
+Alice wins the game!
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -1167,37 +1255,6 @@ The difference between the value and the index is 200.
 </div>
 </div>
 </div>
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
-<span class="kn">from</span> <span class="nn">flask_sqlalchemy</span> <span class="kn">import</span> <span class="n">SQLAlchemy</span>
-
-<span class="c1"># Setup of key Flask object (app)</span>
-<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
-<span class="c1"># Setup SQLAlchemy object and properties for the database (db)</span>
-<span class="n">database</span> <span class="o">=</span> <span class="s1">&#39;sqlite:///sqlite.db&#39;</span>  <span class="c1"># path and filename of database</span>
-<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;SQLALCHEMY_TRACK_MODIFICATIONS&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
-<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;SQLALCHEMY_DATABASE_URI&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">database</span>
-<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;SECRET_KEY&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;SECRET_KEY&#39;</span>
-<span class="n">db</span> <span class="o">=</span> <span class="n">SQLAlchemy</span><span class="p">()</span>
-
-
-<span class="c1"># This belongs in place where it runs once per project</span>
-<span class="n">db</span><span class="o">.</span><span class="n">init_app</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="The-Model-File">The Model File<a class="anchor-link" href="#The-Model-File"> </a></h2><p>The model file plays a crucial role in the formation of the database.</p>
@@ -1329,6 +1386,29 @@ The difference between the value and the index is 200.
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/home/taykim/vscode/VSCodeProject/_notebooks/2023-04-25-studenttemplate.ipynb Cell 54</span> in <span class="ansi-cyan-fg">&lt;cell line: 7&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/taykim/vscode/VSCodeProject/_notebooks/2023-04-25-studenttemplate.ipynb#Y104sdnNjb2RlLXJlbW90ZQ%3D%3D?line=3&#39;&gt;4&lt;/a&gt;</span> from sqlalchemy.exc import IntegrityError
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/taykim/vscode/VSCodeProject/_notebooks/2023-04-25-studenttemplate.ipynb#Y104sdnNjb2RlLXJlbW90ZQ%3D%3D?line=5&#39;&gt;6&lt;/a&gt;</span> # Define the User class to manage actions in the &#39;users&#39; table
+<span class="ansi-green-fg">----&gt; &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/taykim/vscode/VSCodeProject/_notebooks/2023-04-25-studenttemplate.ipynb#Y104sdnNjb2RlLXJlbW90ZQ%3D%3D?line=6&#39;&gt;7&lt;/a&gt;</span> class User(db.Model):
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/taykim/vscode/VSCodeProject/_notebooks/2023-04-25-studenttemplate.ipynb#Y104sdnNjb2RlLXJlbW90ZQ%3D%3D?line=7&#39;&gt;8&lt;/a&gt;</span>     __tablename__ = &#39;players&#39;  # table name is plural, class name is singular
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/taykim/vscode/VSCodeProject/_notebooks/2023-04-25-studenttemplate.ipynb#Y104sdnNjb2RlLXJlbW90ZQ%3D%3D?line=9&#39;&gt;10&lt;/a&gt;</span>     # Define the User schema with &#34;vars&#34; from object
+
+<span class="ansi-red-fg">NameError</span>: name &#39;db&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     {% endraw %}
 
@@ -1346,7 +1426,7 @@ The difference between the value and the index is 200.
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">streak</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">streak</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_username</span> <span class="o">=</span> <span class="n">username</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_score</span> <span class="o">=</span> <span class="n">streak</span>
 </pre></div>
@@ -1365,29 +1445,10 @@ The difference between the value and the index is 200.
 <li><strong>Setter</strong>: a method that allows us to set or change the value of an attribute in a class.</li>
 <li><strong>Getter</strong>: a method that allows us to access an attribute in a given class.</li>
 </ul>
-<h3 id="Setter-Example">Setter Example<a class="anchor-link" href="#Setter-Example"> </a></h3>
-</div>
-</div>
-</div>
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nd">@streak</span><span class="o">.</span><span class="n">setter</span>
-<span class="k">def</span> <span class="nf">streak</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">streak</span><span class="p">):</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">_streak</span> <span class="o">=</span> <span class="n">streak</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
 
 </div>
-    {% endraw %}
-
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Getter-Example">Getter Example<a class="anchor-link" href="#Getter-Example"> </a></h3>
@@ -1404,6 +1465,31 @@ The difference between the value and the index is 200.
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nd">@property</span>
 <span class="k">def</span> <span class="nf">streak</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_streak</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Setter-Example">Setter Example<a class="anchor-link" href="#Setter-Example"> </a></h3>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nd">@streak</span><span class="o">.</span><span class="n">setter</span>
+<span class="k">def</span> <span class="nf">streak</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">streak</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_streak</span> <span class="o">=</span> <span class="n">streak</span>
 </pre></div>
 
     </div>

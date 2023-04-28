@@ -211,8 +211,9 @@ layout: notebook
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="SASS-Creation">SASS Creation<a class="anchor-link" href="#SASS-Creation"> </a></h2><p><a href="">Link</a></p>
-<p>Code screenshot: <img src="images/sass-hacks.png" alt="SASS"></p>
+<h2 id="SASS-Creation">SASS Creation<a class="anchor-link" href="#SASS-Creation"> </a></h2><p><a href="https://taykimmy.github.io/VSCodeProject/markdown/week%2031/2023/04/27/sass-hacks.html">Link</a></p>
+<p>Code screenshot:</p>
+<p><img src="/VSCodeProject/images/copied_from_nb/images/sass-hacks.png" alt="SASS"></p>
 
 </div>
 </div>
