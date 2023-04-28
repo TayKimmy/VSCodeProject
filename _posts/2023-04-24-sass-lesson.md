@@ -240,7 +240,8 @@ layout: notebook
     @extend .primary-btn;
     //background-color: #6c757d;
   }</p>
-<p>&lt;/style&gt;</p>
+<p>&lt;/style&gt;
+&lt;!DOCTYPE html&gt;</p>
 <html>
 <head>
 </head>
