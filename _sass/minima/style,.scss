@@ -1,0 +1,29 @@
+@mixin button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #f8057e;
+    border-radius: 5px;
+    background-color: #04f886;
+    color: #1d1c1c;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    
+    &:hover {
+      background-color: #ccc;
+      color: #fff;
+    }
+  }
+  .primary-btn {
+    @include button;
+    //background-color: #007bff;
+    //color: #fff;
+  }
+  
+  .secondary-btn {
+    @extend .primary-btn;
+    //background-color: #6c757d;
+  }
+  
