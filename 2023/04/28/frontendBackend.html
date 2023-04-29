@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      10 min read
+      11 min read
     
 </span></p>
 
@@ -564,17 +564,16 @@ Delete: Option for deleting every film, also takes in a name to delete that film
         <span class="s2">"id"</span><span class="p">:</span> <span class="n">result</span><span class="p">[</span><span class="s2">"id"</span><span class="p">],</span>
         <span class="s2">"title"</span><span class="p">:</span> <span class="n">result</span><span class="p">[</span><span class="s2">"titleText"</span><span class="p">][</span><span class="s2">"text"</span><span class="p">],</span>
         <span class="s2">"release_year"</span><span class="p">:</span> <span class="n">result</span><span class="p">[</span><span class="s2">"releaseYear"</span><span class="p">][</span><span class="s2">"year"</span><span class="p">],</span>
+        <span class="s2">"is_series"</span><span class="p">:</span> <span class="n">result</span><span class="p">[</span><span class="s2">"titleType"</span><span class="p">][</span><span class="s2">"isSeries"</span><span class="p">]</span>
     <span class="p">}</span>
     <span class="n">entries</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span>
-
 <span class="c1"># Convert the list of dictionaries into a DataFrame</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">entries</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 
 
-
-<span class="c1"># ADD YOUR OWN COLUMN TO THE DATAFRAME</span>
+<span class="c1"># ADD YOUR OWN COLUMN TO THE DATAFRAME - is_series</span>
 </pre></div>
 
     </div>
@@ -587,17 +586,17 @@ Delete: Option for deleting every film, also takes in a name to delete that film
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>          id                                    title  release_year
-0  tt0001922                That Winsome Winnie Smile          1911
-1  tt0001539                             Caïn et Abel          1911
-2  tt0001636                                  Galileo          1911
-3  tt0002148                   The Drummer's Vacation          1912
-4  tt0001702               The Indian Maiden's Lesson          1911
-5  tt0001856             The Revenue Man and the Girl          1911
-6  tt0001790  Les misérables - Époque 1: Jean Valjean          1913
-7  tt0000543                 Christian IXS bisættelse          1906
-8  tt0002089                                   Carmen          1912
-9  tt0000548                       Fiskerliv i Norden          1906
+<pre>          id                                    title  release_year  is_series
+0  tt0001922                That Winsome Winnie Smile          1911      False
+1  tt0001539                             Caïn et Abel          1911      False
+2  tt0001636                                  Galileo          1911      False
+3  tt0002148                   The Drummer's Vacation          1912      False
+4  tt0001702               The Indian Maiden's Lesson          1911      False
+5  tt0001856             The Revenue Man and the Girl          1911      False
+6  tt0001790  Les misérables - Époque 1: Jean Valjean          1913      False
+7  tt0000543                 Christian IXS bisættelse          1906      False
+8  tt0002089                                   Carmen          1912      False
+9  tt0000548                       Fiskerliv i Norden          1906      False
 </pre>
 </div>
 </div>
@@ -622,7 +621,29 @@ Delete: Option for deleting every film, also takes in a name to delete that film
 <h1 id="Write-notes-below">
 <a class="anchor" href="#Write-notes-below" aria-hidden="true"><span class="octicon octicon-link"></span></a>Write notes below<a class="anchor-link" href="#Write-notes-below"> </a>
 </h1>
-<p>-</p>
+<p>Frontend Development:</p>
+<ul>
+<li>Creation and maintenance of UI/UX using HTML, CSS, and JavaScript</li>
+<li>Ensuring the site/app is easy to use and visually appealing</li>
+</ul>
+<p>Backend Development:</p>
+<ul>
+<li>Server-side programming using languages like Python, Ruby, Java, or PHP</li>
+<li>Handling data processing, database management, and server-side functions</li>
+<li>Ensuring scalability, security, and data management</li>
+</ul>
+<p>Fetching:</p>
+<ul>
+<li>Retrieving data from a server using AJAX, Fetch API, or third-party libraries like Axios</li>
+<li>Frontend developers implement fetching functionality</li>
+</ul>
+<p>CRUD:</p>
+<ul>
+<li>Acronym for Create, Read, Update, and Delete</li>
+<li>Basic operations performed on data in a database or web app</li>
+<li>Backend developers implement CRUD functionality</li>
+<li>Used for data and user input management in web development</li>
+</ul>
 
 </div>
 </div>
@@ -655,14 +676,73 @@ Delete: Option for deleting every film, also takes in a name to delete that film
 <ul>
 <li>Shows full stack requirements<ul>
 <li>Backend/Frontend developments</li>
-<li>When buttons are clicked, it results in something to happen in the backend</li>
+<li>When buttons are clicked, it results in something to changes in the backend files</li>
 </ul>
 </li>
 </ul>
+<p>Frontend Website using GitHub Pages - <a href="https://firestorm0986.github.io/frontend-proj/">Link</a></p>
+<p>Fetch API:</p>
 
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">"https://zesty.nighthawkcodingsociety.com/api/schemas"</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+<span class="n">entries</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+    <span class="n">entry</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">"id"</span><span class="p">:</span> <span class="n">result</span><span class="p">[</span><span class="s2">"id"</span><span class="p">],</span>
+        <span class="s2">"car"</span><span class="p">:</span> <span class="n">result</span><span class="p">[</span><span class="s2">"car"</span><span class="p">],</span>
+        <span class="s2">"likes"</span><span class="p">:</span> <span class="n">result</span><span class="p">[</span><span class="s2">"like"</span><span class="p">],</span>
+    <span class="p">}</span>
+    <span class="n">entries</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">entries</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>   id                      car  likes
+0   2                  NIO ET7      0
+1   3               Rivian R1S      0
+2   4  Lucid Air Grand Touring      0
+3   5           Tesla Roadster      0
+4   6          Hyundai Ioniq 5      0
+5   7            Tesla Model Y      0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
