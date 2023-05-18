@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      11 min read
+      12 min read
     
 </span></p>
 
@@ -246,6 +246,11 @@ window.onload = wrap_img;
         <span class="p">[</span><span class="s2">"Number Systems"</span><span class="p">,</span> <span class="n">numbers</span><span class="p">]</span>
     <span class="p">]</span>
 
+    <span class="n">tree</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">[</span><span class="s2">"/"</span><span class="p">,</span><span class="s2">"|"</span><span class="p">,</span><span class="s2">"\ "</span><span class="p">],</span>
+        <span class="p">[</span><span class="s2">"/"</span><span class="p">,</span><span class="s2">"/"</span><span class="p">,</span><span class="s2">"|"</span><span class="p">,</span><span class="s2">"\ "</span><span class="p">,</span><span class="s2">"\ "</span><span class="p">],</span>
+    <span class="p">]</span>
+
     <span class="c1"># loop 2D matrix with returning list in [key, value] arrangement</span>
     <span class="k">for</span> <span class="n">title</span><span class="p">,</span> <span class="n">matrix</span> <span class="ow">in</span> <span class="n">matrices</span><span class="p">:</span>  <span class="c1"># unpack title and matrix as variables</span>
         
@@ -256,6 +261,7 @@ window.onload = wrap_img;
         <span class="n">print_matrix1</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
         <span class="n">print_matrix2</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
         <span class="n">print_matrix3</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
+        <span class="n">print_matrix2</span><span class="p">(</span><span class="n">tree</span><span class="p">)</span>
         <span class="c1"># blank link in between</span>
         <span class="nb">print</span><span class="p">()</span>
 
@@ -291,6 +297,9 @@ For loop with shortcut (*) row expansion
 4 5 6
 7 8 9
   0  
+Enhanced nested for loops
+/ | \  
+/ / | \  \  
 
 Keyboard 4 x ~24
 Classic nested loops using ij indexes
@@ -308,6 +317,9 @@ For loop with shortcut (*) row expansion
     Q   W   E   R   T   Y   U   I     O   P   [   ]   \
       A   S   D   F   G   H   J   K   L   ;   '
         Z   X   C   V   B   N   M   ,   .   /
+Enhanced nested for loops
+/ | \  
+/ / | \  \  
 
 Number Systems 3 x ~2
 Classic nested loops using ij indexes
@@ -322,6 +334,9 @@ For loop with shortcut (*) row expansion
 0 1
 0 1 2 3 4 5 6 7 8 9
 0 1 2 3 4 5 6 7 8 9 A B C D E F
+Enhanced nested for loops
+/ | \  
+/ / | \  \  
 
 </pre>
 </div>
@@ -349,6 +364,33 @@ For loop with shortcut (*) row expansion
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">print_matrix2</span><span class="p">(</span><span class="n">matrix</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Enhanced nested for loops"</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">matrix</span><span class="p">:</span>  <span class="c1"># short hand row iterator, index is not required</span>
+        <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">row</span><span class="p">:</span>  <span class="c1"># short hand column iterator</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">" "</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">material</span><span class="p">():</span>
+    <span class="n">tree</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">""</span><span class="p">,</span><span class="s2">""</span><span class="p">,</span><span class="s2">""</span>
+    <span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -390,10 +432,10 @@ For loop with shortcut (*) row expansion
 
 
 
-<div id="b03a81c8-4f4e-411f-8955-85ae03988e7b"></div>
+<div id="1d22355e-b787-4804-b646-3ff80576cb13"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#b03a81c8-4f4e-411f-8955-85ae03988e7b');
+var element = $('#1d22355e-b787-4804-b646-3ff80576cb13');
 
 /*
 * Creator: Nighthawk Coding Society
@@ -517,15 +559,15 @@ element.append(arr2D);
         <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" little monkeys jumping on the bed..."</span><span class="p">)</span>
 
         <span class="c1"># cycle through monkeys that are left in poem countdown</span>
-        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>  <span class="c1"># cycles through remaining monkeys in countdown</span>
+        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">monkeys</span><span class="p">[</span><span class="mi">0</span><span class="p">])):</span>  <span class="c1"># cycles through remaining monkeys in countdown</span>
 
             <span class="c1"># cycles through monkey part by part</span>
-            <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">monkeys</span><span class="p">[</span><span class="n">row</span><span class="p">])):</span>
+            <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
                 <span class="c1"># prints specific part of the monkey from the 2D cell</span>
-                <span class="nb">print</span><span class="p">(</span><span class="n">monkeys</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">]</span> <span class="o">+</span> <span class="s2">" "</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">monkeys</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">]</span> <span class="o">+</span> <span class="s2">" "</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>
 
             <span class="c1"># this new line gives separation between stanza of poem</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\u001b</span><span class="s2">[0m"</span><span class="p">)</span>  <span class="c1"># reset color</span>
+            <span class="nb">print</span><span class="p">()</span>  <span class="c1"># reset color</span>
             
         <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 
@@ -876,11 +918,12 @@ element.append(arr2D);
     <span class="nb">print</span><span class="p">(</span><span class="n">RESET_COLOR</span><span class="p">)</span>
     
     <span class="n">sp</span> <span class="o">=</span> <span class="s2">" "</span> <span class="o">*</span> <span class="n">position</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">sp</span> <span class="o">+</span> <span class="s2">"    |\   "</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">sp</span> <span class="o">+</span> <span class="s2">"    |/   "</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">sp</span> <span class="o">+</span> <span class="s2">"   / \__"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">sp</span> <span class="o">+</span> <span class="s2">"  (    @\___"</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">SHIP_COLOR</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">sp</span> <span class="o">+</span> <span class="s2">"\__ |__/ "</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">sp</span> <span class="o">+</span> <span class="s2">" \____/  "</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">sp</span> <span class="o">+</span> <span class="s2">"  /         O"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">sp</span> <span class="o">+</span> <span class="s2">" /   (_____/"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">sp</span> <span class="o">+</span> <span class="s2">"/_____/   U"</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">OCEAN_COLOR</span> <span class="o">+</span> <span class="s2">"--"</span><span class="o">*</span><span class="mi">32</span> <span class="o">+</span> <span class="n">RESET_COLOR</span><span class="p">)</span>
 
 
@@ -910,10 +953,11 @@ element.append(arr2D);
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-                                                              |\   
-                                                              |/   
-<span class="ansi-magenta-fg">                                                          \__ |__/ 
-                                                           \____/  
+                                                             / \__
+                                                            (    @\___
+<span class="ansi-magenta-fg">                                                            /         O
+                                                           /   (_____/
+                                                          /_____/   U
 </span><span class="ansi-blue-fg">----------------------------------------------------------------</span>
 </pre>
 </div>
