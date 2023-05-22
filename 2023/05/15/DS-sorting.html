@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      6 min read
+      8 min read
     
 </span></p>
 
@@ -125,6 +125,8 @@ window.onload = wrap_img;
 </li>
 <li class="toc-entry toc-h1"><a href="#Sorting-Words">Sorting Words </a>
 <ul>
+<li class="toc-entry toc-h2"><a href="#Bubble-Sort-Popcorn-Hack">Bubble Sort Popcorn Hack </a></li>
+<li class="toc-entry toc-h2"><a href="#Selection-Sort-Popcorn-Hack">Selection Sort Popcorn Hack </a></li>
 <li class="toc-entry toc-h2"><a href="#Discuss">Discuss </a></li>
 <li class="toc-entry toc-h2"><a href="#HACKS">HACKS </a></li>
 </ul>
@@ -273,21 +275,20 @@ Merge Sort:I will split the list until only individual elements remain - 88, 39,
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">nltk</span>
 <span class="kn">import</span> <span class="nn">random</span>
-
-<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">'words'</span><span class="p">)</span>  <span class="c1"># Download the word list (only required once)</span>
-
 <span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">words</span>
-
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">'words'</span><span class="p">)</span>  <span class="c1"># Download the word list (only required once)</span>
 <span class="n">english_words</span> <span class="o">=</span> <span class="n">words</span><span class="o">.</span><span class="n">words</span><span class="p">()</span>
-<span class="c1">#print(len(english_words))  # Prints the number of words in the list</span>
 
-<span class="c1"># You can now use the 'english_words' list in your code</span>
+<span class="k">def</span> <span class="nf">new_words</span><span class="p">():</span>
+    <span class="c1"># You can now use the 'english_words' list in your code</span>
+    <span class="n">random_words</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+        <span class="n">random_words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">english_words</span><span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">english_words</span><span class="p">))])</span>
+    <span class="k">return</span> <span class="n">random_words</span>
+        
 
-<span class="n">words</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-    <span class="n">words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">english_words</span><span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">english_words</span><span class="p">))])</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Random List"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">new_words</span><span class="p">())</span>
 </pre></div>
 
     </div>
@@ -299,17 +300,9 @@ Merge Sort:I will split the list until only individual elements remain - 88, 39,
 
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>[nltk_data] Downloading package words to /home/taykim/nltk_data...
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Random List
-['platymeria', 'stereomatrix', 'Tabby', 'situal', 'underseedman', 'dioxindole', 'Vandal', 'mangonel', 'Maeonian', 'stockmaking']
+['wickerwork', 'eyepiece', 'dissimilarly', 'viscerotropic', 'frush', 'slough', 'trawl', 'countercheck', 'amimia', 'hypho']
 </pre>
 </div>
 </div>
@@ -317,7 +310,8 @@ Merge Sort:I will split the list until only individual elements remain - 88, 39,
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>[nltk_data]   Unzipping corpora/words.zip.
+<pre>[nltk_data] Downloading package words to /home/taykim/nltk_data...
+[nltk_data]   Package words is already up-to-date!
 </pre>
 </div>
 </div>
@@ -335,11 +329,177 @@ Merge Sort:I will split the list until only individual elements remain - 88, 39,
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">english_words</span><span class="p">:</span>
-    
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">insertion_sort</span><span class="p">(</span><span class="n">word_list</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">word_list</span><span class="p">)):</span>
+        <span class="n">current_word</span> <span class="o">=</span> <span class="n">word_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">j</span> <span class="o">=</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="k">while</span> <span class="n">j</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">word_list</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">current_word</span><span class="p">:</span>
+            <span class="n">word_list</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">word_list</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+            <span class="n">j</span> <span class="o">-=</span> <span class="mi">1</span>
+        <span class="n">word_list</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">current_word</span>
+
+<span class="n">random_words</span> <span class="o">=</span> <span class="n">new_words</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Random List:"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">random_words</span><span class="p">)</span>
+
+<span class="n">insertion_sort</span><span class="p">(</span><span class="n">random_words</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Sorted List:"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">random_words</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Random List:
+['seizable', 'supererogate', 'venerability', 'cloistress', 'corvillosum', 'chamaeprosopic', 'subassembly', 'bearwood', 'rakan', 'archgenethliac']
+Sorted List:
+['archgenethliac', 'bearwood', 'chamaeprosopic', 'cloistress', 'corvillosum', 'rakan', 'seizable', 'subassembly', 'supererogate', 'venerability']
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Bubble-Sort-Popcorn-Hack">
+<a class="anchor" href="#Bubble-Sort-Popcorn-Hack" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bubble Sort Popcorn Hack<a class="anchor-link" href="#Bubble-Sort-Popcorn-Hack"> </a>
+</h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">bubbleSort</span><span class="p">(</span><span class="nb">list</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>  <span class="c1"># list are indexed 0 to n-1, len is n</span>
+    
+    <span class="c1"># Traverse through list with i index</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">swapped</span> <span class="o">=</span> <span class="kc">False</span>  <span class="c1"># optimize code, so it exits if now swaps on inner loop</span>
+
+        <span class="c1"># Inner traversal using j index</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="p">):</span>  <span class="c1"># n-i as positions on right are in order in bubble</span>
+ 
+            <span class="c1"># Swap if the element KeyN is greater KeyN1</span>
+            <span class="n">keyN</span> <span class="o">=</span> <span class="nb">list</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+            <span class="n">keyN1</span> <span class="o">=</span> <span class="nb">list</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">keyN</span> <span class="o">&gt;</span> <span class="n">keyN1</span><span class="p">:</span>
+                <span class="n">swapped</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="nb">list</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="nb">list</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">],</span> <span class="nb">list</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>  <span class="c1"># single line swap</span>
+         
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">swapped</span><span class="p">:</span>  <span class="c1"># if no swaps on inner pass, list is sorted</span>
+            <span class="k">return</span>  <span class="c1"># exit function</span>
+        
+
+<span class="n">words</span> <span class="o">=</span> <span class="n">new_words</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+
+<span class="n">bubbleSort</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Sorted List:"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>['biography', 'acropathy', 'chakravartin', 'unspiritedly', 'laminose', 'uncomposeable', 'serolipase', 'browden', 'semilunare', 'catholyte']
+Sorted List:
+['acropathy', 'biography', 'browden', 'catholyte', 'chakravartin', 'laminose', 'semilunare', 'serolipase', 'uncomposeable', 'unspiritedly']
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Selection-Sort-Popcorn-Hack">
+<a class="anchor" href="#Selection-Sort-Popcorn-Hack" aria-hidden="true"><span class="octicon octicon-link"></span></a>Selection Sort Popcorn Hack<a class="anchor-link" href="#Selection-Sort-Popcorn-Hack"> </a>
+</h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">selectionSort</span><span class="p">(</span><span class="nb">list</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>  <span class="c1"># length is n</span>
+    
+    <span class="c1"># List is traversed from index 0 to n-1, n elements</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">smallI</span> <span class="o">=</span> <span class="n">i</span>  <span class="c1"># small index is captured</span>
+        <span class="n">smallV</span> <span class="o">=</span> <span class="nb">list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+        <span class="c1"># Inner traversal looks at elements after i</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+            <span class="c1"># Save reference if less</span>
+            <span class="n">keyV</span> <span class="o">=</span> <span class="nb">list</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">keyV</span> <span class="o">&lt;</span> <span class="n">smallV</span><span class="p">:</span>
+                <span class="n">smallI</span> <span class="o">=</span> <span class="n">j</span>  <span class="c1"># small index is replaced</span>
+                <span class="n">smallV</span> <span class="o">=</span> <span class="n">keyV</span>
+        
+        <span class="c1"># swap smallest to current i positon, sorting left to right</span>
+        <span class="nb">list</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="nb">list</span><span class="p">[</span><span class="n">smallI</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">[</span><span class="n">smallI</span><span class="p">],</span> <span class="nb">list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>  <span class="c1"># single line swap </span>
+        
+
+<span class="n">words</span> <span class="o">=</span> <span class="n">new_words</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+
+<span class="n">selectionSort</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Sorted List:"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>['flimp', 'spyglass', 'trustify', 'ephedrine', 'pseudomonotropy', 'fornenst', 'pacate', 'honeyberry', 'semicallipygian', 'flite']
+Sorted List:
+['ephedrine', 'flimp', 'flite', 'fornenst', 'honeyberry', 'pacate', 'pseudomonotropy', 'semicallipygian', 'spyglass', 'trustify']
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -363,9 +523,9 @@ Select the algorithm you believe is best for each, explain.</li>
 </ul>
 </li>
 </ul>
-<p>1: Insertion Sort is the best option because there are only 2 elements that need to be switched and insertion only iterates through the list once, so it will be much faster than the other algorithms.
-2: Selection Sort is the best option because the 2 elements that are misplaced are the "greatest" and "smallest" values in terms of alphabetical order. In this list, only <code>Elephant</code> and <code>Apple</code> need to be replaced so selection is much better.
-3: Merge Sort is the best option because it is the only one with an efficient time complexity and works well for long lists.</p>
+<p>1: Insertion Sort is the best option because there are only 2 elements that need to be switched and insertion only iterates through the list once, so it will be much faster than the other algorithms.</p>
+<p>2: Selection Sort is the best option because the 2 elements that are misplaced are the "greatest" and "smallest" values in terms of alphabetical order. In this list, only <code>Elephant</code> and <code>Apple</code> need to be replaced so selection is much better.</p>
+<p>3: Merge Sort is the best option because it is the only one with an efficient time complexity and works well for long lists.</p>
 
 </div>
 </div>
