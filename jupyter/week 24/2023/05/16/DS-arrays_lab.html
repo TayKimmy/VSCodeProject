@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      12 min read
+      14 min read
     
 </span></p>
 
@@ -238,17 +238,24 @@ window.onload = wrap_img;
             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="s2">"A"</span><span class="p">,</span> <span class="s2">"B"</span><span class="p">,</span> <span class="s2">"C"</span><span class="p">,</span> <span class="s2">"D"</span><span class="p">,</span> <span class="s2">"E"</span><span class="p">,</span> <span class="s2">"F"</span><span class="p">]</span> <span class="c1"># hexadecimal</span>
             <span class="p">]</span>
     
+    <span class="n">tree</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">[</span><span class="s2">" "</span><span class="p">,</span> <span class="s2">" "</span><span class="p">,</span> <span class="s2">" "</span><span class="p">,</span> <span class="s2">" "</span><span class="p">,</span> <span class="s2">"*"</span><span class="p">,</span> <span class="s2">" "</span><span class="p">,</span> <span class="s2">" "</span><span class="p">,</span> <span class="s2">" "</span><span class="p">,</span> <span class="s2">" "</span><span class="p">],</span>
+        <span class="p">[</span><span class="s2">" "</span><span class="p">,</span> <span class="s2">" "</span><span class="p">,</span> <span class="s2">" "</span><span class="p">,</span> <span class="s2">"/"</span><span class="p">,</span> <span class="s2">"."</span><span class="p">,</span> <span class="s2">"\ "</span><span class="p">,</span> <span class="s2">" "</span><span class="p">,</span> <span class="s2">" "</span><span class="p">,</span> <span class="s2">" "</span><span class="p">],</span>
+        <span class="p">[</span><span class="s2">" "</span><span class="p">,</span> <span class="s2">" "</span><span class="p">,</span> <span class="s2">"/"</span><span class="p">,</span> <span class="s2">"o"</span><span class="p">,</span> <span class="s2">"."</span><span class="p">,</span> <span class="s2">"."</span><span class="p">,</span> <span class="s2">"\ "</span><span class="p">,</span> <span class="s2">" "</span><span class="p">,</span> <span class="s2">" "</span><span class="p">],</span>
+        <span class="p">[</span><span class="s2">" "</span><span class="p">,</span> <span class="s2">" "</span><span class="p">,</span> <span class="s2">"/"</span><span class="p">,</span> <span class="s2">"."</span><span class="p">,</span> <span class="s2">"."</span><span class="p">,</span> <span class="s2">"o"</span><span class="p">,</span> <span class="s2">"\ "</span><span class="p">,</span> <span class="s2">" "</span><span class="p">,</span> <span class="s2">" "</span><span class="p">],</span>
+        <span class="p">[</span><span class="s2">" "</span><span class="p">,</span> <span class="s2">"/"</span><span class="p">,</span> <span class="s2">"."</span><span class="p">,</span> <span class="s2">"o"</span><span class="p">,</span> <span class="s2">"."</span><span class="p">,</span> <span class="s2">"."</span><span class="p">,</span> <span class="s2">"o"</span><span class="p">,</span> <span class="s2">"\ "</span><span class="p">,</span> <span class="s2">" "</span><span class="p">],</span>
+        <span class="p">[</span><span class="s2">" "</span><span class="p">,</span> <span class="s2">"/"</span><span class="p">,</span> <span class="s2">"."</span><span class="p">,</span> <span class="s2">"."</span><span class="p">,</span> <span class="s2">"."</span><span class="p">,</span> <span class="s2">"o"</span><span class="p">,</span> <span class="s2">"."</span><span class="p">,</span> <span class="s2">"\ "</span><span class="p">,</span> <span class="s2">" "</span><span class="p">],</span>
+        <span class="p">[</span><span class="s2">"/"</span><span class="p">,</span> <span class="s2">"."</span><span class="p">,</span> <span class="s2">"."</span><span class="p">,</span> <span class="s2">"o"</span><span class="p">,</span> <span class="s2">"."</span><span class="p">,</span> <span class="s2">"."</span><span class="p">,</span> <span class="s2">"."</span><span class="p">,</span> <span class="s2">"."</span><span class="p">,</span> <span class="s2">"\ "</span><span class="p">],</span>
+        <span class="p">[</span><span class="s2">"^"</span><span class="p">,</span> <span class="s2">"^"</span><span class="p">,</span> <span class="s2">"^"</span><span class="p">,</span> <span class="s2">"["</span><span class="p">,</span> <span class="s2">"_"</span><span class="p">,</span> <span class="s2">"]"</span><span class="p">,</span> <span class="s2">"^"</span><span class="p">,</span> <span class="s2">"^"</span><span class="p">,</span> <span class="s2">"^"</span><span class="p">]</span>
+
+    <span class="p">]</span>
 
     <span class="c1"># pack into a list of matrices with titles</span>
     <span class="n">matrices</span> <span class="o">=</span> <span class="p">[</span>
         <span class="p">[</span><span class="s2">"Keypad"</span><span class="p">,</span> <span class="n">keypad</span><span class="p">],</span> 
         <span class="p">[</span><span class="s2">"Keyboard"</span><span class="p">,</span> <span class="n">keyboard</span><span class="p">],</span> 
-        <span class="p">[</span><span class="s2">"Number Systems"</span><span class="p">,</span> <span class="n">numbers</span><span class="p">]</span>
-    <span class="p">]</span>
-
-    <span class="n">tree</span> <span class="o">=</span> <span class="p">[</span>
-        <span class="p">[</span><span class="s2">"/"</span><span class="p">,</span><span class="s2">"|"</span><span class="p">,</span><span class="s2">"\ "</span><span class="p">],</span>
-        <span class="p">[</span><span class="s2">"/"</span><span class="p">,</span><span class="s2">"/"</span><span class="p">,</span><span class="s2">"|"</span><span class="p">,</span><span class="s2">"\ "</span><span class="p">,</span><span class="s2">"\ "</span><span class="p">],</span>
+        <span class="p">[</span><span class="s2">"Number Systems"</span><span class="p">,</span> <span class="n">numbers</span><span class="p">],</span>
+        <span class="p">[</span><span class="s2">"Christmas Tree"</span><span class="p">,</span> <span class="n">tree</span><span class="p">]</span>
     <span class="p">]</span>
 
     <span class="c1"># loop 2D matrix with returning list in [key, value] arrangement</span>
@@ -261,7 +268,7 @@ window.onload = wrap_img;
         <span class="n">print_matrix1</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
         <span class="n">print_matrix2</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
         <span class="n">print_matrix3</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
-        <span class="n">print_matrix2</span><span class="p">(</span><span class="n">tree</span><span class="p">)</span>
+        <span class="n">print_matrix1</span><span class="p">(</span><span class="n">tree</span><span class="p">)</span>
         <span class="c1"># blank link in between</span>
         <span class="nb">print</span><span class="p">()</span>
 
@@ -297,9 +304,15 @@ For loop with shortcut (*) row expansion
 4 5 6
 7 8 9
   0  
-Enhanced nested for loops
-/ | \  
-/ / | \  \  
+Classic nested loops using ij indexes
+        *         
+      / . \        
+    / o . . \      
+    / . . o \      
+  / . o . . o \    
+  / . . . o . \    
+/ . . o . . . . \  
+^ ^ ^ [ _ ] ^ ^ ^ 
 
 Keyboard 4 x ~24
 Classic nested loops using ij indexes
@@ -317,9 +330,15 @@ For loop with shortcut (*) row expansion
     Q   W   E   R   T   Y   U   I     O   P   [   ]   \
       A   S   D   F   G   H   J   K   L   ;   '
         Z   X   C   V   B   N   M   ,   .   /
-Enhanced nested for loops
-/ | \  
-/ / | \  \  
+Classic nested loops using ij indexes
+        *         
+      / . \        
+    / o . . \      
+    / . . o \      
+  / . o . . o \    
+  / . . . o . \    
+/ . . o . . . . \  
+^ ^ ^ [ _ ] ^ ^ ^ 
 
 Number Systems 3 x ~2
 Classic nested loops using ij indexes
@@ -334,9 +353,53 @@ For loop with shortcut (*) row expansion
 0 1
 0 1 2 3 4 5 6 7 8 9
 0 1 2 3 4 5 6 7 8 9 A B C D E F
+Classic nested loops using ij indexes
+        *         
+      / . \        
+    / o . . \      
+    / . . o \      
+  / . o . . o \    
+  / . . . o . \    
+/ . . o . . . . \  
+^ ^ ^ [ _ ] ^ ^ ^ 
+
+Christmas Tree 8 x ~9
+Classic nested loops using ij indexes
+        *         
+      / . \        
+    / o . . \      
+    / . . o \      
+  / . o . . o \    
+  / . . . o . \    
+/ . . o . . . . \  
+^ ^ ^ [ _ ] ^ ^ ^ 
 Enhanced nested for loops
-/ | \  
-/ / | \  \  
+        *         
+      / . \        
+    / o . . \      
+    / . . o \      
+  / . o . . o \    
+  / . . . o . \    
+/ . . o . . . . \  
+^ ^ ^ [ _ ] ^ ^ ^ 
+For loop with shortcut (*) row expansion
+        *        
+      / . \       
+    / o . . \     
+    / . . o \     
+  / . o . . o \   
+  / . . . o . \   
+/ . . o . . . . \ 
+^ ^ ^ [ _ ] ^ ^ ^
+Classic nested loops using ij indexes
+        *         
+      / . \        
+    / o . . \      
+    / . . o \      
+  / . o . . o \    
+  / . . . o . \    
+/ . . o . . . . \  
+^ ^ ^ [ _ ] ^ ^ ^ 
 
 </pre>
 </div>
@@ -371,33 +434,6 @@ Enhanced nested for loops
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">print_matrix2</span><span class="p">(</span><span class="n">matrix</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Enhanced nested for loops"</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">matrix</span><span class="p">:</span>  <span class="c1"># short hand row iterator, index is not required</span>
-        <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">row</span><span class="p">:</span>  <span class="c1"># short hand column iterator</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">" "</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">()</span>
-
-<span class="k">def</span> <span class="nf">material</span><span class="p">():</span>
-    <span class="n">tree</span> <span class="o">=</span> <span class="p">[</span>
-        <span class="s2">""</span><span class="p">,</span><span class="s2">""</span><span class="p">,</span><span class="s2">""</span>
-    <span class="p">]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%js</span>
 
 <span class="cm">/*</span>
@@ -417,7 +453,7 @@ Enhanced nested for loops
     <span class="p">}</span>
 <span class="p">}</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr2D</span><span class="p">);</span>
-<span class="nx">element</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">arr2D</span><span class="p">);</span>
+<span class="nx">element</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">arr2D</span><span class="p">));</span>
 </pre></div>
 
     </div>
@@ -432,10 +468,10 @@ Enhanced nested for loops
 
 
 
-<div id="8e6ef788-df94-4384-bc91-b19e96484dcd"></div>
+<div id="4e091f8f-1b75-4eb7-b7f6-4985ead4dd1c"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#8e6ef788-df94-4384-bc91-b19e96484dcd');
+var element = $('#4e091f8f-1b75-4eb7-b7f6-4985ead4dd1c');
 
 /*
 * Creator: Nighthawk Coding Society
@@ -454,7 +490,93 @@ for (var i = 0; i < rows; i++) {
     }
 }
 console.log(arr2D);
-element.append(arr2D);
+element.append(JSON.stringify(arr2D));
+
+</script>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%js</span>
+
+<span class="kd">var</span> <span class="nx">height</span> <span class="o">=</span> <span class="mf">5</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">tree</span> <span class="o">=</span> <span class="s1">''</span><span class="p">;</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">row</span> <span class="o">=</span> <span class="mf">1</span><span class="p">;</span> <span class="nx">row</span> <span class="o">&lt;=</span> <span class="nx">height</span><span class="p">;</span> <span class="nx">row</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">treeRow</span> <span class="o">=</span> <span class="s1">''</span><span class="p">;</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">space</span> <span class="o">=</span> <span class="mf">1</span><span class="p">;</span> <span class="nx">space</span> <span class="o">&lt;=</span> <span class="nx">height</span> <span class="o">-</span> <span class="nx">row</span><span class="p">;</span> <span class="nx">space</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">treeRow</span> <span class="o">+=</span> <span class="s1">'&amp;nbsp;&amp;nbsp;'</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">star</span> <span class="o">=</span> <span class="mf">1</span><span class="p">;</span> <span class="nx">star</span> <span class="o">&lt;=</span> <span class="mf">2</span> <span class="o">*</span> <span class="nx">row</span> <span class="o">-</span> <span class="mf">1</span><span class="p">;</span> <span class="nx">star</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">treeRow</span> <span class="o">+=</span> <span class="s1">'* '</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nx">tree</span> <span class="o">+=</span> <span class="nx">treeRow</span> <span class="o">+</span> <span class="s1">'&lt;br&gt;'</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">trunkSpaces</span> <span class="o">=</span> <span class="s1">'&amp;nbsp;&amp;nbsp;'</span><span class="p">.</span><span class="nx">repeat</span><span class="p">(</span><span class="nx">height</span> <span class="o">-</span> <span class="mf">1</span><span class="p">)</span> <span class="o">+</span> <span class="s1">'| |&lt;br&gt;'</span><span class="p">;</span>
+<span class="nx">tree</span> <span class="o">+=</span> <span class="nx">trunkSpaces</span><span class="p">.</span><span class="nx">repeat</span><span class="p">(</span><span class="mf">2</span><span class="p">);</span>
+
+<span class="nx">element</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">tree</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+
+<div id="b4e37d18-ee26-414f-a310-1320b02db231"></div>
+<div class="output_subarea output_javascript ">
+<script type="text/javascript">
+var element = $('#b4e37d18-ee26-414f-a310-1320b02db231');
+
+var height = 5;
+var tree = '';
+
+// Loop to generate each row of the Christmas tree
+for (var row = 1; row <= height; row++) {
+    var treeRow = '';
+
+    // Add spaces before the stars
+    for (var space = 1; space <= height - row; space++) {
+        treeRow += '&nbsp;&nbsp;';
+    }
+
+    // Add stars for the tree
+    for (var star = 1; star <= 2 * row - 1; star++) {
+        treeRow += '* ';
+    }
+
+    tree += treeRow + '<br>';
+}
+
+var trunkSpaces = '&nbsp;&nbsp;'.repeat(height - 1) + '| |<br>';
+tree += trunkSpaces.repeat(2);
+
+// Output the generated tree
+element.append(tree);
 
 </script>
 </div>
@@ -492,15 +614,10 @@ element.append(arr2D);
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
-<span class="sd"> * Creator: Nighthawk Coding Society</span>
-<span class="sd"> * Mini Lab Name: Hello Series, featuring Monkey Jumpers Poem</span>
-<span class="sd">"""</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">clear_output</span>
 
-<span class="kn">import</span> <span class="nn">time</span> <span class="c1"># used for delay</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">clear_output</span>  <span class="c1"># jupyter specific clear</span>
-
-<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>    
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
     <span class="c1"># ANSI Color Codes</span>
     <span class="n">Red</span> <span class="o">=</span> <span class="s2">"</span><span class="se">\u001b</span><span class="s2">[31m"</span>
     <span class="n">Green</span> <span class="o">=</span> <span class="s2">"</span><span class="se">\u001b</span><span class="s2">[32m"</span>
@@ -511,67 +628,58 @@ element.append(arr2D);
     <span class="sd">""" 2D array data assignment """</span>
     <span class="n">monkeys</span> <span class="o">=</span> <span class="p">[</span>
         <span class="p">[</span>
-            <span class="n">Red</span><span class="p">,</span>
-            <span class="s2">"ʕง ͠° ͟ل͜ ͡°)ʔ "</span><span class="p">,</span>  <span class="c1"># [0][0] eyes</span>
-            <span class="s2">"  </span><span class="se">\\</span><span class="s2">_⏄_/  "</span><span class="p">,</span>  <span class="c1"># [0][1] chin</span>
-            <span class="s2">"  --0--   "</span><span class="p">,</span>  <span class="c1"># [0][2] body</span>
-            <span class="s2">"  ⎛   ⎞   "</span>  <span class="c1"># [0][3] legs</span>
+            <span class="n">Red</span> <span class="o">+</span> <span class="s2">"ʕง ͠° ͟ل͜ ͡°)ʔ "</span><span class="p">,</span>
+            <span class="n">Green</span> <span class="o">+</span> <span class="s2">" ʕ༼ ◕_◕ ༽ʔ "</span><span class="p">,</span>
+            <span class="n">Yellow</span> <span class="o">+</span> <span class="s2">" ʕ(▀ ⍡ ▀)ʔ"</span><span class="p">,</span>
+            <span class="n">Blue</span> <span class="o">+</span> <span class="s2">"ʕ ͡° ͜ʖ ° ͡ʔ"</span><span class="p">,</span>
+            <span class="n">Magenta</span> <span class="o">+</span> <span class="s2">"  (◕‿◕✿) "</span>
         <span class="p">],</span>
         <span class="p">[</span>
-            <span class="n">Green</span><span class="p">,</span>
-            <span class="s2">" ʕ༼ ◕_◕ ༽ʔ "</span><span class="p">,</span>  <span class="c1"># [1][0]</span>
-            <span class="s2">"  </span><span class="se">\\</span><span class="s2">_⎏_/  "</span><span class="p">,</span>
-            <span class="s2">"  ++1++  "</span><span class="p">,</span>
-            <span class="s2">"   ⌋ ⌊   "</span>
+            <span class="n">Red</span> <span class="o">+</span> <span class="s2">"  </span><span class="se">\\</span><span class="s2">_⏄_/  "</span><span class="p">,</span>
+            <span class="n">Green</span> <span class="o">+</span> <span class="s2">"  </span><span class="se">\\</span><span class="s2">_⎏_/  "</span><span class="p">,</span>
+            <span class="n">Yellow</span> <span class="o">+</span> <span class="s2">"  </span><span class="se">\\</span><span class="s2">_⎐_/ "</span><span class="p">,</span>
+            <span class="n">Blue</span> <span class="o">+</span> <span class="s2">"  </span><span class="se">\\</span><span class="s2">_⍾_/  "</span><span class="p">,</span>
+            <span class="n">Magenta</span> <span class="o">+</span> <span class="s2">"  </span><span class="se">\\</span><span class="s2">_⍾_/ "</span>
         <span class="p">],</span>
         <span class="p">[</span>
-            <span class="n">Yellow</span><span class="p">,</span>
-            <span class="s2">" ʕ(▀ ⍡ ▀)ʔ"</span><span class="p">,</span>  <span class="c1"># [2][0]</span>
-            <span class="s2">"  </span><span class="se">\\</span><span class="s2">_⎐_/ "</span><span class="p">,</span>
-            <span class="s2">"  &lt;-2-&gt;  "</span><span class="p">,</span>
-            <span class="s2">"  〈  〉 "</span>
+            <span class="n">Red</span> <span class="o">+</span> <span class="s2">"  --0--   "</span><span class="p">,</span>
+            <span class="n">Green</span> <span class="o">+</span> <span class="s2">"  ++1++  "</span><span class="p">,</span>
+            <span class="n">Yellow</span> <span class="o">+</span> <span class="s2">"  &lt;-2-&gt;  "</span><span class="p">,</span>
+            <span class="n">Blue</span> <span class="o">+</span> <span class="s2">"  ==3==  "</span><span class="p">,</span>
+            <span class="n">Magenta</span> <span class="o">+</span> <span class="s2">"  ==4==  "</span>
         <span class="p">],</span>
         <span class="p">[</span>
-            <span class="n">Blue</span><span class="p">,</span>
-            <span class="s2">"ʕ ͡° ͜ʖ ° ͡ʔ"</span><span class="p">,</span>  <span class="c1"># [3][0]</span>
-            <span class="s2">"  </span><span class="se">\\</span><span class="s2">_⍾_/  "</span><span class="p">,</span>
-            <span class="s2">"  ==3==  "</span><span class="p">,</span>
-            <span class="s2">"  _/ </span><span class="se">\\</span><span class="s2">_  "</span>
-        <span class="p">],</span>
-        <span class="p">[</span>
-            <span class="n">Magenta</span><span class="p">,</span>
-            <span class="s2">"  (◕‿◕✿) "</span><span class="p">,</span>  <span class="c1"># [4][0]</span>
-            <span class="s2">"  </span><span class="se">\\</span><span class="s2">_⍾_/ "</span><span class="p">,</span>  <span class="c1"># [4][1]</span>
-            <span class="s2">"  ==4==  "</span><span class="p">,</span>  <span class="c1"># [4][2]</span>
-            <span class="s2">"  _/ </span><span class="se">\\</span><span class="s2">_ "</span>  <span class="c1"># [4][3]</span>
+            <span class="n">Red</span> <span class="o">+</span> <span class="s2">"  ⎛   ⎞   "</span><span class="p">,</span>
+            <span class="n">Green</span> <span class="o">+</span> <span class="s2">"   ⌋ ⌊   "</span><span class="p">,</span>
+            <span class="n">Yellow</span> <span class="o">+</span> <span class="s2">"  〈   〉  "</span><span class="p">,</span>
+            <span class="n">Blue</span> <span class="o">+</span> <span class="s2">"  _/ </span><span class="se">\\</span><span class="s2">_  "</span><span class="p">,</span>
+            <span class="n">Magenta</span> <span class="o">+</span> <span class="s2">"  _/ </span><span class="se">\\</span><span class="s2">_ "</span>
         <span class="p">]</span>
     <span class="p">]</span>
 
     <span class="sd">""" 2D array program logic """</span>
-    <span class="c1"># cycles through 2D array backwards</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">monkeys</span><span class="p">),</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
         <span class="n">clear_output</span><span class="p">(</span><span class="n">wait</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
         
         <span class="nb">print</span><span class="p">(</span><span class="s2">"Nursery Rhyme"</span><span class="p">)</span>  <span class="c1"># identification message</span>
 
-        <span class="c1"># this print statement shows current count of Monkeys</span>
-        <span class="c1"># concatenation (+) of the loop variable and string to form a countdown message</span>
-        <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" little monkeys jumping on the bed..."</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="si">}</span><span class="s2"> little monkeys jumping on the bed,"</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"1 little monkey jumping on the bed,"</span><span class="p">)</span>
 
-        <span class="c1"># cycle through monkeys that are left in poem countdown</span>
-        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">monkeys</span><span class="p">[</span><span class="mi">0</span><span class="p">])):</span>  <span class="c1"># cycles through remaining monkeys in countdown</span>
+        <span class="c1"># Print the current stanza</span>
+        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">monkeys</span><span class="p">)):</span>
+            <span class="c1"># Concatenate the monkey parts horizontally for the current stanza</span>
+            <span class="n">line</span> <span class="o">=</span> <span class="s2">""</span>
+            <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+                <span class="n">line</span> <span class="o">+=</span> <span class="n">monkeys</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">]</span> <span class="o">+</span> <span class="s2">" "</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
 
-            <span class="c1"># cycles through monkey part by part</span>
-            <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-                <span class="c1"># prints specific part of the monkey from the 2D cell</span>
-                <span class="nb">print</span><span class="p">(</span><span class="n">monkeys</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">]</span> <span class="o">+</span> <span class="s2">" "</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>
-
-            <span class="c1"># this new line gives separation between stanza of poem</span>
-            <span class="nb">print</span><span class="p">()</span>  <span class="c1"># reset color</span>
-            
+        <span class="c1"># Add a delay between stanzas</span>
         <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 
-    <span class="c1"># out of all the loops, prints finishing messages</span>
+    <span class="c1"># Out of all the loops, print finishing messages</span>
     <span class="n">clear_output</span><span class="p">(</span><span class="n">wait</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"No more monkeys jumping on the bed"</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"0000000000000000000000000000000000"</span><span class="p">)</span>
