@@ -53,7 +53,6 @@ categories: [Week 37]
         movieInfo += "<p><strong>Release Date:</strong> " + movie.release_date + "</p>"; // original release date
         movieInfo += "<p><strong>Vote Count:</strong> " + movie.vote_count + "</p>"; // how many people voted for the movie - more is better
         movieInfo += "<p><strong>Genre(s):</strong> " + getGenres(movie.genre_ids) + "</p>"; // a helper function and retrieves the genres from movie.genre_ids
-        movieInfo += "<p><strong>Runtime:</strong> " + movie.runtime + " minutes</p>"; // How long movie is
 
 
         document.getElementById("movieContainer").innerHTML = movieInfo; // printing data onto the page
