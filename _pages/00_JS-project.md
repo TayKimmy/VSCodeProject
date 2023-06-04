@@ -45,6 +45,7 @@ categories: [Week 37]
         var movie = data.results[0]; // extract relevant info
         var movieInfo = "<h2>" + movie.title + " (" + movie.release_date.substring(0, 4) + ")</h2>";
         movieInfo += "<img src='https://image.tmdb.org/t/p/w500" + movie.poster_path + "' alt='Movie Poster'><br>"; // image of the movie poster
+        movieInfo += "<p><strong>Original Title:</strong> " + movie.original_title + "</p>"; // original title in original language
         movieInfo += "<p><strong>Overview:</strong> " + movie.overview + "</p>"; // summary of the plot
         movieInfo += "<p><strong>Popularity:</strong> " + movie.popularity + "</p>"; // the popularity is determined by the API provider - TMDB
         movieInfo += "<p><strong>Vote Average:</strong> " + movie.vote_average + "</p>"; // Average rating out of 10 - higher is better
@@ -52,6 +53,8 @@ categories: [Week 37]
         movieInfo += "<p><strong>Release Date:</strong> " + movie.release_date + "</p>"; // original release date
         movieInfo += "<p><strong>Vote Count:</strong> " + movie.vote_count + "</p>"; // how many people voted for the movie - more is better
         movieInfo += "<p><strong>Genre(s):</strong> " + getGenres(movie.genre_ids) + "</p>"; // a helper function and retrieves the genres from movie.genre_ids
+        movieInfo += "<p><strong>Runtime:</strong> " + movie.runtime + " minutes</p>"; // How long movie is
+
 
         document.getElementById("movieContainer").innerHTML = movieInfo; // printing data onto the page
       } else {
