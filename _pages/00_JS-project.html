@@ -4,20 +4,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>World History | Tay Kim fastpages</title>
+<title>JS Tutorial | Tay Kim fastpages</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="World History" />
+<meta property="og:title" content="JS Tutorial" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Tay’s first fastpage is going to be amazing." />
 <meta property="og:description" content="Tay’s first fastpage is going to be amazing." />
-<link rel="canonical" href="https://taykimmy.github.io/VSCodeProject/_pages/04_Other-Subject.html" />
-<meta property="og:url" content="https://taykimmy.github.io/VSCodeProject/_pages/04_Other-Subject.html" />
+<link rel="canonical" href="https://taykimmy.github.io/VSCodeProject/_pages/00_JS-project.html" />
+<meta property="og:url" content="https://taykimmy.github.io/VSCodeProject/_pages/00_JS-project.html" />
 <meta property="og:site_name" content="Tay Kim fastpages" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="World History" />
+<meta property="twitter:title" content="JS Tutorial" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Tay’s first fastpage is going to be amazing.","headline":"World History","url":"https://taykimmy.github.io/VSCodeProject/_pages/04_Other-Subject.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"Tay’s first fastpage is going to be amazing.","headline":"JS Tutorial","url":"https://taykimmy.github.io/VSCodeProject/_pages/00_JS-project.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/VSCodeProject/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://taykimmy.github.io/VSCodeProject/feed.xml" title="Tay Kim fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/VSCodeProject/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -64,7 +64,7 @@ window.onload = wrap_img;
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/VSCodeProject/_pages/00_Schedule.html">Schedule</a><a class="page-link" href="/VSCodeProject/about/">About Me</a><a class="page-link" href="/VSCodeProject/search/">Search</a><a class="page-link" href="/VSCodeProject/_pages/03_Notes.html">Vocab</a><a class="page-link" href="/VSCodeProject/_pages/04_Other-Subject.html">World History</a><a class="page-link" href="/VSCodeProject/categories/">Tags</a><a class="page-link" href="/VSCodeProject/_pages/06_submenu.html">Submenu</a></div>
+        <div class="trigger"><a class="page-link" href="/VSCodeProject/_pages/00_JS-project.html">JS Tutorial</a><a class="page-link" href="/VSCodeProject/_pages/01_Schedule.html">Schedule</a><a class="page-link" href="/VSCodeProject/about/">About Me</a><a class="page-link" href="/VSCodeProject/search/">Search</a><a class="page-link" href="/VSCodeProject/_pages/04_Notes.html">Vocab</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -72,52 +72,62 @@ window.onload = wrap_img;
         <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title">World History</h1>
+    <h1 class="post-title">JS Tutorial</h1>
   </header>
 
   <div class="post-content">
-    <h3 id="world-map">World Map</h3>
+    <html>
+<head>
+  <title>Weather Forecast Display</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <h1>Weather Forecast</h1>
 
-<p><img src="/VSCodeProject/images/Fastpages-world-map.jpg" alt="" /></p>
+  <form id="locationForm">
+    <label for="locationInput">Location:</label>
+    <input type="text" id="locationInput" required="" />
+    <button type="submit">Get Weather</button>
+  </form>
 
-<h3 id="world-religions">World Religions</h3>
+  <div id="weatherContainer"></div>
 
-<p>World Religions worldwide and percentages of the world population</p>
+  <script>
+    // Function to fetch weather data from weatherstack API
+    function fetchWeatherData(location) {
+      var apiKey = "4d8dad4f0e7affa082ea6e906009369e";
+      var apiUrl = "http://api.weatherstack.com/current" + apiKey + "&query=" + location;
+      $.ajax({
+        url: apiUrl,
+        dataType: "json",
+        success: function(data) {
+          displayWeatherData(data);
+        },
+        error: function() {
+          $("#weatherContainer").text("Error fetching weather data.");
+        }
+      });
+    }
+    // Function to display weather data on the page
+    function displayWeatherData(data) {
+      var weather = data.current;
+      var location = data.location.name + ", " + data.location.country;
 
-<table>
-  <thead>
-    <tr>
-      <th>World Religions</th>
-      <th>Percentage of World Population</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Christianity</td>
-      <td>31.7%</td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <td>Islam</td>
-      <td>25%</td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <td>Hinduism</td>
-      <td>15%</td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <td>Buddhism</td>
-      <td>6.6%</td>
-    </tr>
-  </tbody>
-</table>
-
-<p><img src="/VSCodeProject/images/Fastpages-world-religion-map.jpg" alt="" /></p>
+      var weatherInfo = "Location: " + location + "<br>";
+      weatherInfo += "Temperature: " + weather.temperature + "°C<br>";
+      weatherInfo += "Humidity: " + weather.humidity + "%<br>";
+      weatherInfo += "Wind Speed: " + weather.wind_speed + " km/h<br>";
+      weatherInfo += "Weather Description: " + weather.weather_descriptions[0] + "<br>";
+      $("#weatherContainer").html(weatherInfo);
+    }
+    $("#locationForm").submit(function(event) {
+      event.preventDefault();
+      var location = $("#locationInput").val();
+      fetchWeatherData(location);
+    });
+  </script>
+</body>
+</html>
 
   </div>
 
