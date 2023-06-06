@@ -8,6 +8,54 @@ categories: [Week 37]
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    form {
+      margin-bottom: 20px;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 4px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    .movie-container {
+      margin-bottom: 20px;
+    }
+    .movie-series-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .movie-series-table th,
+    .movie-series-table td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    .movie-series-table th {
+      background-color: #f2f2f2;
+    }
+  </style>
 </head>
 <body>
   <h1>Movie Search</h1>
